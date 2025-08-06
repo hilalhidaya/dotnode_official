@@ -143,7 +143,7 @@ p {
 .header {
   width: 100%;
   height: 100%;
-  padding-top: 35svh;
+  padding-top: 30svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,6 +323,16 @@ p {
   transform: translateY(120%);
   will-change: transform;
   padding-bottom: 1rem;
+}
+
+.line h1{
+  font-size: 6rem;
+   color: transparent;
+  background: linear-gradient(145deg, #ffffff, #dcdcdc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  mix-blend-mode: lighten;
+  text-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8); /* visualmente decorativo */
 }
 
 #word-1 h1 {

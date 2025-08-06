@@ -12,95 +12,129 @@
     DotNode
   </title>
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="menu/menu.css" />
+
 </head>
-
 <body>
-
- 
+  <!-- LOADER INICIAL -->
   <div class="loader">
     <div class="overlay">
       <div class="block"></div>
       <div class="block"></div>
     </div>
-
     <div class="intro-logo">
-      <div class="word" id="word-1">
-        <h1><span>Dot</span></h1>
-      </div>
-      <div class="word" id="word-2">
-        <h1>Node</h1>
-      </div>
+      <div class="word" id="word-1"><h1><span>Dot</span></h1></div>
+      <div class="word" id="word-2"><h1>Node</h1></div>
     </div>
-
     <div class="divider"></div>
-
     <div class="spinner-container">
       <div class="spinner"></div>
     </div>
   </div>
 
-  <!-- ✅ Contenido real de la página -->
+  <!-- HERO + HEADER -->
   <section class="section_landing">
     <div class="container">
       <div class="hero-img">
-        <img src="public/fondo.png" alt="" />
+        <img src="/fondo.png" alt="fondo" />
       </div>
 
-      <div class="nav">
-        <div class="logo">
-          <a href="#">DotNode.</a>
-        </div>
-        <div class="nav-links">
-          <a href="#">Rituals</a>
-          <a href="#">Our Roots</a>
-          <a href="#">Lookbook</a>
-          <a href="#">Stories</a>
-        </div>
-        <div class="btn">
-          <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
-        </div>
-      </div>
+      <!-- NAVBAR nueva (menu fullscreen) -->
+      <nav>
+        <div class="logo"><h2>DotNode.</h3></div>
+        <p class="menu-open">Menu</p>
+      </nav>
 
       <div class="header">
         <div class="hero-copy">
           <div class="line subtitle">
             <p>WEB DEVELOPMENT</p>
           </div>
-          <div class="line">
-            <h1><span>Smart</span> Design,</h1>
-          </div>
-          <div class="line">
-            <h1>Real IMPACT</h1>
-          </div>
+          <div class="line"><h1><span>Smart</span> Design,</h1></div>
+          <div class="line"><h1>Real IMPACT</h1></div>
         </div>
         <div class="line">
-          <p>Skincare that stays true to nature and to you</p>
+          <p>Creative solutions for modern brands</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OBJETIVOS_________________ -->
+  <!-- FULLSCREEN MENU -->
+  <div class="menu">
+    <div class="menu-nav"><p class="menu-close">Close</p></div>
+
+    <div class="menu-col menu-img">
+      <img id="img-1" src="/hero.jpg" alt="" />
+      <img id="img-2" src="/hero.jpg" alt="" />
+      <img id="img-3" src="/hero.jpg" alt="" />
+      <img id="img-4" src="/hero.jpg" alt="" />
+    </div>
+
+    <div class="menu-col menu-items">
+      <div class="menu-logo"><img src="/dotnode_logo.png" alt="logo" /></div>
+
+      <div class="menu-links">
+        <div class="menu-link"><p><a href="#">HOME</a></p></div>
+        <div class="menu-link"><p><a href="#">SERVICES</a></p></div>
+        <div class="menu-link"><p><a href="#">BLOG</a></p></div>
+        <div class="menu-link"><p><a href="#">CONTACT US</a></p></div>
+      </div>
+
+      <div class="menu-footer">
+        <div class="menu-sub-col">
+          <div class="menu-sub-item"><p>Connect</p></div>
+          <div class="menu-sub-item"><p>Break</p></div>
+          <br />
+          <div class="menu-sub-item"><p>Explore</p></div>
+          <div class="menu-sub-item"><p>Break</p></div>
+          <br />
+          <div class="menu-sub-item"><p>Contact Us</p></div>
+          <br />
+          <div class="menu-sub-item"><p>Ocean City</p></div>
+          <div class="menu-sub-item"><p>Rhythmic Sound</p></div>
+          <div class="menu-sub-item"><p>2000 Coastal Hwy</p></div>
+          <div class="menu-sub-item"><p>Ocean City, MD 21842</p></div>
+          <br />
+        </div>
+        <div class="menu-sub-col">
+          <div class="menu-sub-item"><p>Instagram</p></div>
+          <div class="menu-sub-item"><p>Youtube</p></div>
+          <br />
+          <div class="menu-sub-item"><p>Spotify</p></div>
+          <div class="menu-sub-item"><p>Mixcloud</p></div>
+          <br />
+          <div class="menu-sub-item"><p>Email</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO SIGUIENTE (ej. objetivos) -->
   <div class="objetivos_container animate-on-scroll">
     <div class="para_ti_logo">
-      <img src="images/logo.png" alt="logo dotnode">
+      <img src="images/logo.png" alt="logo dotnode" />
     </div>
     <div class="para_ti_link">
       <button class="btn3 btn" onclick="location.href='views/contacto.html'">
         <i class="fa-solid fa-link"></i> Sobre Nosotros
       </button>
     </div>
-    <h2>Creemos que la creación de sitios web debe ser accesible para todos.
-      Ofrecemos soluciones de diseño de calidad sin los altos costos normalmente asociados.</h2>
-    <p>En la era digital actual, tener una presencia en línea es más importante que nunca. Lleva tu pequeño
-      negocio al mundo digital con nuestro servicio flexible y libre de complicaciones, diseñado para
-      adaptarse a tus necesidades. Creamos diseños únicos y personalizados para posicionar tu marca y
-      maximizar su potencial en línea.</p>
+    <h2>Creemos que la creación de sitios web debe ser accesible para todos...</h2>
+    <p>En la era digital actual, tener una presencia en línea es más importante que nunca...</p>
   </div>
 
+  <!-- IONICONS -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- JS de tu proyecto -->
   <script type="module" src="/script.js"></script>
+
+  <!-- Scripts del menú (externos) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="menu/menu.js"></script>
+  <script src="menu/tilt.js"></script>
 </body>
 
 </html>
