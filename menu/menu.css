@@ -11,13 +11,10 @@ nav {
   z-index: 1;
 }
 
-.logo {
-  color: #fff;
-}
-
 .menu-open,
 .menu-close {
   cursor: pointer;
+  font-size: 1.8rem;
 }
 
 .menu {
@@ -93,19 +90,27 @@ nav {
 
 .menu-logo img {
   position: relative;
+  object-fit: contain;
+
 }
 
 .menu-link p {
   position: relative;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  padding-bottom: 1rem;
 }
 
 .menu-link a {
   text-decoration: none;
   color: #fff;
-    font-size: 2rem;
+  font-size: 2rem;
+  transition: 400ms all ease;
+}
 
+.menu-link a:hover {
+  color: #0c8899;
+  font-size:2.1rem;
 }
 
 .menu-footer {
@@ -113,21 +118,40 @@ nav {
   display: flex;
 }
 
-.menu-sub-col {
-  flex: 1;
+
+.menu-footer  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 70%;
+    justify-items: center;
 }
 
-.menu-sub-item p {
-  position: relative;
+.menu-footer  ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    transition: var(--transition);
 }
 
-.menu-link,
-.menu-sub-item {
+.menu-footer  ul li a:hover {
+    color: var(--color-orange);
+}
+
+
+.menu-link{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 @media (max-width: 900px) {
   .menu-img {
     display: none;
+  }
+  .menu{
+    text-align: center;
+  }
+  .menu-logo, .menu-footer ul{
+    margin: 0 auto;
   }
 }

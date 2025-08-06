@@ -5,8 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+  <script src="https://kit.fontawesome.com/975a84afb8.js" crossorigin="anonymous"></script>
+
   <!-- logo en miniatura -->
   <link rel="Icon" href="public/dotnode_logo.png">
+
+
 
   <title>
     DotNode
@@ -15,6 +20,7 @@
   <link rel="stylesheet" href="menu/menu.css" />
 
 </head>
+
 <body>
   <!-- LOADER INICIAL -->
   <div class="loader">
@@ -23,8 +29,12 @@
       <div class="block"></div>
     </div>
     <div class="intro-logo">
-      <div class="word" id="word-1"><h1><span>Dot</span></h1></div>
-      <div class="word" id="word-2"><h1>Node</h1></div>
+      <div class="word" id="word-1">
+        <h1><span>Dot</span></h1>
+      </div>
+      <div class="word" id="word-2">
+        <h1>Node</h1>
+      </div>
     </div>
     <div class="divider"></div>
     <div class="spinner-container">
@@ -41,8 +51,10 @@
 
       <!-- NAVBAR nueva (menu fullscreen) -->
       <nav>
-        <div class="logo"><h2>DotNode.</h3></div>
-        <p class="menu-open">Menu</p>
+        <div class="logo">
+          <h2 onclick="location.href='index.html'">DotNode.</h3>
+        </div>
+        <p class="menu-open"><i class="fa-solid fa-bars"></i></p> <!-- Menu -->
       </nav>
 
       <div class="header">
@@ -50,8 +62,12 @@
           <div class="line subtitle">
             <p>WEB DEVELOPMENT</p>
           </div>
-          <div class="line"><h1><span>Smart</span> Design,</h1></div>
-          <div class="line"><h1>Real IMPACT</h1></div>
+          <div class="line">
+            <h1><span>Smart</span> Design,</h1>
+          </div>
+          <div class="line">
+            <h1>Real IMPACT</h1>
+          </div>
         </div>
         <div class="line">
           <p>Creative solutions for modern brands</p>
@@ -62,7 +78,9 @@
 
   <!-- FULLSCREEN MENU -->
   <div class="menu">
-    <div class="menu-nav"><p class="menu-close">Close</p></div>
+    <div class="menu-nav">
+      <p class="menu-close"><i class="fa-solid fa-xmark"></i></p>
+    </div> <!--close menu-->
 
     <div class="menu-col menu-img">
       <img id="img-1" src="/hero.jpg" alt="" />
@@ -75,59 +93,256 @@
       <div class="menu-logo"><img src="/dotnode_logo.png" alt="logo" /></div>
 
       <div class="menu-links">
-        <div class="menu-link"><p><a href="#">HOME</a></p></div>
-        <div class="menu-link"><p><a href="#">SERVICES</a></p></div>
-        <div class="menu-link"><p><a href="#">BLOG</a></p></div>
-        <div class="menu-link"><p><a href="#">CONTACT US</a></p></div>
+        <div class="menu-link">
+          <p><a href="index.html">HOME</a></p>
+        </div>
+        <div class="menu-link">
+          <p><a href="#">SERVICES</a></p>
+        </div>
+        <div class="menu-link">
+          <p><a href="#">BLOG</a></p>
+        </div>
+        <div class="menu-link">
+          <p><a href="#">CONTACT US</a></p>
+        </div>
       </div>
 
       <div class="menu-footer">
-        <div class="menu-sub-col">
-          <div class="menu-sub-item"><p>Connect</p></div>
-          <div class="menu-sub-item"><p>Break</p></div>
-          <br />
-          <div class="menu-sub-item"><p>Explore</p></div>
-          <div class="menu-sub-item"><p>Break</p></div>
-          <br />
-          <div class="menu-sub-item"><p>Contact Us</p></div>
-          <br />
-          <div class="menu-sub-item"><p>Ocean City</p></div>
-          <div class="menu-sub-item"><p>Rhythmic Sound</p></div>
-          <div class="menu-sub-item"><p>2000 Coastal Hwy</p></div>
-          <div class="menu-sub-item"><p>Ocean City, MD 21842</p></div>
-          <br />
-        </div>
-        <div class="menu-sub-col">
-          <div class="menu-sub-item"><p>Instagram</p></div>
-          <div class="menu-sub-item"><p>Youtube</p></div>
-          <br />
-          <div class="menu-sub-item"><p>Spotify</p></div>
-          <div class="menu-sub-item"><p>Mixcloud</p></div>
-          <br />
-          <div class="menu-sub-item"><p>Email</p></div>
-        </div>
+        <ul>
+          <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://likedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <!-- CONTENIDO SIGUIENTE (ej. objetivos) -->
-  <div class="objetivos_container animate-on-scroll">
-    <div class="para_ti_logo">
-      <img src="images/logo.png" alt="logo dotnode" />
+
+  <!-- SECCION CATEGORÍAS   -->
+
+  <!-- CATEGORIAS_________ -->
+    <section class="categories">
+        <div class="container categories__container ">
+
+            <div class="categories__left animate-on-scroll">
+                <h1>CATEGORIES<span class="punto">.</span></h1>
+                <p>Explore our specialized categories — from custom, interactive websites to powerful E-commerce
+                    platforms. Each one is crafted to elevate your business through smart, tailored solutions.</p>
+                <a href="views/servicios.html" class="btn btn4">Learn More</a>
+            </div>
+
+            <div class="categories__right animate-on-scroll">
+
+                <article class="category">
+                    <a href="views/servicios.html">
+                        <span class="category__icon"><i class="fa-solid fa-layer-group"></i></span>
+                        <h5>WEB ESSENCIALS</h5>
+                        <p>Launch your presence online with a clean, functional website. From landing pages to full
+                            institutional sites, dynamic blogs, and digital portfolios — built to reflect you.</p>
+                    </a>
+                </article>
+
+                <!-- Aquí lo ideal seía quue cada link te lleve a una página específica que desgloce cada servicio pero eso haría el proyecto muy extenso -->
+
+                <article class="category">
+                    <a href="views/servicios.html">
+                        <span class="category__icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                        <h5>E-COMMERCE SOLUTIONS</h5>
+                        <p>Start selling with a custom online store — built from scratch or on Shopify. We also create
+                            booking systems and optimize your shop for a seamless buying experience.</p>
+                    </a>
+                </article>
+
+                <article class="category">
+                    <a href="views/servicios.html">
+                        <span class="category__icon"><i class="fa-solid fa-user-shield"></i></span>
+                        <h5>CUSTOM PLATFORMS</h5>
+                        <p>Need more than a website? We develop login-based platforms, user dashboards, and custom
+                            backend systems for business and client management.</p>
+                    </a>
+                </article>
+
+                <article class="category">
+                    <a href="views/servicios.html">
+                        <span class="category__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                        <h5>REDESIGN & OPTIMIZATION</h5>
+                        <p>If you already have a website, we help you improve it — with a modern redesign, faster
+                            performance, better usability and basic SEO improvements.</p>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+ 
+
+  <!-- SECCION PASOS  -->
+
+  <section class="pasos_section">
+    <div class="pasos_header">
+      <h1>Nebulon Does it again.</h1>
     </div>
-    <div class="para_ti_link">
-      <button class="btn3 btn" onclick="location.href='views/contacto.html'">
-        <i class="fa-solid fa-link"></i> Sobre Nosotros
-      </button>
+
+    <div class="pasos_card">
+      <div class="pasos_card-img"><img src="./assets/img1.jpg" alt="" /></div>
+      <div class="pasos_card-content">
+        <div class="pasos_card-title">
+          <h2>Immersive Training Simulations</h2>
+        </div>
+        <div class="pasos_card-description">
+          <p>
+            Revolutionize hands-on learning with lifelike training environments,
+            enhancing skill development and retention.
+          </p>
+        </div>
+      </div>
     </div>
-    <h2>Creemos que la creación de sitios web debe ser accesible para todos...</h2>
-    <p>En la era digital actual, tener una presencia en línea es más importante que nunca...</p>
-  </div>
+
+    <div class="pasos_card">
+      <div class="pasos_card-img"><img src="./assets/img2.jpg" alt="" /></div>
+      <div class="pasos_card-content">
+        <div class="pasos_card-title">
+          <h2>Virtual Design Collaboration</h2>
+        </div>
+        <div class="pasos_card-description">
+          <p>
+            Enable remote teams to co-create in 3D spaces, speeding up design
+            iterations and boosting innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pasos_card">
+      <div class="pasos_card-img"><img src="./assets/img3.jpg" alt="" /></div>
+      <div class="pasos_card-content">
+        <div class="pasos_card-title">
+          <h2>Immersive Product Demos</h2>
+        </div>
+        <div class="pasos_card-description">
+          <p>
+            Showcase products in a fully interactive, 360-degree experience,
+            making presentations more engaging and memorable.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pasos_card">
+      <div class="pasos_card-img"><img src="./assets/img4.jpg" alt="" /></div>
+      <div class="pasos_card-content">
+        <div class="pasos_card-title">
+          <h2>Remote Healthcare Solutions</h2>
+        </div>
+        <div class="pasos_card-description">
+          <p>
+            Empower healthcare professionals with virtual consultations and
+            remote diagnostics in immersive 3D environments.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pasos_card">
+      <div class="pasos_card-img"><img src="./assets/img1.jpg" alt="" /></div>
+      <div class="pasos_card-content">
+        <div class="pasos_card-title">
+          <h2>Interactive Entertainment</h2>
+        </div>
+        <div class="pasos_card-description">
+          <p>
+            Deliver a new dimension of gaming and entertainment with fully
+            immersive and interactive virtual experiences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- <section class="categories">
+      <div class="categories_container">
+        <h2>Explore ur specialized categpries, from custom, interactive websites to powerful E-commerce platforms. Each one is crafted to elevate your business through smart, tailored solutions.</h1>
+      </div>
+  </section>
+
+
+  <section class="cards">
+    <div class="card" id="card-1">
+      <div class="card-inner">
+        <div class="card-content">
+          <h1><i class="fa-solid fa-layer-group"></i>WEB ESSENCIALS</h1>
+          <p>
+           Launch your presence online with a clean, functional website. From landing pages to full institutional sites, dynamic blogs, and digital portfolios built to reflect you.
+          </p>
+        </div>
+        <div class="card-img">
+          <img src="./assets/card-1.jpeg" alt="Brand Foundation" />
+        </div>
+      </div>
+    </div>
+    <div class="card" id="card-2">
+      <div class="card-inner">
+        <div class="card-content">
+          <h1><i class="fa-solid fa-cart-shopping"></i>E-COMMERCE SOLUTIONS</h1>
+          <p>
+           Start Selling with a custom online store, built from scratch or on Shopify. We also create booking systems and optimize your shop for a seamless buying experience.
+          </p>
+        </div>
+        <div class="card-img">
+          <img src="./assets/card-2.jpeg" alt="Design Identity" />
+        </div>
+      </div>
+    </div>
+    <div class="card" id="card-3">
+      <div class="card-inner">
+        <div class="card-content">
+          <h1><i class="fa-solid fa-user-gear"></i>CUSTOM PLATFORMS</h1>
+          <p>
+            Need more than a website? We develop login-based platforms, user dashboards, and custom backend systems for business and client management.
+          </p>
+        </div>
+        <div class="card-img">
+          <img src="./assets/card-3.jpeg" alt="Digital Presence" />
+        </div>
+      </div>
+    </div>
+    <div class="card" id="card-4">
+      <div class="card-inner">
+        <div class="card-content">
+          <h1><i class="fa-solid fa-wand-magic-sparkles"></i>REDESIGN & OPTIMIZATION</h1>
+          <p>
+           If you already have a website, we help you improve it with a modern redesign, faster permormance, better usability and basic SEO improvements.
+          </p>
+        </div>
+        <div class="card-img">
+          <img src="./assets/card-4.jpeg" alt="Experience Design" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="outro">
+    <h1>Let’s build a brand that leaves a mark.</h1>
+  </section> -->
+
+
+
+
+  
+
+
 
   <!-- IONICONS -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+  <!-- Script de cartas  -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <!-- JS de tu proyecto -->
   <script type="module" src="/script.js"></script>
 
@@ -135,6 +350,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="menu/menu.js"></script>
   <script src="menu/tilt.js"></script>
+
+
 </body>
 
 </html>

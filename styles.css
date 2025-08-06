@@ -27,6 +27,11 @@
     --transition: 400ms all ease;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -34,7 +39,7 @@ html {
 body {
   background-color: var(--color-dark-blue);
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 img {
@@ -44,11 +49,9 @@ img {
 }
 
 
-
 h1 {
-  text-align: center;
-  color: #fff;
-  font-size: 5rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 1;
 }
@@ -63,12 +66,9 @@ h1 {
 a,
 p {
   text-decoration: none;
-  text-transform: uppercase;
   color: #fff;
-  font-size: 12px;
+  font-size: 1.1rem;
   font-weight: 500;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
 }
 
 .subtitle p{
@@ -80,9 +80,75 @@ p {
   color: var(--color-orange);
 }
 
+/* BOTONES  */
+
+.btn {
+    font-family: Montserrat, Sans-serif;
+    font-size: .9rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.btn a {
+    color: var(--color-black);
+}
+
+
+.btn:hover {
+    color: white;
+    background: none;
+    cursor: pointer;
+    border: var(--color-white) solid 1px;
+}
+
+.btn2 {
+    background: transparent;
+    color: var(--color-light-gray);
+    border: var(--color-dark-gray) solid 1px;
+}
+
+.btn2:hover {
+    border: 1px solid var(--color-orange);
+}
+
+.btn3 {
+    background: var(--color-dark-gray);
+    color: var(--color-white);
+}
+
+.btn3:hover {
+    background: var(--color-light-gray);
+    border: none;
+}
+
+.btn4 {
+    background: var(--color-orange);
+    color: var(--color-white);
+}
+
+.btn5 {
+    border-radius: 0;
+    background: var(--color-orange);
+    color: var(--color-white);
+}
+
+.punto {
+    background: linear-gradient(45deg, #6facbc 2%, #9d4748 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 120%;
+}
+
+/* LANDING PAGE  */
+
 .container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100svh;
   overflow: hidden;
 }
@@ -111,10 +177,12 @@ p {
   flex: 1;
 }
 
-.logo a {
+.logo h2 {
   text-transform: capitalize;
   font-size:1.5rem;
   font-weight: 500;
+  color: var(--color-white);
+  cursor: pointer;
 }
 
 .nav-links {
@@ -269,33 +337,6 @@ p {
   }
 }
 
-.counter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.count {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-}
-
-.digit {
-  flex: 1;
-  padding-top: 1rem;
-}
-
-.count .digit h1 {
-  font-family: "PP Editorial Old", "PP Neue Montreal";
-  font-size: 15rem;
-  font-weight: 400;
-}
-
 .nav {
   transform: translateY(-120%);
 }
@@ -357,6 +398,247 @@ p {
   will-change: transform;
 }
 
+
+/* SECCION CATEGORIAS  */
+/* .categories{
+  background: url(public/fondo3.png);
+  background-size: cover;
+}
+.categories_container{
+  height: 20rem;
+  width: var(--container-width-sm);
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+}
+
+.categories_container h2{
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.intro,
+.outro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 2em;
+  background: var(--color-dark-blue);
+}
+
+.hero {
+  padding: 0;
+}
+
+.intro,
+.outro {
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+}
+
+.intro h1,
+.outro h1 {
+  margin-bottom: 0;
+}
+
+.card {
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+  gap: 4em;
+}
+
+.card-content {
+  flex: 3;
+}
+
+.card-content h1{
+  font-size: 2rem;
+  text-align: left;
+  padding: 1rem 0;
+}
+
+.card-content p{
+  font-size: 1.5rem;
+}
+
+.card-img {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75em;
+  overflow: hidden;
+}
+
+#card-1 .card-inner {
+  background-color: #09001f;
+}
+
+#card-2 .card-inner {
+  background-color: #1f0101;
+}
+
+#card-3 .card-inner {
+  background-color: #200126;
+}
+
+#card-4 .card-inner {
+  background-color: #0c012b;
+  color: #fff;
+} */
+
+.categories{
+  padding: 10rem 0;
+  background: var(--color-dark-blue);
+      width: var(--container-width-md);
+margin: 0 auto;
+}
+
+.categories__container {
+    color: var(--color-white);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.categories__left {
+    padding-right: 4rem;
+    text-align: left;
+}
+
+.categories__left p {
+    padding: 1rem 0 3rem;
+}
+
+.categories__left h1{
+  text-align: left;
+}
+
+.category a {
+    color: var(--color-white);
+}
+
+.categories__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    padding-left: 3rem;
+}
+
+.category {
+    background-image: url(public/fondo3.png);
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: 400ms all ease;
+}
+
+.category:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+.category__icon {
+    background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+
+.category h5 {
+    margin: 2rem 0 1rem;
+    font-size: 1.1rem;
+}
+
+.category p {
+    font-size: 1rem;
+}
+
+
+/* SECCION PASOS  */
+
+.pasos_section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ded8c8;
+}
+
+.pasos_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+}
+
+.pasos_header h1 {
+  margin: 0;
+  color: #000;
+  font-size: 30vw;
+  font-weight: lighter;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+}
+
+.pasos_card {
+  position: absolute;
+  top: 5%;
+  left: 100%;
+  width: 325px;
+  height: 500px;
+  background-color: #000;
+  border-radius: 1em;
+  padding: 0.5em;
+  will-change: transform;
+  z-index: 2;
+}
+
+.pasos_card-img {
+  width: 100%;
+  height: 100px;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.pasos_card-content {
+  width: 100%;
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0.5em;
+}
+
+.pasos_card-content h2 {
+  font-size: 42px;
+  font-weight: lighter;
+  letter-spacing: -0.005em;
+}
+
+.pasos_card-content p {
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: -0.005em;
+}
+
+
 @media (max-width: 900px) {
   h1 {
     font-size: 2.5rem;
@@ -368,5 +650,12 @@ p {
 
   .cta {
     width: 90%;
+  }
+  .card-inner {
+    flex-direction: column;
+  }
+
+  .card-img {
+    display: none;
   }
 }
