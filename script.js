@@ -118,19 +118,19 @@ document.addEventListener("DOMContentLoaded", () => {
       y: "0%",
       duration: 1.5,
       delay: 0.5,
-      
+
     },
     "<"
   );
   tl.to(".loader", {
-  opacity: 0,
-  duration: 0.5,
-  delay: 0.5,
-  onComplete: () => {
-    document.querySelector(".loader").style.display = "none";
-    document.body.style.overflow = "auto";
-  },
-});
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.5,
+    onComplete: () => {
+      document.querySelector(".loader").style.display = "none";
+      document.body.style.overflow = "auto";
+    },
+  });
 
 });
 
@@ -183,6 +183,93 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = gsap.utils.toArray(".issues_card");
+  const totalCards = cards.length;
+  const reversedCards = [...cards].reverse();
+
+  // ESTÉTICA INICIAL – abanico
+  reversedCards.forEach((card, index) => {
+    const angle = index * -10;
+    gsap.set(card, {
+      rotate: angle,
+      zIndex: totalCards - index,
+    });
+  });
+
+  // TIMELINE PRINCIPAL CON SCROLLTRIGGER
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".issues_area",
+      start: "top top",
+      end: `+=${totalCards * 300}vh`, // más duración por tarjeta
+      scrub: true,
+      pin: true,
+    },
+  });
+
+  // ANIMACIÓN POR TARJETA
+  reversedCards.forEach((card, index) => {
+    const stepStart = index * 1.5;
+
+    // 1. Enderezar antes de estar visible
+    tl.to(
+      card,
+      {
+        rotation: 0,
+        ease: "power2.out",
+        duration: 0.2,
+      },
+      stepStart
+    );
+
+    // 2. Moverla suavemente a centro (y mantenerla recta)
+    tl.to(
+      card,
+      {
+        y: "0vh",
+        ease: "power1.out",
+        duration: 0.5,
+      },
+      stepStart + 0.2
+    );
+
+    // 3. Espera “en el centro” mientras ya está recta (tiempo para leer)
+    tl.to(
+      {},
+      {
+        duration: 0.5,
+      },
+      stepStart + 0.7
+    );
+
+    // 4. Salida: hacia arriba y con rotación final
+    tl.to(
+      card,
+      {
+        y: "-120vh",
+        rotation: -48,
+        transformOrigin: "bottom left",
+        ease: "power2.inOut",
+        duration: 0.8,
+      },
+      stepStart + 1.2
+    );
+
+    tl.to(
+      ".issues_final",
+      {
+        y: "-100vh",
+        ease: "none",
+      },
+      "+=0.5"
+    );
+
+  });
+});
+
+
 
 
 
@@ -276,4 +363,36 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+
+// ANIMACION CATEGORIAS 
+document.addEventListener("DOMContentLoaded", () => {
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach((category, i) => {
+    // Animación de entrada (cuando aparecen)
+    gsap.from(category, {
+      scrollTrigger: {
+        trigger: category,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      delay: i * 0.1,
+      ease: "power2.out",
+    });
+
+    // Movimiento constante posterior (floating)
+    gsap.to(category, {
+      y: "-=10",
+      repeat: -1,
+      yoyo: true,
+      duration: 2 + Math.random(), // variación para que no todas vayan sincronizadas
+      ease: "sine.inOut",
+    });
+  });
+});
+
 
