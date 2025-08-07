@@ -66,14 +66,21 @@ h1 {
 a,
 p {
   text-decoration: none;
-  color: #fff;
+  color: var(--color-light-gray);
   font-size: 1.1rem;
   font-weight: 500;
 }
 
-.subtitle p{
-  text-align: center;
+.subtitle p, .subtitle{
   color: var(--color-orange);
+  font-size: .8rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.subtitle p{
+    text-align: center;
+    padding: 0;
 }
 
 .orange{
@@ -497,6 +504,58 @@ p {
   color: #fff;
 } */
 
+.para_ti {
+    background: var(--color-dark-blue);
+}
+
+.para_ti_container {
+    padding: 3rem 0;
+    width: var(--container-width-sm);
+    margin: 0 auto;
+    color: var(--color-white);
+    text-align: center;
+}
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.para_ti{
+  padding: 4rem;
+}
+
+.para_ti_logo img {
+  width: 2rem;
+  margin-bottom: 3rem;
+  animation: upDown 2.5s ease-in-out infinite;
+}
+
+.para_ti_link{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.para_ti h1 {
+    letter-spacing: -3px;
+    margin-bottom: 2rem;
+}
+
+.para_ti_container p {
+    margin: 0 auto;
+    width: var(--container-width-sm);
+    color: var(--color-light-gray);
+}
+
+
+
+/* SECCION CATEGORIAS  */
+
 .categories{
   padding: 10rem 0;
   background: var(--color-dark-blue);
@@ -516,12 +575,11 @@ margin: 0 auto;
     text-align: left;
 }
 
-.categories__left p {
-    padding: 1rem 0 3rem;
-}
+
 
 .categories__left h1{
   text-align: left;
+  font-size: 3rem;
 }
 
 .category a {
