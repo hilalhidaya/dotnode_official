@@ -470,4 +470,171 @@ document.querySelectorAll('.category').forEach((card) => {
   section.addEventListener('mouseleave', hide);
 })();
 
+// ANIMACION DE APARICION 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade_in_scroll, .fade_in_right, .fade_in_left");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+
+// TEXTO MAQUINA DE ESCRIBI 
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".typewriter");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains("done")) {
+        const el = entry.target;
+        const text = el.getAttribute("data-text");
+        let i = 0;
+
+        const type = () => {
+          if (i < text.length) {
+            el.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, 50); // velocidad de escritura
+          } else {
+            el.classList.add("done"); // evita que se repita
+          }
+        };
+
+        type();
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+
+// CALL TO ACTION 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".cta_ending_section");
+  const mascot  = section?.querySelector(".cta_mascot");
+  const cursor  = section?.querySelector(".cta_cursor");
+  if (!section || !mascot || !cursor) return;
+
+  /* ===== Cursor solo en esta sección (igual que ya tenías) ===== */
+  let targetX = 0, targetY = 0, currX = innerWidth/2, currY = innerHeight/2, rafId = null;
+  const lerp = (a,b,t)=>a+(b-a)*t;
+  const moveLoop = () => {
+    currX = lerp(currX, targetX, 0.18);
+    currY = lerp(currY, targetY, 0.18);
+    cursor.style.transform = `translate(${currX}px, ${currY}px)`;
+    rafId = requestAnimationFrame(moveLoop);
+  };
+  section.addEventListener("mouseenter", () => {
+    section.classList.add("cursor_active");
+    if (!rafId) rafId = requestAnimationFrame(moveLoop);
+  });
+  section.addEventListener("mouseleave", () => {
+    section.classList.remove("cursor_active");
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = null;
+  });
+  section.addEventListener("mousemove", (e) => {
+    targetX = e.clientX; targetY = e.clientY;
+  });
+
+  /* ===== Flotación suave permanente ===== */
+  const floatTween = gsap.to(mascot, {
+    y: "-=8",
+    duration: 2.6,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut"
+  });
+
+  let pathTl = null;
+
+  function buildMascotTimeline() {
+    if (pathTl) pathTl.kill();
+
+    const sectionW = section.clientWidth;
+    const mascotW  = mascot.clientWidth || 40; // fallback por si aún no mide
+
+    // Recorrido dentro del 90% central
+    const usable = sectionW * 0.90;
+    const offset = (sectionW - usable) / 2;
+
+    // Márgenes laterales extra para no “besar” el borde
+    const pad = Math.max(8, mascotW * 0.15);
+
+    const minX = Math.max(0, offset + pad);
+    const maxX = Math.max(minX, offset + usable - pad - mascotW);
+    const midX = (minX + maxX) / 2;
+
+    // arranca en minX
+    gsap.set(mascot, { x: minX, rotation: 0, scaleX: 1, transformOrigin: "50% 50%" });
+
+    pathTl = gsap.timeline({ repeat: -1, defaults: { ease: "power1.inOut" } });
+
+    pathTl
+      // Hacia el centro, lento
+      .to(mascot, { x: midX, duration: 4.8, ease: "power2.out" })
+
+      // Mirar lados (ligero translate y rotación para más “vida”)
+      .to(mascot, { rotation: 6, x: `+=6`, duration: 0.5 }, "+=0.2")
+      .to(mascot, { rotation: -6, x: `-=10`, duration: 0.6 })
+      .to(mascot, { rotation: 0, x: `+=4`, duration: 0.4 })
+      .to(mascot, { scaleX: -1, duration: 0.25, ease: "power1.inOut" }, "<") // darse la vuelta
+
+      // Pausa flotando
+      .to(mascot, { y: "+=5", duration: 1.1, yoyo: true, repeat: 1, ease: "sine.inOut" })
+
+      // Hacia el extremo derecho (sin salirse)
+      .to(mascot, { x: maxX, duration: 5.8, ease: "power2.inOut" })
+
+      // Miradas otra vez y preparar vuelta
+      .to(mascot, { rotation: -5, x: `-=6`, duration: 0.5 }, "+=0.2")
+      .to(mascot, { rotation: 5, x: `+=10`, duration: 0.6 })
+      .to(mascot, { rotation: 0, x: `-=4`, duration: 0.4 })
+      .to(mascot, { scaleX: 1, duration: 0.25, ease: "power1.inOut" }, "<")
+
+      // Pausa flotando y volver a inicio (sin salirse)
+      .to(mascot, { y: "-=5", duration: 1.1, yoyo: true, repeat: 1, ease: "sine.inOut" })
+      .to(mascot, { x: minX, duration: 6.0, ease: "power2.inOut" });
+  }
+
+  function init() {
+    buildMascotTimeline();
+    // Pausa/reanuda si la sección no es visible
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { floatTween.play(); pathTl?.play(); }
+        else { floatTween.pause(); pathTl?.pause(); }
+      });
+    }, { threshold: 0.1 });
+    io.observe(section);
+  }
+
+  // Asegúrate de medir el ancho real del logo
+  if (mascot.complete) {
+    init();
+  } else {
+    mascot.addEventListener("load", init, { once: true });
+  }
+
+  // Recalcula límites al redimensionar
+  window.addEventListener("resize", () => {
+    buildMascotTimeline();
+  });
+});
+
+
+
+
 
