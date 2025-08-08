@@ -394,5 +394,80 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+ 
+// COLOR DE HOVER CATEGORY 
+
+document.querySelectorAll('.category').forEach((card) => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const deltaX = x - centerX;
+    const deltaY = y - centerY;
+
+    const glowColor = getComputedStyle(card).getPropertyValue('--glow-color');
+
+    card.style.boxShadow = `${-deltaX * 0.1}px ${-deltaY * 0.1}px 30px ${glowColor}`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.boxShadow = 'none';
+  });
+});
+
+
+// CURSOR PARA ISSUES 
+(() => {
+  const section = document.querySelector('.issues_final');
+  const cursor  = document.querySelector('.issues_cursor');
+  if (!section || !cursor) return;
+
+  const RADIUS = 70; // tamaño del círculo (ajusta a tu gusto)
+
+  section.addEventListener('mousemove', (e) => {
+    cursor.style.opacity = '1';
+    cursor.style.clipPath = `circle(${RADIUS}px at ${e.clientX}px ${e.clientY}px)`;
+  });
+
+  section.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '1';
+  });
+
+  section.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+  });
+})();
+
+
+// CURSOR LANDING 
+(() => {
+  const section = document.querySelector('.section_landing');
+  const glow = document.querySelector('.landing-glow');
+  if (!section || !glow) return;
+
+  let tx = innerWidth/2, ty = innerHeight/2;
+  let x = tx, y = ty;
+  const ease = 0.18;
+
+  function loop(){
+    x += (tx - x) * ease;
+    y += (ty - y) * ease;
+    // elemento 1x1: no restamos “-50%”
+    glow.style.transform = `translate(${x}px, ${y}px)`;
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  const show = () => glow.style.opacity = getComputedStyle(document.documentElement).getPropertyValue('--glow-opacity');
+  const hide = () => glow.style.opacity = '0';
+
+  section.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; show(); });
+  section.addEventListener('mouseenter', show);
+  section.addEventListener('mouseleave', hide);
+})();
 
 
