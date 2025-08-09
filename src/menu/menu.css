@@ -171,6 +171,32 @@ nav {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/* Centrar footer del menú en todas las vistas */
+.menu-footer {
+  display: flex;
+  justify-content: center;   /* <— centra el UL dentro */
+  width: 100%;
+}
+
+.menu-footer ul {
+  width: 100%;
+  max-width: 360px;          /* evita que se pegue a la izquierda */
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;   /* centra la cuadrícula */
+  justify-items: center;     /* centra cada icono */
+  gap: .75rem;
+  list-style: none;
+}
+
+.menu-footer ul li a {
+  display: grid;             /* asegura hitbox centrada */
+  place-items: center;
+}
+
+
 @media (max-width: 900px) {
   .menu-img {
     display: none;
@@ -184,4 +210,5 @@ nav {
   .menu-footer ul {
     margin: 0 auto;
   }
+  .menu { text-align: center; }
 }
