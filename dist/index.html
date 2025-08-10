@@ -1,25 +1,18 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+  <!-- CSS del build lo inyecta Vite; si tienes un CSS global adicional, enlázalo dentro de main.js -->
+  <link rel="icon" href="/dotnode_logo.png">
 
-  <script src="https://kit.fontawesome.com/975a84afb8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer">
 
-  <!-- logo en miniatura -->
-  <link rel="Icon" href="./dotnode_logo.png">
-
-
-
-  <title>
-    DotNode
-  </title>
-  
-
-  <script type="module" crossorigin src="./assets/index-HFPuDrvX.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index.css">
+  <title>DotNode</title>
+  <script type="module" crossorigin src="/assets/index-DXNmudfS.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index.css">
 </head>
 
 <body>
@@ -47,25 +40,27 @@
   <section class="section_landing">
     <div class="container">
       <div class="hero-img">
-        <img src="./fondoalternativo.jpg" alt="fondo" />
+        <img src="/fondochica.jpg" alt="fondo" />
       </div>
 
       <!-- NAVBAR nueva (menu fullscreen) -->
-      <nav>
+      <nav class="nav">
         <div class="logo">
-          <h2 onclick="location.href='index.html'">DotNode.</h3>
+          <h2 onclick="location.href='index.html'">DotNode.</h2>
         </div>
-        <div class="menu_right"> <button class="btn-expand-icon" onclick="">
+        <div class="menu_right">
+          <button class="btn-expand-icon" onclick="">
             <span>BOOK A CALL</span><span class="arrow"><i class="fa-solid fa-phone"></i></span>
           </button>
-          <p class="menu-open"><i class="fa-solid fa-bars"></i></p> <!-- Menu -->
+          <p class="menu-open"><i class="fa-solid fa-bars"></i></p>
         </div>
       </nav>
 
       <div class="header">
         <div class="hero-copy">
-          <div class="line subtitle">
-            <p>WEB DEVELOPMENT & DIGITAL REPUTATION</p>
+          <div class="line subtitle line-subtitle">
+            <p style="font-size: .9rem;
+             font-weight: 500;">WEB DEVELOPMENT & DIGITAL REPUTATION</p>
           </div>
           <div class="line">
             <h1>Smart Design,</h1>
@@ -74,13 +69,14 @@
             <h1>Real IMPACT</h1>
           </div>
         </div>
-        <div class="line">
-          <p>YOUR PROJECT, FINALLY DONE RIGHT.</p>
+        <div class="line line-img">
+          <p><img class="float-y" src="/dotnode_logo.png" alt="DotNode Logo"></p>
         </div>
       </div>
     </div>
     <div class="landing-glow" aria-hidden="true"></div>
   </section>
+
 
   <!-- FULLSCREEN MENU -->
   <div class="menu">
@@ -89,14 +85,14 @@
     </div> <!--close menu-->
 
     <div class="menu-col menu-img">
-      <img id="img-1" src="./hero.jpg" alt="" />
-      <img id="img-2" src="./hero.jpg" alt="" />
-      <img id="img-3" src="./hero.jpg" alt="" />
-      <img id="img-4" src="./hero.jpg" alt="" />
+      <img id="img-1" src="/hero.jpg" alt="" />
+      <img id="img-2" src="/hero.jpg" alt="" />
+      <img id="img-3" src="/hero.jpg" alt="" />
+      <img id="img-4" src="/hero.jpg" alt="" />
     </div>
 
     <div class="menu-col menu-items">
-      <div class="menu-logo"><img src="./dotnode_logo.png" alt="logo" /></div>
+      <div class="menu-logo"><img src="/dotnode_logo.png" alt="logo" /></div>
 
       <div class="menu-links">
         <div class="menu-link">
@@ -129,9 +125,6 @@
   <!-- SECCION PARA TI   -->
   <section class="para_ti">
     <div class="para_ti_container animate-on-scroll">
-      <div class="para_ti_logo  fade_in_scroll">
-        <img src="./dotnode_logo.png" alt="dotnode logo">
-      </div>
       <div class="para_ti_link fade_in_scroll">
         <button class="btn3 btn" onclick="location.href='views/contacto.html'"><i class="fa-solid fa-link"></i>
           Who Are We</button>
@@ -149,17 +142,17 @@
 
   <section class="issues_area">
     <div class="issues_left">
-      <div class="issues_title fade_in_right ">
+      <div class="issues_title fade_in_right">
         <h1>DOES ANY OF THIS SOUND FAMILIAR?</h1>
       </div>
       <div class="issues_subtitle fade_in_left">
         <p>You’re not alone. These are real quotes from real clients who came to us frustrated, confused, and
           overcharged.</p>
         <br />
-        <button class="btn-expand-icon btn4 fade_in_left">Let’s fix this<i
-            class="fa-solid fa-arrow-right arrow"></i></button>
+        <button class="btn-expand-icon btn4 fade_in_left">Let’s fix this
+          <i class="fa-solid fa-arrow-right arrow"></i>
+        </button>
       </div>
-    </div>
     </div>
 
     <div class="issues_right">
@@ -199,14 +192,14 @@
         </div>
       </div>
     </div>
+
     <div class="issues_final">
       <h1>YOU DESERVE BETTER.</h1><br>
-        <h2 class="typewriter"
-          data-text="Your website should be a masterpiece — one that tells your story, captivates your audience, and sets you apart from the rest.">
-        </h2>
-
-        <!-- cursor -->
-        <div class="issues_cursor" aria-hidden="true"></div>
+      <h2 class="typewriter"
+        data-text="Your website should be a masterpiece — one that tells your story, captivates your audience, and sets you apart from the rest."
+        data-speed="35">
+      </h2>
+      <div class="issues_cursor" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -214,14 +207,15 @@
 
   <!-- CATEGORIAS_________ -->
   <section class="categories">
-    <div class="container categories__container ">
+    <div class="categories__container">
 
-      <div class="categories__left fade_in_scroll ">
+      <div class="categories__top fade_in_scroll">
         <p class="subtitle orange">SERVICES</p>
         <h1>Comprehensive digital solutions for all ambitions<span class="punto">.</span></h1>
+        <button class="btn-expand-icon btn4">SEE MORE<i class="fa-solid fa-arrow-right arrow"></i></button>
       </div>
 
-      <div class="categories__right fade_in_scroll l">
+      <div class="categories__bottom fade_in_scroll">
 
         <article class="category color-blue">
           <a href="views/servicios.html">
@@ -231,7 +225,6 @@
               institutional sites, dynamic blogs, and digital portfolios — built to reflect you.</p>
           </a>
         </article>
-
 
         <article class="category color-red">
           <a href="views/servicios.html">
@@ -274,7 +267,7 @@
     </div>
 
     <div class="pasos_card">
-      <div class="pasos_card-img"><img src="./img1.jpg" alt="" /></div>
+      <div class="pasos_card-img"><img src="/img1.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
           <h2>01. Discovery</h2>
@@ -289,7 +282,7 @@
     </div>
 
     <div class="pasos_card">
-      <div class="pasos_card-img"><img src="./img2.jpg" alt="" /></div>
+      <div class="pasos_card-img"><img src="/img2.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
           <h2>02. Planning</h2>
@@ -304,7 +297,7 @@
     </div>
 
     <div class="pasos_card">
-      <div class="pasos_card-img"><img src="./img3.jpg" alt="" /></div>
+      <div class="pasos_card-img"><img src="/img3.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
           <h2>03. Creation</h2>
@@ -319,7 +312,7 @@
     </div>
 
     <div class="pasos_card">
-      <div class="pasos_card-img"><img src="./img4.jpg" alt="" /></div>
+      <div class="pasos_card-img"><img src="/img4.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
           <h2>04. Launch</h2>
@@ -334,7 +327,7 @@
     </div>
 
     <div class="pasos_card">
-      <div class="pasos_card-img"><img src="./img5.jpg" alt="" /></div>
+      <div class="pasos_card-img"><img src="/img5.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
           <h2>05. Support</h2>
@@ -353,19 +346,19 @@
 
 
   <!-- CALL TO ACTION  -->
-<a href="https://tusitio.com/contacto" class="cta_ending_section_link">
-  <section class="cta_ending_section">
-    <h2 class="cta_title">BOOK A CALL</h2>
-    <img class="cta_mascot" src="./dotnode_logo.png" alt="DotNode logo" />
+  <a href="https://tusitio.com/contacto" class="cta_ending_section_link">
+    <section class="cta_ending_section">
+      <h2 class="cta_title">BOOK A CALL</h2>
+      <img class="cta_mascot" src="/dotnode_logo.png" alt="DotNode logo" />
 
-    <!-- Cursor custom -->
-    <div class="cta_cursor">
-      <div class="cursor_circle">
-        <i class="fa-solid fa-arrow-right-long"></i>
+      <!-- Cursor custom -->
+      <div class="cta_cursor">
+        <div class="cursor_circle">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
       </div>
-    </div>
-  </section>
-</a>
+    </section>
+  </a>
 
 
 
@@ -375,7 +368,7 @@
     <div class="footer_container">
       <div class="footer_logo">
         <a href="index.html">
-          <h4>DotNode.</h4>
+          <h2>DotNode.</h2>
         </a>
         <p>Granada, España</p>
       </div>
@@ -398,21 +391,14 @@
 
 
 
- <!-- IONICONS -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <!-- Script de cartas -->
+<!-- 
   <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- Scripts externos del menú -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+ 
 
-  <!-- Único punto de entrada con Vite -->
-
-
-</body>
 
 </html>
