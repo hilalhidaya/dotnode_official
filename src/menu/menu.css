@@ -15,25 +15,21 @@ nav {
 .menu-close {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
-  background-color: rgba(58, 58, 58, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.15);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  font-size: 1rem;
+  transition: var(--transition);
+  font-size: 1.5rem;
   backdrop-filter: blur(6px);
 }
 
-/* Efecto hover */
+
 .menu-open:hover,
 .menu-close:hover {
-  background-color: rgba(74, 74, 74, 0.5); 
-  border-color: rgba(255, 255, 255, 0.25);
-}
+transform: scale(1.2);
+color:var(--color-orange);}
 
 .menu_right {
   display: flex;
@@ -43,7 +39,6 @@ nav {
   flex-wrap: nowrap;
 }
 
-
 .menu {
   position: fixed;
   top: 0;
@@ -51,7 +46,7 @@ nav {
   width: 100vw;
   min-height: 100svh;           /* iOS 16+ / Android modernos */
   min-height: 100dvh;           /* alternativo moderno */
-  min-height: -webkit-fill-available; /* fallback iOS */
+  min-height: -webkit-fill-available; /* Ajuste de altura para evitar problemas con la barra de direcciones */
   background: #101010;
   color: #fff;
   display: flex;
@@ -88,7 +83,6 @@ nav {
   z-index: -1;
   padding: 4rem 0;
 }
-
 .menu-img img {
   position: absolute;
   top: 50%;
@@ -114,13 +108,15 @@ nav {
 
 .menu-logo {
   width: 48px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .menu-logo img {
   position: relative;
   object-fit: contain;
+}
 
+.menu-logo-responsive img{
+  display: none;
 }
 
 .menu-link p {
@@ -161,7 +157,7 @@ nav {
 .menu-footer ul li a {
   color: #fff;
   font-size: 1.5rem;
-   display: grid;
+  display: grid;
   place-items: center; 
   padding: 0 1rem;
   transition: var(--transition);
@@ -170,7 +166,6 @@ nav {
 .menu-footer ul li a:hover {
   color: var(--color-orange);
 }
-
 
 .menu-link {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);

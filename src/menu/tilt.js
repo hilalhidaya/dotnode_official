@@ -1,4 +1,5 @@
 import gsap from "gsap";
+
 document.addEventListener("DOMContentLoaded", () => {
   const menu   = document.querySelector(".menu");
   const wrap   = document.querySelector(".menu-img");
@@ -64,15 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Cambiar "mousemove" y "pointermove" por "touchmove" para móviles
   const onMove = (e) => {
-    const ev = e.touches ? e.touches[0] : e;
+    const ev = e.touches ? e.touches[0] : e; // Cambiar a "touchmove" para dispositivos táctiles
     mx = ev.clientX;
     my = ev.clientY;
     if (!raf) raf = requestAnimationFrame(render);
   };
 
+  // Reemplazamos "mousemove" y "pointermove" por "touchmove" para dispositivos táctiles
   document.addEventListener("mousemove", onMove,   { passive: true });
   document.addEventListener("pointermove", onMove, { passive: true });
+  document.addEventListener("touchmove", onMove, { passive: true }); // Agregar touchmove para iPhone
 
   window.addEventListener("resize", measureCenter);
   window.addEventListener("menu:opened", () => setTimeout(measureCenter, 50));

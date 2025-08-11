@@ -1,8 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import CustomEase from "gsap/CustomEase";
-// usa **una** de estas dos según el paquete que tengas instalado:
-// import Lenis from "@studio-freight/lenis";
 import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger, CustomEase);

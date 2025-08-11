@@ -1127,7 +1127,7 @@ p {
 }
 
 
-@media (max-width: 560px) {
+@media screen and (max-width: 560px) {
   .menu_right button {
     display: none;
   }
@@ -1185,227 +1185,47 @@ p {
   }
 }
 
-/* Soluciones específicas para iPhone y dispositivos iOS */
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    height: 100%; 
-    overflow-x: hidden; /* Eliminar cualquier desplazamiento horizontal */
-    margin: 0; /* Eliminar márgenes adicionales */
-  }
-
-  /* Menú principal ajustado */
+@media screen and (max-width: 768px) {
   .menu {
-    width: 100%;
-    height: 100vh; /* Asegura que ocupe toda la pantalla */
-    position: fixed; /* Fijo en la parte superior */
-    top: 0;
-    left: 0;
-    background: #101010; /* Fondo oscuro */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000; /* Asegura que se superponga al contenido */
-    padding: 0; /* Eliminar padding adicional */
-    overflow: hidden; /* Evitar desplazamiento en el menú */
+    height: 100vh;
   }
 
-  /* Asegura que el logo y los elementos estén correctamente alineados */
   .menu-logo {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+      display: none;
   }
 
-  .menu-logo img {
-    max-width: 150px;
-    object-fit: contain;
+  .menu-logo-responsive{
+    width: 70px; 
+    max-width: 150px; 
+    margin: 0 auto;
+    padding-top: 3rem;
   }
 
-  /* Menú de navegación */
-  .menu-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centra los enlaces verticalmente */
-    padding: 2rem 1rem;
-    flex-grow: 1; /* Ocupa todo el espacio disponible */
-  }
-
-  /* Estilos para los enlaces */
   .menu-link p,
   .menu-link a {
-    font-size: 1.8rem;
-    color: #fff;
-    text-decoration: none;
-    margin: 0.5rem 0;
-    transition: 0.3s;
-  }
-
-  .menu-link a:hover {
-    color: #0c8899;
-    font-size: 2rem;
-  }
-
-  /* Footer */
-  .menu-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: auto; /* Empuja el footer al final */
-    padding: 1rem;
-  }
-
-  .menu-footer ul {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    gap: 0.5rem;
-    list-style: none;
-    padding: 0;
-  }
-
-  .menu-footer ul li a {
     font-size: 1.5rem;
-    color: #fff;
-    transition: 0.3s;
-  }
-
-  .menu-footer ul li a:hover {
-    color: #0c8899;
-  }
-}
-
-/* Solución para dispositivos con pantallas más pequeñas */
-@media (max-width: 768px) {
-  .menu {
-    height: 100vh; /* Asegura que el menú ocupe toda la altura */
-    padding-top: env(safe-area-inset-top); /* Asegura que no haya problemas con el notch */
-    padding-bottom: env(safe-area-inset-bottom); /* Asegura que no haya problemas con el área inferior */
-  }
-
-  .menu-items {
-    padding-top: 10vh; /* Da espacio suficiente para el logo */
-  }
-
-  .menu-logo {
-    padding: 1.5rem 0;
-  }
-
-  .menu-link p, .menu-link a {
-    font-size: 1.5rem;
-  }
-}
-
-
-/* Soluciones específicas para iPhone y dispositivos iOS */
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    height: 100%; 
-    overflow-x: hidden; /* Eliminar cualquier desplazamiento horizontal */
-    margin: 0; /* Eliminar márgenes adicionales */
-  }
-
-  /* Menú principal ajustado */
-  .menu {
-    width: 100%;
-    height: 100vh; /* Asegura que ocupe toda la pantalla */
-    position: fixed; /* Fijo en la parte superior */
-    top: 0;
-    left: 0;
-    background: #101010; /* Fondo oscuro */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000; /* Asegura que se superponga al contenido */
-    padding: 0; /* Eliminar padding adicional */
-    overflow: hidden; /* Evitar desplazamiento en el menú */
-  }
-
-  /* Asegura que el logo y los elementos estén correctamente alineados */
-  .menu-logo {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .menu-logo img {
-    max-width: 150px;
-    object-fit: contain;
-  }
-
-  /* Menú de navegación */
-  .menu-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centra los enlaces verticalmente */
-    padding: 2rem 1rem;
-    flex-grow: 1; /* Ocupa todo el espacio disponible */
-  }
-
-  /* Estilos para los enlaces */
-  .menu-link p,
-  .menu-link a {
-    font-size: 1.8rem;
-    color: #fff;
-    text-decoration: none;
-    margin: 0.5rem 0;
-    transition: 0.3s;
-  }
-
-  .menu-link a:hover {
-    color: #0c8899;
-    font-size: 2rem;
-  }
-
-  /* Footer */
-  .menu-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: auto; /* Empuja el footer al final */
-    padding: 1rem;
-  }
-
-  .menu-footer ul {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    gap: 0.5rem;
-    list-style: none;
-    padding: 0;
-  }
-
-  .menu-footer ul li a {
-    font-size: 1.5rem;
-    color: #fff;
-    transition: 0.3s;
-  }
-
-  .menu-footer ul li a:hover {
-    color: #0c8899;
   }
 }
 
 /* <= 768px (tablets/móviles) */
-@media (max-width: 900px) {
- .menu {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+@media screen and (max-width: 900px) {
+  .menu {
+    height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
-
-  .menu-img {
-    display: none !important;
-  }
-
   .menu-items {
-    flex: 1 1 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-items: center;
+    margin-top: -4rem;
+  }
+  .menu-logo {
     text-align: center;
-    z-index: 1;
-    padding: 2rem 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+  }
+   .menu-img {
+    display: none !important; 
   }
 
   .menu-link p,
@@ -1427,7 +1247,16 @@ p {
     justify-items: center;
   }
 
+  .menu .menu-footer ul i {
+    font-size: 2rem;
+  }
+
   .logo h2 {
+    font-size: 2rem;
+  }
+
+  .menu-open i,
+  .menu-close i {
     font-size: 1.8rem;
   }
 
@@ -1627,9 +1456,16 @@ p {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-top: 25svh;
+  }
+}
+
+
 
 /* >= 1024px (desktop grande) */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .header {
     padding-top: 25svh;
   }

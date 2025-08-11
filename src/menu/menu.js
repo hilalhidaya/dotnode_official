@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let isOpen = false;
   const defaultEase = "power4.inOut";
 
+  // Solo ejecutar la animación en pantallas grandes
+  if (window.innerWidth > 768) {
+    gsap.set(".menu-logo img", { y: 50 });
+  }
+  
+  // Resto de tu código...
+
+
   gsap.set(".menu-logo img", { y: 50 });
   gsap.set(".menu-link p",   { y: 40 });
   // gsap.set(".menu-sub-item p", { y: 12 });  // <- quita si no existen
