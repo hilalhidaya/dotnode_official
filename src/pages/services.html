@@ -70,24 +70,23 @@
       </div>
     </div> -->
 
-    
-  <section class="services-page">
-  <div class="container-flex">
-    <div class="image-left fade_in_right">
-      <img src="/rectangulo.png" alt="Imagen izquierda" />
-    </div>
+      <section class="service_page">
+        <div class="container-flex">
+          <div class="image-left fade_in_right">
+            <img src="/rectangulo.png" alt="Imagen izquierda" />
+          </div>
 
-    <div class="services-text line">
-       <p class="subtitle orange fade_in_scroll">OUR  SERVICES</p>
-        <h1>Our digital solutions are crafted to take your online presence to new heights.</h1>
-    </div>
+          <div class="services-text line">
+            <p class="subtitle orange fade_in_scroll">OUR SERVICES</p>
+            <h1>Our digital solutions are crafted to take your online presence to new heights.</h1>
+          </div>
 
-    <div class="image-right  fade_in_left">
-      <img src="/triangulo.png" alt="Imagen derecha" />
-    </div>
-  </div>
-</section>
-   
+          <div class="image-right  fade_in_left">
+            <img src="/triangulo.png" alt="Imagen derecha" />
+          </div>
+        </div>
+      </section>
+
   </section>
 
 
@@ -160,7 +159,7 @@
   <!-- SECCION 2  -->
 
   <section class="proven-process">
-    <div class="container">
+    <div class="container_process">
       <h2 class="title fade_in_scroll">PROVEN PROCESS FOR SUCCESS</h2>
       <p class="subtitle fade_in_scroll">We help you on every step of the journey</p>
 
@@ -213,165 +212,182 @@
 
 
   <!-- SERVICIOS SERVICES  -->
-<!-- SERVICES -->
-<section class="our_services fullpage_section">
-  <div class="section_services_header">
-    <h1>OUR SERVICES</h1>
+  <!-- SERVICES -->
+  <section class="our_services fullpage_section">
+    <div class="section_services_header">
+      <h1>OUR SERVICES</h1>
+    </div>
+    <div class="glass_container">
+      <!-- Custom Platforms category: occupies 4 boxes (2x2) -->
+      <div class="categoryy custom_platforms">
+        <h2 class="category_title">Custom Platforms</h2>
+        <div class="services_list">
+          <!-- Services -->
+          <div class="service_item"
+            data-service='{"name":"Dynamic Administered Blog","price":"400 - 600 €","time":"6 - 9 days","includes":"Backend with admin login, article management, comments, and users."}'>
+            <span class="service_name">Dynamic Administered Blog</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+          <div class="service_item"
+            data-service='{"name":"Booking and Scheduling System","price":"500 - 900 €","time":"7 - 14 days","includes":"Users, registrations, calendar, email confirmation."}'>
+            <span class="service_name">Booking and Scheduling System</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+          <div class="service_item"
+            data-service='{"name":"User Panel and Login Platform","price":"600 - 1000 €","time":"10 - 15 days","includes":"Secure login, profiles, CRUD data, custom dashboard."}'>
+            <span class="service_name">User Panel and Login Platform</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+          <div class="service_item"
+            data-service='{"name":"Portfolio with CMS","price":"250 - 400 €","time":"4 - 6 days","includes":"Project gallery editable from admin or Notion API."}'>
+            <span class="service_name">Portfolio with CMS</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Essentials category: occupies 2 boxes -->
+      <div class="categoryy web_essentials">
+        <h2 class="category_title">Web Essentials</h2>
+        <div class="services_list">
+          <div class="service_item"
+            data-service='{"name":"Professional Landing Page","price":"150 - 200 €","time":"3 - 5 days","includes":"Single page, responsive design, contact form, basic hosting."}'>
+            <span class="service_name">Professional Landing Page</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+          <div class="service_item"
+            data-service='{"name":"Complete Institutional Site","price":"300 - 500 €","time":"5 - 7 days","includes":"Home + About + Services + Contact + form + animations + SEO."}'>
+            <span class="service_name">Complete Institutional Site</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ecommerce Solutions category: 1 box -->
+      <div class="categoryy ecommerce_solutions">
+        <h2 class="category_title">Ecommerce Solutions</h2>
+        <div class="services_list">
+          <div class="service_item"
+            data-service='{"name":"Customized Online Store (Woo, Shopify)","price":"450 - 800 €","time":"7 - 12 days","includes":"Up to 20 products, payment gateway, personalized design."}'>
+            <span class="service_name">Customized Online Store (Woo, Shopify)</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Redesign & Optimization category: 1 box -->
+      <div class="categoryy redesign_optimization">
+        <h2 class="category_title">Redesign & Optimization</h2>
+        <div class="services_list">
+          <div class="service_item"
+            data-service='{"name":"Redesign & Optimization","price":"200 - 600 €","time":"3 - 10 days","includes":"UI/UX improvements, performance, responsive, and basic SEO."}'>
+            <span class="service_name">Redesign & Optimization</span>
+            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
+                class="fa-solid fa-eye"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal (igual que antes) -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none;">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2 id="modalServiceName"></h2>
+      <div class="modal-details">
+        <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+        <p><strong>Time:</strong> <span id="modalTime"></span></p>
+      </div>
+      <hr />
+      <p id="modalIncludes"></p>
+    </div>
   </div>
-  <div class="glass_container">
-    <!-- Custom Platforms category: occupies 4 boxes (2x2) -->
-    <div class="categoryy custom_platforms">
-      <h2 class="category_title">Custom Platforms</h2>
-      <div class="services_list">
-        <!-- Services -->
-        <div class="service_item" data-service='{"name":"Dynamic Administered Blog","price":"400 - 600 €","time":"6 - 9 days","includes":"Backend with admin login, article management, comments, and users."}'>
-          <span class="service_name">Dynamic Administered Blog</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-        <div class="service_item" data-service='{"name":"Booking and Scheduling System","price":"500 - 900 €","time":"7 - 14 days","includes":"Users, registrations, calendar, email confirmation."}'>
-          <span class="service_name">Booking and Scheduling System</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-        <div class="service_item" data-service='{"name":"User Panel and Login Platform","price":"600 - 1000 €","time":"10 - 15 days","includes":"Secure login, profiles, CRUD data, custom dashboard."}'>
-          <span class="service_name">User Panel and Login Platform</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-        <div class="service_item" data-service='{"name":"Portfolio with CMS","price":"250 - 400 €","time":"4 - 6 days","includes":"Project gallery editable from admin or Notion API."}'>
-          <span class="service_name">Portfolio with CMS</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Web Essentials category: occupies 2 boxes -->
-    <div class="categoryy web_essentials">
-      <h2 class="category_title">Web Essentials</h2>
-      <div class="services_list">
-        <div class="service_item" data-service='{"name":"Professional Landing Page","price":"150 - 200 €","time":"3 - 5 days","includes":"Single page, responsive design, contact form, basic hosting."}'>
-          <span class="service_name">Professional Landing Page</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-        <div class="service_item" data-service='{"name":"Complete Institutional Site","price":"300 - 500 €","time":"5 - 7 days","includes":"Home + About + Services + Contact + form + animations + SEO."}'>
-          <span class="service_name">Complete Institutional Site</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ecommerce Solutions category: 1 box -->
-    <div class="categoryy ecommerce_solutions">
-      <h2 class="category_title">Ecommerce Solutions</h2>
-      <div class="services_list">
-        <div class="service_item" data-service='{"name":"Customized Online Store (Woo, Shopify)","price":"450 - 800 €","time":"7 - 12 days","includes":"Up to 20 products, payment gateway, personalized design."}'>
-          <span class="service_name">Customized Online Store (Woo, Shopify)</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Redesign & Optimization category: 1 box -->
-    <div class="categoryy redesign_optimization">
-      <h2 class="category_title">Redesign & Optimization</h2>
-      <div class="services_list">
-        <div class="service_item" data-service='{"name":"Redesign & Optimization","price":"200 - 600 €","time":"3 - 10 days","includes":"UI/UX improvements, performance, responsive, and basic SEO."}'>
-          <span class="service_name">Redesign & Optimization</span>
-          <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i class="fa-solid fa-eye"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Modal (igual que antes) -->
-<div class="modal-overlay" id="modalOverlay" style="display:none;">
-  <div class="modal-content">
-    <button class="modal-close" id="modalClose">&times;</button>
-    <h2 id="modalServiceName"></h2>
-    <div class="modal-details">
-      <p><strong>Price:</strong> <span id="modalPrice"></span></p>
-      <p><strong>Time:</strong> <span id="modalTime"></span></p>
-    </div>
-    <hr />
-    <p id="modalIncludes"></p>
-  </div>
-</div>
 
 
 
-<!-- FICHAS MANTENIMIENTO  -->
-<section class="maintenance_section">
-  <div class="maintenance_title">Maintenance</div>
+  <!-- FICHAS MANTENIMIENTO  -->
+  <section class="maintenance_section">
+    <div class="maintenance_title">Maintenance</div>
 
-  <div class="maintenance_cards">
+    <div class="maintenance_cards">
       <!-- BASIC -->
-  <!-- BASIC -->
-<div class="maintenance_card" onclick="selectPlan(this)">
-  <h3>Basic</h3>
-  <p class="price">34'99 €</p>
-  <ul class="features">
-    <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
-    <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
-    <li class="excluded"><i class="fa-solid fa-xmark"></i>Plugin updates</li>
-    <li class="excluded"><i class="fa-solid fa-xmark"></i>Email & Chat Support</li>
-    <li class="excluded"><i class="fa-solid fa-xmark"></i>Daily backups</li>
-    <li class="excluded"><i class="fa-solid fa-xmark"></i>Consulting</li>
-  </ul>
-  <button class="btn btn4">Choose</button>
-</div>
+      <!-- BASIC -->
+      <div class="maintenance_card" onclick="selectPlan(this)">
+        <h3>Basic</h3>
+        <p class="price">34'99 €</p>
+        <ul class="features">
+          <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
+          <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i>Plugin updates</li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i>Email & Chat Support</li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i>Daily backups</li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i>Consulting</li>
+        </ul>
+        <button class="btn btn4">Choose</button>
+      </div>
 
-<!-- STANDARD -->
-<div class="maintenance_card selected" onclick="selectPlan(this)">
-  <h3>Standard</h3>
-  <p class="price">49'00 €</p>
-  <ul class="features">
-    <li class="included"><i class="fa-solid fa-check"></i>Theme & Plugin updates</li>
-    <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
-    <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Email & Chat Support</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Weekly backups</li>
-    <li class="excluded"><i class="fa-solid fa-xmark"></i>Unlimited tasks</li>
-    <li class="excluded"><i class="fa-solid fa-xmark"></i>Consulting</li>
-  </ul>
-  <button class="btn btn4">Choose</button>
-</div>
+      <!-- STANDARD -->
+      <div class="maintenance_card selected" onclick="selectPlan(this)">
+        <h3>Standard</h3>
+        <p class="price">49'00 €</p>
+        <ul class="features">
+          <li class="included"><i class="fa-solid fa-check"></i>Theme & Plugin updates</li>
+          <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
+          <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Email & Chat Support</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Weekly backups</li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i>Unlimited tasks</li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i>Consulting</li>
+        </ul>
+        <button class="btn btn4">Choose</button>
+      </div>
 
-<!-- PREMIUM -->
-<div class="maintenance_card" onclick="selectPlan(this)">
-  <h3>Premium</h3>
-  <p class="price">79'99 €</p>
-  <ul class="features">
-    <li class="included"><i class="fa-solid fa-check"></i>Theme & Plugin updates</li>
-    <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
-    <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Email, Chat & Call Support</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Daily backups</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Unlimited tasks</li>
-    <li class="included"><i class="fa-solid fa-check"></i>Consulting</li>
-  </ul>
-  <button class="btn btn4">Choose</button>
-</div>
-
-
-  </div>
-</section>
+      <!-- PREMIUM -->
+      <div class="maintenance_card" onclick="selectPlan(this)">
+        <h3>Premium</h3>
+        <p class="price">79'99 €</p>
+        <ul class="features">
+          <li class="included"><i class="fa-solid fa-check"></i>Theme & Plugin updates</li>
+          <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
+          <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Email, Chat & Call Support</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Daily backups</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Unlimited tasks</li>
+          <li class="included"><i class="fa-solid fa-check"></i>Consulting</li>
+        </ul>
+        <button class="btn btn4">Choose</button>
+      </div>
 
 
+    </div>
+  </section>
 
 
-<section class="cta_service_section">
-  <div class="cta_service_content">
-    <p class="subtitle">Did you like what you saw?</p>
-    <h2 class="cta_service_title">START YOUR PROJECT</h2>
-    <button class="btn-expand-icon btn4" onclick="location.href='contact.html'">Contact Us <i class="fa-solid fa-arrow-righ arrow"></i></button>
-  </div>
-  <div class="glow_circle_service"></div>
-</section>
+
+
+  <section class="cta_service_section">
+    <div class="cta_service_content">
+      <p class="subtitle">Did you like what you saw?</p>
+      <h2 class="cta_service_title">START YOUR PROJECT</h2>
+      <button class="btn-expand-icon btn4" onclick="location.href='contact.html'">Contact Us <i
+          class="fa-solid fa-arrow-righ arrow"></i></button>
+    </div>
+    <div class="glow_circle_service"></div>
+  </section>
 
 
 
@@ -407,52 +423,55 @@
 
 
   <script>
-function openModal(button) {
-  const serviceItem = button.closest('.service_item');
-  if (!serviceItem) return;
+    function openModal(button) {
+      const serviceItem = button.closest('.service_item');
+      if (!serviceItem) return;
 
-  let data = {};
-  try {
-    data = JSON.parse(serviceItem.getAttribute('data-service'));
-  } catch (error) {
-    console.error('Error parsing JSON:', error);
-    return;
-  }
+      let data = {};
+      try {
+        data = JSON.parse(serviceItem.getAttribute('data-service'));
+      } catch (error) {
+        console.error('Error parsing JSON:', error);
+        return;
+      }
 
-  document.getElementById('modalServiceName').textContent = data.name || '';
-  document.getElementById('modalPrice').textContent = data.price || '';
-  document.getElementById('modalTime').textContent = data.time || '';
-  document.getElementById('modalIncludes').textContent = data.includes || '';
+      document.getElementById('modalServiceName').textContent = data.name || '';
+      document.getElementById('modalPrice').textContent = data.price || '';
+      document.getElementById('modalTime').textContent = data.time || '';
+      document.getElementById('modalIncludes').textContent = data.includes || '';
 
-  const modalOverlay = document.getElementById('modalOverlay');
-  modalOverlay.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
+      const modalOverlay = document.getElementById('modalOverlay');
+      modalOverlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
 
-document.getElementById('modalClose').addEventListener('click', () => {
-  const modalOverlay = document.getElementById('modalOverlay');
-  modalOverlay.style.display = 'none';
-  document.body.style.overflow = '';
-});
-
-document.getElementById('modalOverlay').addEventListener('click', (event) => {
-  if (event.target.id === 'modalOverlay') {
-    event.target.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-});
-
-
- function selectPlan(card) {
-    // Elimina 'selected' de todas
-    document.querySelectorAll('.maintenance_card').forEach(c => {
-      c.classList.remove('selected');
+    document.getElementById('modalClose').addEventListener('click', () => {
+      const modalOverlay = document.getElementById('modalOverlay');
+      modalOverlay.style.display = 'none';
+      document.body.style.overflow = '';
     });
 
-    // Añade 'selected' a la clicada
-    card.classList.add('selected');
-  }
-</script>
+    document.getElementById('modalOverlay').addEventListener('click', (event) => {
+      if (event.target.id === 'modalOverlay') {
+        event.target.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+
+
+    function selectPlan(card) {
+      // Elimina 'selected' de todas
+      document.querySelectorAll('.maintenance_card').forEach(c => {
+        c.classList.remove('selected');
+      });
+
+      // Añade 'selected' a la clicada
+      card.classList.add('selected');
+    }
+
+
+    
+  </script>
 
 </body>
 
