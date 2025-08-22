@@ -1770,7 +1770,6 @@ p {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 .go_top_container {
   display: flex;
   align-items: center;
@@ -1816,6 +1815,191 @@ p {
     transform: translateY(-6px);
   }
 }
+
+
+
+/* CONTACT US PAGE---- */
+
+/* Base de la página de contacto */
+.contact_page {
+  background: #0e0f13;
+  color: #e9e9ee;
+
+}
+
+/* Utilidades locales */
+.contact_page .contact_us_data .container {
+  width: min(950px, 90vw);
+  margin-inline: auto;
+  margin: 0 auto;
+}
+.contact_page .contact_us_data .grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: start;
+}
+.contact_page .lead { color: #a9adc2; margin-top: 0.5rem; }
+
+/* HERO */
+.contact_page .contact_hero {
+  position: relative;
+  background:
+    radial-gradient(1200px 400px at 10% -10%, #1a1d2e 0%, rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, #0f1119 0%, #0d0f15 100%);
+  padding: 9rem 0 5rem;
+  text-align: center;
+}
+.contact_page .contact_hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: 0.02em;
+  font-weight: 800;
+}
+.contact_page .contact_hero p {
+  margin-top: 0.75rem;
+  color: #a9adc2;
+}
+
+/* BLOQUE CONTACT / FORM */
+.contact_page .contact_us_data {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #0d0f15 0%, #0b0d12 100%);
+  z-index: 3;
+}
+
+.contact_page .contact_info h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+.contact_page .contact_list {
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+.contact_page .contact_list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.contact_page .contact_list i {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #111428;
+  color: #8b7bff;
+}
+
+.contact_page .socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.contact_page .socials a {
+font-size: 1.5rem;
+  display: grid;
+  padding: 1rem;
+  place-items: center;
+  color: #e9e9ee;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.contact_page .socials a:hover {
+  transform: scale(1.2);
+  color: var(--color-orange);
+}
+
+/* TARJETA DEL FORMULARIO */
+.contact_page .contact_card {
+  background:
+    radial-gradient(600px 300px at 10% 0%, rgba(139,123,255,0.18), rgba(0,0,0,0) 50%),
+    linear-gradient(180deg, #0f1224 0%, #0b0d18 100%);
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  padding: 2rem;
+ margin-bottom: -220px; 
+  z-index: 4;
+}
+
+.contact_page .contact_form h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.contact_page .form_grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+
+.contact_page .form_field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact_page .form_field span {
+  font-size: 0.95rem;
+  color: #e9e9ee;
+  font-weight: 600;
+}
+
+.contact_page .form_field input,
+.contact_page .form_field textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e9e9ee;
+  font-size: 1rem;
+  padding: 0.6rem 0;
+  transition: border-color 0.25s ease;
+}
+
+.contact_page .form_field input:focus,
+.contact_page .form_field textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #8b7bff;
+}
+
+.contact_page .form_field input::placeholder,
+.contact_page .form_field textarea::placeholder {
+  color: #7b7f96;
+}
+
+.contact_page .contact_form textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 250px;
+}
+
+.contact_page .btn_primary {
+  margin-top: 1rem;
+  border: none;
+  background: linear-gradient(90deg, #6d5efc, #8b7bff);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.95rem 1.25rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.contact_page .btn_primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+
+
+
 
 
 

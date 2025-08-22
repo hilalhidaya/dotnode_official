@@ -12,10 +12,9 @@
   <title>DotNode</title>
 </head>
 
-<body>
+<body class="contact_page">
     
-
-      <!-- LOADER INICIAL -->
+<!-- LOADER INICIAL -->
   <div class="loader">
     <div class="overlay">
       <div class="block"></div>
@@ -35,8 +34,43 @@
     </div>
   </div>
 
+
+  <!-- HERO + HEADER -->
+  <section class="section_landing">
+    <div class="container">
+      <div class="hero-img">
+        <img src="/service_fondo.jpg" alt="fondo" />
+      </div>
+
+      <!-- NAVBAR nueva (menu fullscreen) -->
+      <nav class="nav">
+        <div class="logo">
+          <h2 onclick="location.href='index.html'">DotNode.</h2>
+        </div>
+        <div class="menu_right">
+          <button class="btn-expand-icon" onclick="">
+            <span>BOOK A CALL</span><span class="arrow"><i class="fa-solid fa-phone"></i></span>
+          </button>
+          <p class="menu-open"><i class="fa-solid fa-bars"></i></p>
+        </div>
+      </nav>
+
+      <div class="header">
+        <div class="hero-copy">
+          <div class="line line-img">
+          <p><img class="float-y" src="/dotnode_logo.png" alt="DotNode Logo"></p>
+        </div>
+          <div class="line">
+            <h1>OUR SERVICES</h1>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+
+  </section>
   
-  <!-- FULLSCREEN MENU -->
+    <!-- FULLSCREEN MENU -->
   <div class="menu">
     <div class="menu-nav">
       <p class="menu-close"><i class="fa-solid fa-xmark"></i></p>
@@ -54,18 +88,19 @@
 
       <div class="menu-links">
         <div class="menu-link">
-          <p><a href="/index.html">HOME</a></p>
+          <p><a href="/">HOME</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="services.html">SERVICES</a></p>
+          <p><a href="/services.html">SERVICES</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="blog.html">BLOG</a></p>
+          <p><a href="/blog.html">BLOG</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="contact_us.html">CONTACT US</a></p>
+          <p><a href="/contact_us.html">CONTACT US</a></p>
         </div>
       </div>
+
       <div class="menu-footer">
         <ul>
           <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
@@ -80,6 +115,70 @@
 
   <!-- SECCION 1  -->
 
+<section class="contact_us_data">
+  <div class="container grid">
+    <!-- LADO IZQUIERDO: INFO -->
+    <div class="contact_info">
+      <h2>Get in touch</h2>
+      <p class="lead">Let’s work together to build something you’re proud of.</p>
+
+      <ul class="contact_list">
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            
+            <span>contact@dotnode.io</span>
+          </div>
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span>+34 623 737 050</span>
+          </div>
+        </li>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span>Granada, Spain</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="socials">
+        <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- LADO DERECHO: FORMULARIO EN TARJETA -->
+    <div class="contact_card">
+      <form class="contact_form" action="#" method="post" onsubmit="event.preventDefault();">
+        <h3>Your Details</h3>
+
+        <div class="form_grid">
+          <label class="form_field">
+            <span>Full Name </span>
+            <input type="text" name="name" placeholder="Your Name" required>
+          </label>
+
+          <label class="form_field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Email" required>
+          </label>
+        </div>
+
+        <label class="form_field">
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Tell us more about your project" required></textarea>
+        </label>
+
+        <button class="btn_primary" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
 
   
     <footer class="footer">
@@ -105,6 +204,87 @@
         </div>
     </footer>
     <script type="module" src="/src/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".contact_form");
+  const inputs = form.querySelectorAll("input, textarea");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    const nameField = form.querySelector("input[name='name']");
+    const emailField = form.querySelector("input[name='email']");
+    const subjectField = form.querySelector("input[name='subject']");
+    const messageField = form.querySelector("textarea[name='message']");
+
+    clearValidationStyles([nameField, emailField, subjectField, messageField]);
+
+    // VALIDAR NOMBRE
+    if (nameField.value.trim().length < 2) {
+      applyInvalidStyle(nameField);
+      isValid = false;
+    } else {
+      applyValidStyle(nameField);
+    }
+
+    // VALIDAR EMAIL
+    if (!validateEmail(emailField.value.trim())) {
+      applyInvalidStyle(emailField);
+      isValid = false;
+    } else {
+      applyValidStyle(emailField);
+    }
+
+    // VALIDAR ASUNTO
+    if (subjectField.value.trim().length < 3) {
+      applyInvalidStyle(subjectField);
+      isValid = false;
+    } else {
+      applyValidStyle(subjectField);
+    }
+
+    // VALIDAR MENSAJE
+    if (messageField.value.trim().length < 5) {
+      applyInvalidStyle(messageField);
+      isValid = false;
+    } else {
+      applyValidStyle(messageField);
+    }
+
+    if (!isValid) {
+      alert("Please correct the highlighted fields.");
+      return;
+    }
+
+    // TODO: Aquí irá el fetch o redirección al backend PHP
+    alert("Form submitted successfully. We'll get back to you shortly.");
+    form.reset();
+    clearValidationStyles([nameField, emailField, subjectField, messageField]);
+  });
+
+  // UTILIDADES
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  function applyValidStyle(field) {
+    field.style.borderBottom = "1px solid #28c76f"; // Verde
+  }
+
+  function applyInvalidStyle(field) {
+    field.style.borderBottom = "1px solid #ff4c61"; // Rojo
+  }
+
+  function clearValidationStyles(fields) {
+    fields.forEach(field => {
+      field.style.borderBottom = "1px solid rgba(255, 255, 255, 0.2)";
+    });
+  }
+});
+</script>
 
 </body>
 </html>
