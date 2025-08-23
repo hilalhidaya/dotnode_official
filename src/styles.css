@@ -17,6 +17,7 @@
   --color-blue: #0c8899;
   --color-dark-blue: #080911;
   --color-orange: #e15941;
+  --color-purple: #88139f;
   --color-light-gray: #b7b4b4;
   --color-white: #f4f4f4;
   --color-dark-gray: #383838;
@@ -1134,10 +1135,8 @@ p {
 /* PAGINA SERVICIOS--------------------------------------------------------  */
 
 .services-page .section_landing {
-  height: 100vh;
-  /* menos altura, ajusta según prefieras */
+  height: 70vh;
   min-height: 400px;
-  /* para evitar que sea muy pequeño en pantallas grandes */
   cursor: default !important;
 }
 
@@ -1155,7 +1154,6 @@ p {
   width: 2rem;
 }
 
-/* Ajustes para header */
 .services-page .section_landing .header {
   margin-top: auto;
   margin-bottom: auto;
@@ -1181,23 +1179,17 @@ p {
 
 /* SECTION INTRO SERVICES  */
 .service_page .container-flex {
-  /* background: url(/blur4_oscura.jpg);
-  background-size: cover; */
   position: relative;
-  /* Para que hijos con position absolute se posicionen aquí */
   margin: 0 auto;
   height: 550px;
-  /* Ajusta a la altura que necesites */
   width: 100%;
 }
 
-/* Imagen izquierda en esquina inferior izquierda */
 .service_page .image-left {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 380px;
-  /* Ajusta el tamaño deseado */
 }
 
 .service_page .image-left img {
@@ -1369,7 +1361,6 @@ p {
   justify-content: center;
   align-items: center;
   background: url(/heroe.jpg) no-repeat center/cover;
-  /* lo pondrás tú */
   font-family: 'Montserrat', sans-serif;
   color: #eee;
 }
@@ -1649,9 +1640,7 @@ p {
 .maintenance_card.selected {
   background: rgba(15, 13, 13, 0.18);
   border: 1px solid #f97316;
-  /* naranja brillante */
   box-shadow: 0 0 40px rgba(249, 115, 22, 0.25);
-  /* sombra naranja suave */
   transition: var(--transition);
   transform: scale(1.03);
 }
@@ -1770,6 +1759,7 @@ p {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .go_top_container {
   display: flex;
   align-items: center;
@@ -1800,6 +1790,7 @@ p {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -1808,9 +1799,12 @@ p {
 
 /* Bouncing arrow animation */
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
@@ -1818,57 +1812,49 @@ p {
 
 
 
-/* CONTACT US PAGE---- */
+/* CONTACT US PAGE------------------------------ */
 
-/* Base de la página de contacto */
-.contact_page {
-  background: #0e0f13;
-  color: #e9e9ee;
-
+.contact_landing {
+  height: 60vh;
+  min-height: 400px;
+  cursor: default !important;
 }
 
-/* Utilidades locales */
+.contact_landing .header h1 {
+  margin-top: 2rem;
+}
+
 .contact_page .contact_us_data .container {
   width: min(950px, 90vw);
   margin-inline: auto;
   margin: 0 auto;
+  padding-top: 2rem;
 }
+
 .contact_page .contact_us_data .grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 3rem;
   align-items: start;
 }
-.contact_page .lead { color: #a9adc2; margin-top: 0.5rem; }
 
-/* HERO */
-.contact_page .contact_hero {
-  position: relative;
-  background:
-    radial-gradient(1200px 400px at 10% -10%, #1a1d2e 0%, rgba(0,0,0,0) 60%),
-    linear-gradient(180deg, #0f1119 0%, #0d0f15 100%);
-  padding: 9rem 0 5rem;
-  text-align: center;
-}
-.contact_page .contact_hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  letter-spacing: 0.02em;
-  font-weight: 800;
-}
-.contact_page .contact_hero p {
-  margin-top: 0.75rem;
+.contact_page .lead {
   color: #a9adc2;
+  margin-top: 0.5rem;
 }
+
 
 /* BLOQUE CONTACT / FORM */
 .contact_page .contact_us_data {
-  padding: 4rem 0;
+  padding: 4rem 0 0;
   background: linear-gradient(180deg, #0d0f15 0%, #0b0d12 100%);
   z-index: 3;
+  color: var(--color-white);
 }
 
 .contact_page .contact_info h2 {
   font-size: clamp(1.6rem, 3vw, 2rem);
+  color: var(--color-white);
 }
 
 .contact_page .contact_list {
@@ -1876,6 +1862,7 @@ p {
   display: grid;
   gap: 1rem;
 }
+
 .contact_page .contact_list li {
   display: grid;
   grid-template-columns: 42px 1fr;
@@ -1883,6 +1870,7 @@ p {
   align-items: center;
   padding: 0.75rem 0;
 }
+
 .contact_page .contact_list i {
   width: 42px;
   height: 42px;
@@ -1900,28 +1888,26 @@ p {
 }
 
 .contact_page .socials a {
-font-size: 1.5rem;
+  font-size: 1.5rem;
   display: grid;
   padding: 1rem;
   place-items: center;
   color: #e9e9ee;
   transition: transform 0.25s ease, background 0.25s ease;
 }
+
 .contact_page .socials a:hover {
   transform: scale(1.2);
-  color: var(--color-orange);
+  color: var(--color-blue);
 }
 
 /* TARJETA DEL FORMULARIO */
 .contact_page .contact_card {
-  background:
-    radial-gradient(600px 300px at 10% 0%, rgba(139,123,255,0.18), rgba(0,0,0,0) 50%),
-    linear-gradient(180deg, #0f1224 0%, #0b0d18 100%);
+  background: url(/fondo_invertido.png);
+  background-size: cover;
   border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   padding: 2rem;
- margin-bottom: -220px; 
-  z-index: 4;
 }
 
 .contact_page .contact_form h3 {
@@ -1978,27 +1964,6 @@ font-size: 1.5rem;
   min-height: 120px;
   max-height: 250px;
 }
-
-.contact_page .btn_primary {
-  margin-top: 1rem;
-  border: none;
-  background: linear-gradient(90deg, #6d5efc, #8b7bff);
-  color: #ffffff;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  padding: 0.95rem 1.25rem;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.contact_page .btn_primary:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-}
-
-
-
 
 
 
@@ -2085,7 +2050,7 @@ font-size: 1.5rem;
 
   /* SERVICE PAGE------ */
 
-  .services-page .menu-logo{
+  .services-page .menu-logo, .contact_page .menu-logo {
     display: block;
     margin-top: 5rem;
   }
@@ -2094,11 +2059,14 @@ font-size: 1.5rem;
     padding-top: 7rem;
   }
 
+  .services-page .section_landing {
+    height: 100vh;
+  }
+
   /* section 1  */
   .service_page .container-flex {
     position: relative;
     height: 70vh;
-    /* que crezca según contenido */
     padding: 1rem 1rem 0;
     display: flex;
     flex-direction: column;
@@ -2260,14 +2228,10 @@ font-size: 1.5rem;
     padding: 1rem;
     justify-content: flex-start;
     overflow-x: auto;
-    /* habilita scroll horizontal */
     overflow-y: visible;
     scroll-snap-type: x mandatory;
-    /* centra al soltar */
     -webkit-overflow-scrolling: touch;
-    /* inercia iOS */
     touch-action: pan-x;
-    /* gestos horizontales */
     overscroll-behavior-inline: contain;
   }
 
@@ -2289,6 +2253,39 @@ font-size: 1.5rem;
 
   .maintenance_title {
     font-size: 3.5rem;
+  }
+
+
+  /* CONTACT PAGE------------ */
+
+  .contact_landing .header h1 {
+    text-align: center;
+  }
+
+  .contact_page .contact_us_data .container {
+    width: var(--container-width-lg);
+
+  }
+
+ .contact_page .contact_us_data .contact_info, .contact_page .contact_us_data .socials{
+  text-align: center;
+  justify-items: center;
+ }
+
+  .contact_page .contact_us_data .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 1rem; 
+   }
+
+
+
+  .contact_page .contact_card {
+    margin: 4rem 0 6rem;
+  }
+
+  .contact_page .form_grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
 }
@@ -2479,7 +2476,6 @@ font-size: 1.5rem;
     position: static;
     height: 80dvh;
     padding: 7rem 1rem;
-    /* más padding arriba y abajo */
     transform: none !important;
     margin-top: 1rem;
   }
@@ -2503,7 +2499,6 @@ font-size: 1.5rem;
 
   .cta_title {
     text-align: center;
-    /* puedes cambiar a left si lo prefieres */
   }
 
   .cta_mascot {
