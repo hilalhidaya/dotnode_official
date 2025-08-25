@@ -1,15 +1,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <link rel="icon" href="/dotnode_logo.png">
+  <link rel="icon" href="/dotnode_logo.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer">
 
-    <title>DotNode</title>
+  <title>DotNode</title>
   <script type="module" crossorigin src="/assets/main-C2Iun_t1.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main.css">
 </head>
@@ -17,7 +17,7 @@
 <body>
 
 
-      <!-- LOADER INICIAL -->
+  <!-- LOADER INICIAL -->
   <div class="loader">
     <div class="overlay">
       <div class="block"></div>
@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  
+
   <!-- FULLSCREEN MENU -->
   <div class="menu">
     <div class="menu-nav">
@@ -69,33 +69,69 @@
         </div>
       </div>
 
-      
+
+
+      <!-- SECTIONSSSSS --------------- -->
+
+
+      <section class="blog_intro">
+  <h2>OUR LATEST ARTICLES</h2>
+</section>
+
+<section id="blog_articles_container" class="articles_wrapper">
+  <!-- Artículos cargados dinámicamente -->
+</section>
 
 
 
-    <footer class="footer">
+
+      <!-- ---------------------------- -->
+      <footer class="footer">
         <div class="footer_container">
-            <div class="footer_logo">
-                <a href="index.html">
-                    <h2>DotNode.</h2>
-                </a>
-                <p>Granada, España</p>
-            </div>
-            <div class="footer_socials">
-                <ul>
-                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://likedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="footer_copyright">
-                <p>Copyright &copy; 2024</p>
-                <a href="index.html">Política de privacidad</a>
-            </div>
+          <div class="footer_logo">
+            <a href="index.html">
+              <h2>DotNode.</h2>
+            </a>
+            <p>Granada, España</p>
+          </div>
+          <div class="footer_socials">
+            <ul>
+              <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://likedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+          <div class="footer_copyright">
+            <p>Copyright &copy; 2024</p>
+            <a href="index.html">Política de privacidad</a>
+          </div>
         </div>
-    </footer>
+      </footer>
 
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const blogContainer = document.getElementById("blog_articles_container");
+  if (blogContainer) {
+    fetch("/get_articles.php?lang=en")
+      .then(res => res.text())
+      .then(html => blogContainer.innerHTML = html)
+      .catch(err => console.error("Error loading articles:", err));
+  }
+
+  const homeContainer = document.getElementById("latest_articles_container");
+  if (homeContainer) {
+    fetch("/get_articles.php?lang=en&limit=3")
+      .then(res => res.text())
+      .then(html => homeContainer.innerHTML = html)
+      .catch(err => console.error("Error loading home articles:", err));
+  }
+});
+
+
+      </script>
+
 
 </body>
 

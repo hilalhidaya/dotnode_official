@@ -1385,7 +1385,7 @@ p {
 .categoryy {
   background: rgba(255 255 255 / 0.1);
   border-radius: 12px;
-  padding: 1.2rem;
+  padding: 1rem;
   cursor: pointer;
   position: relative;
   display: flex;
@@ -1401,22 +1401,47 @@ p {
 /* Layout categorías específicas */
 .custom_platforms {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
 }
 
 .web_essentials {
   grid-column: 3 / span 2;
-  grid-row: 1 / span 1;
+  grid-row: 1 / span 2;
 }
 
 .ecommerce_solutions {
   grid-column: 3 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 2;
 }
 
 .redesign_optimization {
   grid-column: 4 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 2;
+}
+/* DotGrade ocupa el mismo ancho que Custom Platforms pero solo una fila */
+.dotgrade_service {
+grid-column: 1 / span 2;
+grid-row: 4 / span 1;
+
+}
+
+.new_badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6a00, #ffcc00, #ff6a00);
+  background-size: 300% 300%;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+  animation: shine 3s infinite linear;
+  text-transform: uppercase;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Solo título visible inicialmente */
@@ -1513,13 +1538,15 @@ p {
   z-index: 9999;
   /* Lo suficientemente alto para estar encima */
 }
+#modalIncludes { white-space: pre-line; }
 
 .modal-content {
   background: rgba(255 255 255 / 0.12);
   backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 2rem;
-  max-width: 400px;
+  max-width: 500px;
+  height: auto;
   width: 90%;
   color: #eee;
   position: relative;
@@ -1966,6 +1993,48 @@ p {
 }
 
 
+/* Errores inline */
+.field_error {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  margin-top: 0.35rem;
+  color: #ff6b6b;
+  min-height: 1.2em; /* reserva espacio para evitar saltos */
+}
+
+.contact_form input.is-invalid,
+.contact_form textarea.is-invalid {
+  outline: 2px solid #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.contact_form input.is-valid,
+.contact_form textarea.is-valid {
+  outline: 2px solid #38d39f;
+  border-color: #38d39f;
+}
+
+/* Mensaje final */
+.form_status {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+.form_status.success { color: #38d39f; }
+.form_status.error   { color: #ff6b6b; }
+
+/* Oculta honeypot visualmente */
+.honeypot {
+  position: absolute !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+
+
 
 
 @media screen and (max-width: 560px) {
@@ -2266,11 +2335,6 @@ p {
     width: var(--container-width-lg);
 
   }
-
- .contact_page .contact_us_data .contact_info, .contact_page .contact_us_data .socials{
-  text-align: center;
-  justify-items: center;
- }
 
   .contact_page .contact_us_data .grid {
     display: grid;

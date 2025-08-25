@@ -59,27 +59,13 @@
         </div>
       </nav>
 
-      <!-- <div class="header">
-        <div class="hero-copy">
-          <div class="line line-img">
-          <p><img class="float-y" src="/dotnode_logo.png" alt="DotNode Logo"></p>
-        </div>
-          <div class="line">
-            <h1>OUR SERVICES</h1>
-          </div>
-        </div>
-       
-      </div>
-    </div> -->
-
       <section class="service_page">
         <div class="container-flex">
           <div class="image-left fade_in_right">
             <img src="/rectangulo.png" alt="Imagen izquierda" />
           </div>
-
           <div class="services-text line">
-            <p class="subtitle orange fade_in_scroll">OUR SERVICES</p>
+            <p class="subtitle line">OUR SERVICES</p>
             <h1>Our digital solutions are crafted to take your online presence to new heights.</h1>
           </div>
 
@@ -114,20 +100,20 @@
           <p><a href="/">HOME</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/services.html">SERVICES</a></p>
+          <p><a href="services.html">SERVICES</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/blog.html">BLOG</a></p>
+          <p><a href="blog.html">BLOG</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/contact_us.html">CONTACT US</a></p>
+          <p><a href="contact_us.html">CONTACT US</a></p>
         </div>
       </div>
 
       <div class="menu-footer">
         <ul>
           <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
           <li><a href="https://likedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
@@ -392,6 +378,14 @@
   </section>
 
 
+  <!-- GO TOP SECTION -->
+  <section class="go_top">
+  <div class="go_top_container">
+    <span class="go_top_icon"><i class="fa-solid fa-arrow-up"></i></span>
+    <p class="go_top_text">GO TO THE TOP</p>
+  </div>
+</section>
+
 
 
   <!-- FOOTER_________________ -->
@@ -471,7 +465,17 @@
     }
 
 
-    
+
+    // go top function 
+
+    document.querySelector('.go_top').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+
   </script>
 
 </body>

@@ -768,12 +768,4 @@ function selectPlan(card) {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("latest_articles_container");
-  if (container) {
-    fetch("/get_articles.php?lang=en&limit=3")
-      .then(res => res.text())
-      .then(html => container.innerHTML = html)
-      .catch(err => console.error("Error cargando artículos:", err));
-  }
-});
+// PAGINA CONTACT US VALIDACIONES ----- 
