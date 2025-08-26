@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -13,8 +14,8 @@
 </head>
 
 <body class="contact_page">
-    
-<!-- LOADER INICIAL -->
+
+  <!-- LOADER INICIAL -->
   <div class="loader">
     <div class="overlay">
       <div class="block"></div>
@@ -36,7 +37,7 @@
 
 
   <!-- HERO + HEADER -->
- <section class="section_landing contact_landing">
+  <section class="section_landing contact_landing">
     <div class="container">
       <div class="hero-img">
         <img src="/fondo3.png" alt="fondo" />
@@ -45,7 +46,7 @@
       <!-- NAVBAR nueva (menu fullscreen) -->
       <nav class="nav">
         <div class="logo">
-          <h2 onclick="location.href='index.html'">DotNode.</h2>
+          <h2 onclick="location.href='/'">DotNode.</h2>
         </div>
         <div class="menu_right">
           <button class="btn-expand-icon" onclick="">
@@ -65,8 +66,8 @@
     </div>
   </section>
 
-  
-    <!-- FULLSCREEN MENU -->
+
+  <!-- FULLSCREEN MENU -->
   <div class="menu">
     <div class="menu-nav">
       <p class="menu-close"><i class="fa-solid fa-xmark"></i></p>
@@ -99,10 +100,10 @@
 
       <div class="menu-footer">
         <ul>
-          <a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a>
-        <a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.instagram.com/dotnode_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+           <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a></li>
+          <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
@@ -111,106 +112,112 @@
 
   <!-- SECCION 1  -->
 
-<section class="contact_us_data">
-  <div class="container grid">
-    <!-- LADO IZQUIERDO: INFO -->
-    <div class="contact_info">
-      <h2>Get in touch<span class="punto">.</span></h2>
-      <p class="lead">Let’s work together to build something you’re proud of.</p>
+  <section class="contact_us_data">
+    <div class="container grid">
+      <!-- LADO IZQUIERDO: INFO -->
+      <div class="contact_info">
+        <h2 class="fade_in_right">Get in touch<span class="punto">.</span></h2>
+        <p class="lead fade_in_right">Let’s work together to build something you’re proud of.</p>
 
-      <ul class="contact_list">
-        <li>
-          <i class="fa-solid fa-envelope"></i>
-          <div>
-            
-            <span>contact@dotnode.io</span>
-          </div>
-        </li>
-        <li>
-          <i class="fa-solid fa-phone"></i>
-          <div>
-            <span>+34 623 737 050</span>
-          </div>
-        </li>
-        <li>
-          <i class="fa-solid fa-location-dot"></i>
-          <div>
-            <span>Granada, Spain</span>
-          </div>
-        </li>
-      </ul>
+        <ul class="contact_list fade_in_left">
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <div>
 
-      <div class="socials">
-        <a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a>
-        <a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.instagram.com/dotnode_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <span>contact@dotnode.io</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span>+34 623 737 050</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span>Granada, Spain</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="socials fade_in_left">
+          <a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
+              class="fa-brands fa-square-threads"></i></a>
+          <a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/dotnode_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- LADO DERECHO: FORMULARIO EN TARJETA -->
+      <div class="contact_card fade_in_right">
+        <form id="contactForm" class="contact_form" action="#" method="post" novalidate>
+          <h3>Your Details</h3>
+
+          <!-- Honeypot (anti-spam) -->
+          <label class="form_field honeypot" aria-hidden="true" tabindex="-1">
+            <span>Company</span>
+            <input type="text" name="company" autocomplete="off">
+          </label>
+
+          <div class="form_grid">
+            <label class="form_field">
+              <span>Full Name</span>
+              <input id="name" type="text" name="name" placeholder="Your Name" required>
+              <small class="field_error" id="nameError" aria-live="polite"></small>
+            </label>
+
+            <label class="form_field">
+              <span>Email</span>
+              <input id="email" type="email" name="email" placeholder="Email" required>
+              <small class="field_error" id="emailError" aria-live="polite"></small>
+            </label>
+          </div>
+
+          <label class="form_field">
+            <span>Message</span>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us more about your project"
+              required></textarea>
+            <small class="field_error" id="messageError" aria-live="polite"></small>
+          </label>
+
+          <button class="btn btn4" id="submitBtn" type="submit">Send message</button>
+
+          <!-- Estado general (éxito/fracaso) -->
+          <div id="formStatus" class="form_status" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
+  </section>
 
-    <!-- LADO DERECHO: FORMULARIO EN TARJETA -->
- <div class="contact_card">
-      <form id="contactForm" class="contact_form" action="#" method="post" novalidate>
-        <h3>Your Details</h3>
-
-        <!-- Honeypot (anti-spam) -->
-        <label class="form_field honeypot" aria-hidden="true" tabindex="-1">
-          <span>Company</span>
-          <input type="text" name="company" autocomplete="off">
-        </label>
-
-        <div class="form_grid">
-          <label class="form_field">
-            <span>Full Name</span>
-            <input id="name" type="text" name="name" placeholder="Your Name" required>
-            <small class="field_error" id="nameError" aria-live="polite"></small>
-          </label>
-
-          <label class="form_field">
-            <span>Email</span>
-            <input id="email" type="email" name="email" placeholder="Email" required>
-            <small class="field_error" id="emailError" aria-live="polite"></small>
-          </label>
-        </div>
-
-        <label class="form_field">
-          <span>Message</span>
-          <textarea id="message" name="message" rows="5" placeholder="Tell us more about your project" required></textarea>
-          <small class="field_error" id="messageError" aria-live="polite"></small>
-        </label>
-
-        <button class="btn btn4" id="submitBtn" type="submit">Send message</button>
-
-        <!-- Estado general (éxito/fracaso) -->
-        <div id="formStatus" class="form_status" role="status" aria-live="polite"></div>
-      </form>
+  <footer class="footer">
+    <div class="footer_container">
+      <div class="footer_logo">
+        <a href="/">
+          <h2>DotNode.</h2>
+        </a>
+        <p>Granada, España</p>
+      </div>
+      <div class="footer_socials">
+        <ul>
+          <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
+                class="fa-brands fa-square-threads"></i></a></li>
+          <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer_copyright">
+        <p>Copyright &copy; 2024</p>
+        <a href="/">Política de privacidad</a>
+      </div>
     </div>
-  </div>
-</section>
-  
-    <footer class="footer">
-        <div class="footer_container">
-            <div class="footer_logo">
-                <a href="/">
-                    <h2>DotNode.</h2>
-                </a>
-                <p>Granada, España</p>
-            </div>
-            <div class="footer_socials">
-                <ul>
-           <a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a>
-        <a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.instagram.com/dotnode_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                </ul>
-            </div>
-            <div class="footer_copyright">
-                <p>Copyright &copy; 2024</p>
-                <a href="/">Política de privacidad</a>
-            </div>
-        </div>
-    </footer>
-    <script type="module" src="/src/main.js"></script>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
 
 </body>
+
 </html>
