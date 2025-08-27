@@ -2,6 +2,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import CustomEase from "gsap/CustomEase";
 import Lenis from "lenis";
+import SplitType from "split-type";
+
 
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 CustomEase.create("hop", "0.9, 0, 0.1, 1");
@@ -766,6 +768,86 @@ function selectPlan(card) {
 
 // blog sectioin on index ------ 
 
-
+ 
 
 // PAGINA CONTACT US VALIDACIONES ----- 
+
+// BLOG PAGEEEEEEE ===============================
+
+// BLOG ABOUT SECTION
+
+(() => {
+  const viewport = document.querySelector('.article_categories_viewport');
+  const track = document.querySelector('.article_categories_track');
+  const cards = Array.from(document.querySelectorAll('.article_category'));
+  const prevBtn = document.querySelector('.cat_btn.prev');
+  const nextBtn = document.querySelector('.cat_btn.next');
+
+  if (!viewport || !track || cards.length === 0) return;
+
+  // Elimina transición CSS del track si la tuvieras, GSAP se encarga
+  track.style.transition = 'none';
+
+  // Flote desigual (respetando tu animación)
+  cards.forEach(card => {
+    const dur = (Math.random() * 1.2 + 2.8).toFixed(2); // 2.8–4.0s
+    const del = (Math.random() * 1.0).toFixed(2);       // 0–1s
+    card.style.animationDuration = `${dur}s`;
+    card.style.animationDelay = `${del}s`;
+  });
+
+  // Cuántas tarjetas entran por vista (1/2/3) según tus media queries
+  const perView = () => {
+    // medimos con el ancho real de una tarjeta + gap
+    const style = getComputedStyle(track);
+    const gap = parseFloat(style.columnGap || style.gap || 0);
+    const first = track.firstElementChild;
+    const cardW = first ? first.getBoundingClientRect().width : viewport.getBoundingClientRect().width;
+    const vw = viewport.getBoundingClientRect().width;
+    // número aproximado que cabe
+    const n = Math.max(1, Math.round((vw + gap) / (cardW + gap)));
+    return n;
+  };
+
+  // Estado
+  let page = 0;
+
+  function totalPages() {
+    return Math.max(1, Math.ceil(cards.length / perView()));
+  }
+
+  function goToPage(p, animate = true) {
+    const pages = totalPages();
+    page = (p + pages) % pages; // wrap
+    const shift = viewport.getBoundingClientRect().width * page;
+    if (animate) {
+      gsap.to(track, { x: -shift, duration: 0.5, ease: "power2.out" });
+    } else {
+      gsap.set(track, { x: -shift });
+    }
+    // desactivar botones si solo hay 1 página
+    const single = pages <= 1;
+    prevBtn.disabled = single;
+    nextBtn.disabled = single;
+    prevBtn.style.opacity = single ? .4 : 1;
+    nextBtn.style.opacity = single ? .4 : 1;
+    prevBtn.style.pointerEvents = single ? 'none' : 'auto';
+    nextBtn.style.pointerEvents = single ? 'auto' : 'auto';
+  }
+
+  // Listeners
+  prevBtn?.addEventListener('click', () => goToPage(page - 1, true));
+  nextBtn?.addEventListener('click', () => goToPage(page + 1, true));
+
+  // Recalcular en resize (debounce)
+  let to;
+  window.addEventListener('resize', () => {
+    clearTimeout(to);
+    to = setTimeout(() => goToPage(page, false), 120);
+  });
+
+  // Init
+  goToPage(0, false);
+})();
+
+

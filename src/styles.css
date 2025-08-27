@@ -857,6 +857,7 @@ p {
 /* Tarjeta */
 .category {
   cursor: pointer;
+  color: var(--color-white);
   background-image: url(/fondo3.png);
   background-size: cover;
   background-position: center;
@@ -2108,7 +2109,443 @@ grid-row: 4 / span 1;
 }
 
 
+/* PAGINA DE BLOG======================================================  */
 
+/* CONTENEDOR GENERAL */
+
+.blog_landing {
+  cursor: default;
+}
+
+.header_blog {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: clamp(60vh, 100vh, 92vh);
+  overflow: hidden;
+}
+
+/* IZQUIERDA: TITULAR */
+.header_blog .hero-copy {
+  padding: clamp(1.5rem, 5vw, 4rem);
+}
+
+.header_blog .hero-copy .line h1 {
+  margin: 0;
+  line-height: 0.9;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: -0.02em;
+  font-size: clamp(3.4rem, 8vw, 8rem);
+  text-transform: uppercase;
+  color: #e9ecf2;
+}
+
+.header_blog .hero-copy .line-img {
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+/* DERECHA: IMAGEN PEGADA AL EXTREMO DERECHO */
+.header_blog .hero-image-right {
+  position: absolute;
+  left: 40%;
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.header_blog .hero-image-right img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+
+.header_blog .hero-copy .line h1 {
+  transition: transform .45s ease, opacity .45s ease;
+}
+
+.header_blog:hover .hero-copy .line:nth-child(1) h1 {
+  transform: translateX(0.5rem);
+}
+
+.header_blog:hover .hero-copy .line:nth-child(2) h1 {
+  transform: translateX(0.25rem);
+}
+
+.header_blog:hover .hero-copy .line:nth-child(3) h1 {
+  transform: translateX(0.1rem);
+}
+
+
+
+/* about secton  */
+
+.about_section {
+  background: #0e0f13;
+  color: #bbb;
+  /* gris por defecto */
+  padding: 8rem 2rem;
+  /* respiración vertical para el pin */
+}
+
+.about_grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  /* 1fr izquierda, 3fr derecha */
+  gap: 2rem;
+  max-width: 1200px;
+  width: min(92vw, 1200px);
+  margin-inline: auto;
+}
+
+.about_left h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+.about_right h3 {
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Palabras: gris apagado al inicio, transiciones fluidas */
+.about_text .word {
+  color: #60656f;
+  /* gris inicial */
+  transition: color 0.2s linear;
+  display: inline-block;
+  /* necesario para staggers limpios */
+  will-change: color;
+}
+
+/* Espacios preservados */
+.about_text .space {
+  white-space: pre;
+}
+
+
+
+/* Categories section --------------  */
+.article_categories_section {
+  color: #e9ecf2;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.article_categories_container {
+  width: var(--container-width-sm);
+  margin: 0 auto;
+}
+
+.article_categories_container i{
+  display: hidden;
+}
+
+.article_categories_title h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin: 0 0 3rem 0;
+  color: #a9adc2;
+}
+
+/* -------- ORIGINAL: grid de 3 --------
+.article_categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+---------------------------------------- */
+
+/* === Slider: aplica SOLO cuando envuelvas con viewport/track === */
+.article_categories_viewport {
+  overflow: hidden;
+  padding-right: 2rem;
+  /* conservamos tu separación usando el gap del track */
+}
+
+.article_categories_track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - clamp(1rem, 2.5vw, 2rem) * 2) / 3);
+  /* 3 por vista */
+  gap: clamp(1rem, 2.5vw, 2rem);
+  transition: transform .5s ease;
+  will-change: transform;
+}
+
+/* Controles mínimos del slider */
+.article_categories_controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+  margin: -1.5rem 0 1rem;
+  /* discreto, sin romper tu layout */
+}
+
+.cat_btn {
+  border: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(255, 255, 255, .06);
+  padding: .55rem .8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.cat_btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, .12);
+}
+
+/* Responsive: 2 y 1 por vista respetando tu gap */
+@media (max-width: 900px) {
+  .article_categories_track {
+    grid-auto-columns: calc((100% - clamp(1rem, 2.5vw, 2rem)) / 2);
+  }
+}
+
+@media (max-width: 560px) {
+  .article_categories_track {
+    grid-auto-columns: 100%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.article_category {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 5/7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  isolation: isolate;
+  animation: float 3s ease-in-out infinite;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.article_category:focus-visible {
+  outline: 2px solid #38d39f;
+  outline-offset: 3px;
+  border-radius: 16px;
+}
+
+/* Contenedor imagen */
+.article_category_img {
+  position: relative;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.article_category_img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform .4s ease;
+}
+
+/* Overlay para legibilidad */
+.article_category_img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .65) 0 35%, rgba(0, 0, 0, .25) 60%, rgba(0, 0, 0, 0) 100%);
+  opacity: .45;
+  transition: opacity .4s ease;
+}
+
+/* Texto dentro de la imagen, 1rem del borde inferior */
+.article_category_text {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  display: grid;
+  gap: .35rem;
+}
+
+.article_category_text h2 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.1;
+  letter-spacing: -.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .45);
+}
+
+.article_category_text p {
+  margin: 0;
+  color: #a9adc2;
+  font-size: .95rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+
+/* Flecha diagonal arriba-derecha */
+.article_category_badge {
+  position: absolute;
+  top: .85rem;
+  right: .85rem;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .45);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(6px);
+  transition: background .4s ease, transform .4s ease;
+}
+
+.article_category_badge i {
+  font-size: 1rem;
+  color: #e9ecf2;
+  opacity: .9;
+  transform: rotate(-35deg);
+}
+
+/* Hover */
+.article_category:hover {
+  animation-play-state: paused;
+  /* se detiene el “flotado” */
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .45);
+  transform: translateY(-2px);
+  /* se queda quieto con un ligero ajuste */
+}
+
+.article_category:hover .article_category_img img {
+  transform: scale(1.06);
+}
+
+.article_category:hover .article_category_img::after {
+  opacity: .65;
+}
+
+.article_category:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .45);
+  transform: translateY(-2px);
+}
+
+.article_category:hover .article_category_badge {
+  background: #38d39f;
+  transform: translate(-2px, 2px);
+}
+
+.article_category:hover .article_category_badge i {
+  color: #0a0b12;
+}
+
+/* ----------- Flote desigual ILIMITADO (patrones cíclicos) ----------- */
+/* Ciclo de 6 variaciones que se repiten para N elementos */
+.article_category:nth-child(6n+1) {
+  animation-duration: 3.0s;
+  animation-delay: 0s;
+}
+
+.article_category:nth-child(6n+2) {
+  animation-duration: 3.4s;
+  animation-delay: .35s;
+}
+
+.article_category:nth-child(6n+3) {
+  animation-duration: 3.8s;
+  animation-delay: .7s;
+}
+
+.article_category:nth-child(6n+4) {
+  animation-duration: 2.9s;
+  animation-delay: .2s;
+}
+
+.article_category:nth-child(6n+5) {
+  animation-duration: 3.6s;
+  animation-delay: .55s;
+}
+
+.article_category:nth-child(6n) {
+  animation-duration: 4.1s;
+  animation-delay: .9s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .header_blog {
+    grid-template-columns: 1fr;
+    /* apilar */
+    gap: 1.25rem;
+  }
+
+  .header_blog .hero-image-right {
+    justify-self: stretch;
+    height: 48vh;
+  }
+
+  .header_blog .hero-image-right img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* En móvil, mueve el badge al centro de la pantalla, sobre el límite imaginario */
+  .header_blog .center-logo-badge {
+    left: 50%;
+    top: calc(50% + 8vh);
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES------------------------------------------------------------------------------- */
+/* ===================================================================================================== */
+/* ===================================================================================================== */
+/* ===================================================================================================== */
+/* ===================================================================================================== */
+/* ===================================================================================================== */
 
 
 @media screen and (max-width: 560px) {
@@ -2167,6 +2604,19 @@ grid-row: 4 / span 1;
   .category p {
     font-size: .95rem;
   }
+
+  .about_section {
+    padding: 4rem 1rem;
+  }
+
+  .about_left h2 {
+    font-size: 1.4rem;
+  }
+
+  .about_right h3 {
+    font-size: 1.6rem;
+    line-height: 1.35;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2191,7 +2641,7 @@ grid-row: 4 / span 1;
   }
 
 
-  /* SERVICE PAGE------ */
+  /* SERVICE PAGE RESPONSIVE============== */
 
   .services-page .menu-logo,
   .contact_page .menu-logo {
@@ -2330,11 +2780,12 @@ grid-row: 4 / span 1;
     background-attachment: scroll;
   }
 
-.glass_container {
+  .glass_container {
     width: 94vw;
     border-radius: 12px;
     box-shadow: 0 0 18px rgba(150, 150, 255, 0.25);
-    grid-template-columns: 1fr !important; /* 1 columna */
+    grid-template-columns: 1fr !important;
+    /* 1 columna */
     grid-template-rows: auto;
     grid-template-areas:
       "cp"
@@ -2347,8 +2798,8 @@ grid-row: 4 / span 1;
   }
 
 
-  .category_title { 
-    font-size: 1.3rem; 
+  .category_title {
+    font-size: 1.3rem;
     margin-bottom: 0.6rem;
   }
 
@@ -2358,8 +2809,8 @@ grid-row: 4 / span 1;
   }
 
   /* Botón ojo más fácil de tocar */
-  .icon_btn { 
-    font-size: 1.25rem; 
+  .icon_btn {
+    font-size: 1.25rem;
     padding: 0.25rem;
   }
 
@@ -2422,7 +2873,7 @@ grid-row: 4 / span 1;
   }
 
 
-  /* CONTACT PAGE------------ */
+  /* CONTACT PAGE RESPONSIVE ========== */
 
   .contact_landing .header h1 {
     text-align: center;
@@ -2449,6 +2900,74 @@ grid-row: 4 / span 1;
     grid-template-columns: repeat(1, 1fr);
   }
 
+
+  /* BLOG PAGE===================================  */
+
+  .header_blog {
+    grid-template-columns: 1fr;
+    min-height: unset;
+    transform: translateY(-4rem);
+    padding-top: clamp(.5rem, 3vw, 1.5rem);
+  }
+
+  .header_blog .hero-image-right {
+    position: static;
+    width: 130%;
+    margin-left: -2rem;
+    height: 130%;
+
+    overflow: hidden;
+  }
+
+  .about_section {
+    padding: 6rem 2rem 6rem 1.5rem;
+  }
+
+  .about_left h2 {
+    font-size: 1.6rem;
+  }
+
+  .about_right h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+.article_categories_viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0;
+    touch-action: pan-x pan-y; /* permite vertical y horizontal */
+    padding-right: 0;          /* evita corte visual al final */
+  }
+
+  /* En móvil usamos flex (más consistente con scroll-snap) */
+  .article_categories_track {
+    display: flex;
+    gap: clamp(1rem, 2.5vw, 2rem);
+    transform: none !important; /* que nada empuje el track */
+  }
+
+  /* Una tarjeta por vista, encajando al inicio del viewport */
+  .article_category {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  /* Opcional: oculta scrollbar visual sin deshabilitarlo */
+  .article_categories_viewport::-webkit-scrollbar { display: none; }
+  .article_categories_viewport { scrollbar-width: none; }
+
+  .article_categories_controls{
+    display: none;
+  }
+
+  .article_categories_container i{
+  display: static;
+  text-align: right;
+  font-size: 2rem;
+}
 }
 
 /* ====== EXTRA: pequeñas mejoras generales ====== */
@@ -2713,6 +3232,22 @@ grid-row: 4 / span 1;
 
   .footer_copyright p {
     text-align: center;
+  }
+
+  .about_grid {
+    grid-template-columns: 1fr;
+    /* se apila */
+    gap: 1.5rem;
+    text-align: center;
+    /* centramos para mejor legibilidad */
+  }
+
+  .about_left h2 {
+    font-size: 1.8rem;
+  }
+
+  .about_right h3 {
+    font-size: 2.4rem;
   }
 }
 
