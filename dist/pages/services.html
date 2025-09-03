@@ -1,24 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="es" data-i18n-attr="lang:lang.code">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <link rel="icon" href="/dotnode_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    referrerpolicy="no-referrer">
+  <!-- Title & Description (i18n) -->
+  <title data-i18n="services.meta.title">Servicios de desarrollo web | DotNode</title>
+  <meta name="description"
+        data-i18n-attr="content:services.meta.description"
+        content="DotNode ofrece desarrollo web, ecommerce, SEO y optimización digital para empresas que buscan crecer online con resultados reales.">
 
-    <title>Servicios de desarrollo web | DotNode</title>
-  <meta name="description" content="DotNode ofrece desarrollo web, ecommerce, SEO y optimización digital para empresas que buscan crecer online con resultados reales.">
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://dotnode.io/services">
+  <link rel="alternate" href="https://dotnode.io/services" hreflang="en">
+  <link rel="alternate" href="https://dotnode.io/es/servicios" hreflang="es">
+  <link rel="alternate" href="https://dotnode.io/services" hreflang="x-default">
 
-  <script type="module" crossorigin src="/assets/main-DbpOGh4_.js"></script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dotnode.io/services">
+  <meta property="og:site_name" data-i18n-attr="content:site.name" content="DotNode">
+  <meta property="og:title"
+        data-i18n-attr="content:services.meta.title"
+        content="Servicios de desarrollo web | DotNode">
+  <meta property="og:description"
+        data-i18n-attr="content:services.meta.description"
+        content="DotNode ofrece desarrollo web, ecommerce, SEO y optimización digital para empresas que buscan crecer online con resultados reales.">
+  <meta property="og:image" content="https://dotnode.io/og/dotnode_services_og.jpg">
+  <meta property="og:image:alt"
+        data-i18n-attr="content:services.og.image_alt"
+        content="Servicios de desarrollo web de DotNode">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title"
+        data-i18n-attr="content:services.meta.title"
+        content="Servicios de desarrollo web | DotNode">
+  <meta name="twitter:description"
+        data-i18n-attr="content:services.meta.description"
+        content="DotNode ofrece desarrollo web, ecommerce, SEO y optimización digital para empresas que buscan crecer online con resultados reales.">
+  <meta name="twitter:image" content="https://dotnode.io/og/dotnode_services_og.jpg">
+
+  <!-- Useful -->
+  <meta name="theme-color" content="#0e0f13">
+  <meta name="robots" content="index,follow">
+  <script type="module" crossorigin src="/assets/main-BSWNHEUm.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main.css">
 </head>
 
-<body class="services-page">
 
+
+<body class="services-page">
 
   <!-- LOADER INICIAL -->
   <div class="loader">
@@ -28,7 +63,7 @@
     </div>
     <div class="intro-logo">
       <div class="word" id="word-1">
-        <h1><span>Dot</span></h1>
+        <h1>Dot</h1>
       </div>
       <div class="word" id="word-2">
         <h1>Node</h1>
@@ -40,7 +75,6 @@
     </div>
   </div>
 
-
   <!-- HERO + HEADER -->
   <section class="section_landing services_landing">
     <div class="container">
@@ -51,11 +85,12 @@
       <!-- NAVBAR nueva (menu fullscreen) -->
       <nav class="nav">
         <div class="logo">
-          <h2 onclick="location.href='/'">DotNode.</h2>
+          <h2 onclick="location.href='/'" data-i18n="site.name">DotNode.</h2>
         </div>
         <div class="menu_right">
           <button class="btn-expand-icon" onclick="">
-            <span>BOOK A CALL</span><span class="arrow"><i class="fa-solid fa-phone"></i></span>
+            <span data-i18n="cta.book_call">Book a call</span><span class="arrow"><i
+                class="fa-solid fa-phone"></i></span>
           </button>
           <p class="menu-open"><i class="fa-solid fa-bars"></i></p>
         </div>
@@ -67,19 +102,18 @@
             <img src="/rectangulo.png" alt="Imagen izquierda" />
           </div>
           <div class="services-text line">
-            <p class="subtitle line">OUR SERVICES</p>
-            <h1>Our digital solutions are crafted to take your online presence to new heights.</h1>
+            <p class="subtitle line" data-i18n="services.hero.kicker">OUR SERVICES</p>
+            <h1 data-i18n="services.hero.title">Our digital solutions are crafted to take your online presence to new
+              heights.</h1>
           </div>
 
-          <div class="image-right  fade_in_left">
+          <div class="image-right fade_in_left">
             <img src="/triangulo.png" alt="Imagen derecha" />
           </div>
         </div>
       </section>
 
   </section>
-
-
 
   <!-- FULLSCREEN MENU -->
   <div class="menu">
@@ -97,79 +131,63 @@
     <div class="menu-col menu-items">
       <div class="menu-logo"><img src="/dotnode_logo.png" alt="logo" /></div>
 
-      <div class="menu-links">
-        <div class="menu-link">
-          <p><a href="/">HOME</a></p>
+       <div class="menu-links">
+       <div class="menu-link">
+          <p><a href="/" data-i18n="nav.home">HOME</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="services.html">SERVICES</a></p>
+          <p><a href="/pages/services.html" data-i18n="nav.services">SERVICES</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="blog.html">BLOG</a></p>
+          <p><a href="/pages/blog.html" data-i18n="nav.blog">BLOG</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="contact_us.html">CONTACT US</a></p>
+          <p><a href="/pages/contact_us.html" data-i18n="nav.contact">CONTACT</a></p>
+        </div>
+        <div class="menu-link lang-switch" id="lang_switcher" aria-label="Language switcher">
+          <button class="btn btn2" type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button class="btn btn2" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
       </div>
 
       <div class="menu-footer">
         <ul>
-         <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a></li>
+          <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
+                class="fa-brands fa-square-threads"></i></a></li>
           <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/dotnode_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
   </div>
 
-
-  <!-- SECCION 1  -->
-
-
-  <!-- <section class="services-page">
-  <div class="container-flex">
-    <div class="image-left fade_in_right">
-      <img src="/rectangulo.png" alt="Imagen izquierda" />
-    </div>
-
-    <div class="services-text">
-       <p class="subtitle orange fade_in_scroll">Empower Your Business</p>
-        <h2>Our digital solutions are crafted to take your online presence to new heights.</h2>
-    </div>
-
-    <div class="image-right  fade_in_left">
-      <img src="/triangulo.png" alt="Imagen derecha" />
-    </div>
-  </div>
-</section> -->
-
-
-
   <!-- SECCION 2  -->
-
   <section class="proven-process">
     <div class="container_process">
-      <h2 class="title fade_in_scroll">PROVEN PROCESS FOR SUCCESS</h2>
-      <p class="subtitle fade_in_scroll">We help you on every step of the journey</p>
+      <h2 class="title fade_in_scroll" data-i18n="services.process.title">PROVEN PROCESS FOR SUCCESS</h2>
+      <p class="subtitle fade_in_scroll" data-i18n="services.process.subtitle">We help you on every step of the journey
+      </p>
 
       <div class="steps-wrapper">
-
         <div class="steps">
           <div class="step">
             <div class="step-number fade_in_right">01</div>
             <div class="step-point"></div>
-            <h3 class="step-title fade_in_left">Contact me</h3>
-            <p class="step-text fade_in_scroll">
+            <h3 class="step-title fade_in_left" data-i18n="services.process.step1.title">Contact me</h3>
+            <p class="step-text fade_in_scroll" data-i18n="services.process.step1.text">
               Start by reaching out so we can understand your goals and challenges clearly. Your journey begins with a
-              simple conversation. </p>
+              simple conversation.
+            </p>
           </div>
 
           <div class="step">
             <div class="step-number fade_in_right">02</div>
             <div class="step-point"></div>
-            <h3 class="step-title fade_in_left">Research</h3>
-            <p class="step-text fade_in_scroll">
+            <h3 class="step-title fade_in_left" data-i18n="services.process.step2.title">Research</h3>
+            <p class="step-text fade_in_scroll" data-i18n="services.process.step2.text">
               We dive deep into analyzing your needs, competitors, and opportunities to craft a tailored strategy that
               guarantees results.
             </p>
@@ -178,18 +196,18 @@
           <div class="step">
             <div class="step-number fade_in_right">03</div>
             <div class="step-point"></div>
-            <h3 class="step-title fade_in_left">Work</h3>
-            <p class="step-text  fade_in_scroll">
+            <h3 class="step-title fade_in_left" data-i18n="services.process.step3.title">Work</h3>
+            <p class="step-text  fade_in_scroll" data-i18n="services.process.step3.text">
               Our team gets to work implementing the plan with precision and creativity, ensuring every detail aligns
-              with
-              your vision. </p>
+              with your vision.
+            </p>
           </div>
 
           <div class="step">
             <div class="step-number fade_in_right">04</div>
             <div class="step-point"></div>
-            <h3 class="step-title fade_in_left">Test &amp; results</h3>
-            <p class="step-text fade_in_scroll">
+            <h3 class="step-title fade_in_left" data-i18n="services.process.step4.title">Test &amp; results</h3>
+            <p class="step-text fade_in_scroll" data-i18n="services.process.step4.text">
               We monitor progress closely, test outcomes, and optimize continuously to deliver measurable success and
               lasting impact.
             </p>
@@ -199,143 +217,188 @@
     </div>
   </section>
 
-
-
-  <!-- SERVICIOS SERVICES  -->
-  <!-- SERVICES -->
+  <!-- SERVICES SERVICIOS ------ -->
   <section class="our_services fullpage_section">
-    <div class="section_services_header">
-      <h1>OUR SERVICES</h1>
-    </div>
-    <div class="glass_container">
-      <!-- Custom Platforms category: occupies 4 boxes (2x2) -->
-      <div class="categoryy custom_platforms">
-        <h2 class="category_title">Custom Platforms</h2>
-        <div class="services_list">
-          <!-- Services -->
-          <div class="service_item" data-name="Dynamic Administered Blog" data-price="400 - 600 €"
-            data-time="6 - 9 days"
-            data-includes="&#10; We create a fully manageable blog tailored to your needs. It can be built with WordPress for simplicity and scalability, or with custom PHP, HTML, CSS, and JavaScript for a more personalized solution.&#10;&#10;Includes a secure admin panel to manage articles, comments, and users. Whether for personal use, branding, or monetization, the blog is SEO optimized and ready to grow with your project.">
-            <span class="service_name">Dynamic Administered Blog</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)"><i
-                class="fa-solid fa-eye"></i></button>
-          </div>
-
-          <div class="service_item" data-name="Booking and Scheduling System" data-price="from 600 €"
-            data-time="7 - 14 days"
-            data-includes="Booking platform with user registrations, calendar integration, and admin panel to confirm, reschedule, or cancel appointments.&#10;&#10;Includes email confirmations, reminders, and SEO optimization to attract more clients.">
-            <span class="service_name">Booking and Scheduling System</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-              <i class="fa-solid fa-eye"></i>
-            </button>
-          </div>
-
-          <div class="service_item" data-name="User Panel and Login Platform" data-price="600 - 1000 €"
-            data-time="10 - 15 days"
-            data-includes="&#10;A complete platform with secure login and personalized user profiles.&#10;&#10;Includes CRUD data management, role-based permissions, and a custom dashboard for each user.&#10;The admin panel allows full control to create, edit, or delete users, assign roles, and monitor activity.&#10;Perfect for businesses or communities that need a reliable and scalable system to manage members.">
-            <span class="service_name">User Panel and Login Platform</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-              <i class="fa-solid fa-eye"></i>
-            </button>
-          </div>
-
-
-          <div class="service_item" data-name="Personalized Portfolio" data-price="250 - 400 €" data-time="4 - 6 days"
-            data-includes="&#10;Attractive personalized portfolio ideal for designers, photographers, artists, freelancers, and other creatives to showcase their work.&#10;&#10;Includes a project gallery, responsive design, and categories to organize content.&#10;A professional and modern solution to highlight your style, build credibility, and capture new clients.">
-            <span class="service_name">Personalized Portfolio</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-              <i class="fa-solid fa-eye"></i>
-            </button>
-          </div>
-        </div>
+    <div class="our_services_container">
+      <div class="section_services_header">
+        <h1 data-i18n="services.section.title" style=" writing-mode: horizontal-tb !important; transform: rotate(-180deg) !important;">OUR SERVICES</h1>
       </div>
 
+      <div class="glass_container">
+        <!-- Custom Platforms -->
+        <div class="categoryy custom_platforms">
+          <h2 class="category_title" data-i18n="services.cat.custom_platforms">Custom Platforms</h2>
+          <div class="services_list">
+            <!-- BLOG -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.blog.name,
+                 data-price:services.items.blog.price,
+                 data-time:services.items.blog.time,
+                 data-includes:services.items.blog.includes" data-name="Dynamic Administered Blog"
+              data-price="400 - 600 €" data-time="6 - 9 days"
+              data-includes="&#10; We create a fully manageable blog tailored to your needs. It can be built with WordPress for simplicity and scalability, or with custom PHP, HTML, CSS, and JavaScript for a more personalized solution.&#10;&#10;Includes a secure admin panel to manage articles, comments, and users. Whether for personal use, branding, or monetization, the blog is SEO optimized and ready to grow with your project.">
+              <span class="service_name" data-i18n="services.items.blog.name">Dynamic Administered Blog</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
 
-<!-- DotGrade NEW Service -->
-      <div class="categoryy dotgrade_service" id="available_services">
+            <!-- BOOKING -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.booking.name,
+                 data-price:services.items.booking.price,
+                 data-time:services.items.booking.time,
+                 data-includes:services.items.booking.includes" data-name="Booking and Scheduling System"
+              data-price="from 600 €" data-time="7 - 14 days"
+              data-includes="Booking platform with user registrations, calendar integration, and admin panel to confirm, reschedule, or cancel appointments.&#10;&#10;Includes email confirmations, reminders, and SEO optimization to attract more clients.">
+              <span class="service_name" data-i18n="services.items.booking.name">Booking and Scheduling System</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
 
-  <div class="services_list">
-    <div class="service_item" 
-         data-name="DotGrade – Digital Reputation" 
-         data-price="50 €"
-         data-time="1 - 3 days"
-         data-includes="&#10;Digital reputation service focused on improving your Google Business profile.&#10;&#10;Includes updated photos, keyword-rich descriptions, profile optimization, and a personalized QR code so clients can easily leave reviews.&#10;&#10;Ideal for businesses that want to boost their online presence, credibility, and attract more local customers quickly.">
-      <span class="service_name"> <h2>
-    DotGrade 
-    <span class="new_badge">NEW</span> </h2>
- </span>
-      <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-        <i class="fa-solid fa-eye"></i>
-      </button>
-    </div>
-  </div>
-</div> 
+            <!-- USER PANEL -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.user_panel.name,
+                 data-price:services.items.user_panel.price,
+                 data-time:services.items.user_panel.time,
+                 data-includes:services.items.user_panel.includes" data-name="User Panel and Login Platform"
+              data-price="600 - 1000 €" data-time="10 - 15 days"
+              data-includes="&#10;A complete platform with secure login and personalized user profiles.&#10;&#10;Includes CRUD data management, role-based permissions, and a custom dashboard for each user.&#10;The admin panel allows full control to create, edit, or delete users, assign roles, and monitor activity.&#10;Perfect for businesses or communities that need a reliable and scalable system to manage members.">
+              <span class="service_name" data-i18n="services.items.user_panel.name">User Panel and Login Platform</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
 
-
-      <!-- Web Essentials category: occupies 2 boxes -->
-      <div class="categoryy web_essentials">
-        <h2 class="category_title">Web Essentials</h2>
-        <div class="services_list">
-          <div class="service_item" data-name="Professional Landing Page" data-price="250 - 400 €"
-            data-time="3 - 5 days"
-            data-includes="&#10;A modern and responsive single-page website designed to make a strong first impression.&#10;&#10;Includes custom design, engaging visuals, contact form integration, and basic hosting setup.&#10;Perfect for professionals, startups, or businesses that want to showcase their brand and generate leads quickly.">
-            <span class="service_name">Professional Landing Page</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-              <i class="fa-solid fa-eye"></i>
-            </button>
-          </div>
-
-          <div class="service_item" data-name="Complete Institutional Site" data-price="350 - 700 €"
-            data-time="5 - 7 days"
-            data-includes="&#10;A complete multi-page website with all the essentials: Home, About, Services, and Contact.&#10;&#10;Includes modern design, responsive layout, animations, and integrated contact forms.&#10;Perfect for companies, organizations, or institutions that want a professional online presence to inform clients and build trust.">
-            <span class="service_name">Complete Institutional Site</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-              <i class="fa-solid fa-eye"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ecommerce Solutions category: 1 box -->
-      <div class="categoryy ecommerce_solutions">
-        <h2 class="category_title">Ecommerce Solutions</h2>
-        <div class="services_list">
-          <div class="service_item" data-name="Customized Online Store (Woo, Shopify)" data-price="450 - 800 €"
-            data-time="7 - 12 days"
-            data-includes="&#10;A personalized e-commerce store built with WooCommerce or Shopify, adapted to your business needs.&#10;&#10;Includes up to 20 products, secure payment gateway integration, and custom design to match your brand.&#10;Ideal for entrepreneurs, small businesses, or brands looking to sell online with a professional, scalable, and easy-to-manage solution.">
-            <span class="service_name">Customized Online Store (Woo, Shopify)</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-              <i class="fa-solid fa-eye"></i>
-            </button>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Redesign & Optimization category: 1 box -->
-      <div class="categoryy redesign_optimization">
-        <h2 class="category_title">Redesign & Optimization</h2>
-        <div class="services_list">
-          <div class="service_item" data-name="Redesign & Optimization" data-price="200 - 600 €" data-time="3 - 10 days"
-            data-includes="&#10;A complete redesign and optimization service to improve the look and performance of your website.&#10;&#10;Includes UI/UX enhancements, speed and performance optimization, responsive adjustments, and basic SEO setup.&#10;Perfect for outdated sites that need a modern, fast, and user-friendly upgrade to increase engagement and conversions.">
-            <span class="service_name">Redesign & Optimization</span>
-            <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
-              <i class="fa-solid fa-eye"></i>
-            </button>
+            <!-- PORTFOLIO -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.portfolio.name,
+                 data-price:services.items.portfolio.price,
+                 data-time:services.items.portfolio.time,
+                 data-includes:services.items.portfolio.includes" data-name="Personalized Portfolio"
+              data-price="250 - 400 €" data-time="4 - 6 days"
+              data-includes="&#10;Attractive personalized portfolio ideal for designers, photographers, artists, freelancers, and other creatives to showcase their work.&#10;&#10;Includes a project gallery, responsive design, and categories to organize content.&#10;A professional and modern solution to highlight your style, build credibility, and capture new clients.">
+              <span class="service_name" data-i18n="services.items.portfolio.name">Personalized Portfolio</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
           </div>
         </div>
+
+        <!-- DotGrade NEW Service -->
+        <div class="categoryy dotgrade_service" id="available_services">
+          <div class="services_list">
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.dotgrade.name,
+                 data-price:services.items.dotgrade.price,
+                 data-time:services.items.dotgrade.time,
+                 data-includes:services.items.dotgrade.includes" data-name="DotGrade – Digital Reputation"
+              data-price="50 €" data-time="1 - 3 days"
+              data-includes="&#10;Digital reputation service focused on improving your Google Business profile.&#10;&#10;Includes updated photos, keyword-rich descriptions, profile optimization, and a personalized QR code so clients can easily leave reviews.&#10;&#10;Ideal for businesses that want to boost their online presence, credibility, and attract more local customers quickly.">
+              <span class="service_name">
+                <h2>
+                  <span data-i18n="services.items.dotgrade.name">DotGrade<span class="new_badge" data-i18n="services.badge.new">NEW</span></span>
+                  
+                </h2>
+              </span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Essentials -->
+        <div class="categoryy web_essentials">
+          <h2 class="category_title" data-i18n="services.cat.web_essentials">Web Essentials</h2>
+          <div class="services_list">
+            <!-- LANDING -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.landing.name,
+                 data-price:services.items.landing.price,
+                 data-time:services.items.landing.time,
+                 data-includes:services.items.landing.includes" data-name="Professional Landing Page"
+              data-price="250 - 400 €" data-time="3 - 5 days"
+              data-includes="&#10;A modern and responsive single-page website designed to make a strong first impression.&#10;&#10;Includes custom design, engaging visuals, contact form integration, and basic hosting setup.&#10;Perfect for professionals, startups, or businesses that want to showcase their brand and generate leads quickly.">
+              <span class="service_name" data-i18n="services.items.landing.name">Professional Landing Page</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+
+            <!-- INSTITUTIONAL -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.institutional.name,
+                 data-price:services.items.institutional.price,
+                 data-time:services.items.institutional.time,
+                 data-includes:services.items.institutional.includes" data-name="Complete Institutional Site"
+              data-price="350 - 700 €" data-time="5 - 7 days"
+              data-includes="&#10;A complete multi-page website with all the essentials: Home, About, Services, and Contact.&#10;&#10;Includes modern design, responsive layout, animations, and integrated contact forms.&#10;Perfect for companies, organizations, or institutions that want a professional online presence to inform clients and build trust.">
+              <span class="service_name" data-i18n="services.items.institutional.name">Complete Institutional
+                Site</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ecommerce Solutions -->
+        <div class="categoryy ecommerce_solutions">
+          <h2 class="category_title" data-i18n="services.cat.ecommerce">Ecommerce Solutions</h2>
+          <div class="services_list">
+            <!-- STORE -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.store.name,
+                 data-price:services.items.store.price,
+                 data-time:services.items.store.time,
+                 data-includes:services.items.store.includes" data-name="Customized Online Store (Woo, Shopify)"
+              data-price="450 - 800 €" data-time="7 - 12 days"
+              data-includes="&#10;A personalized e-commerce store built with WooCommerce or Shopify, adapted to your business needs.&#10;&#10;Includes up to 20 products, secure payment gateway integration, and custom design to match your brand.&#10;Ideal for entrepreneurs, small businesses, or brands looking to sell online with a professional, scalable, and easy-to-manage solution.">
+              <span class="service_name" data-i18n="services.items.store.name">Customized Online Store (Woo,
+                Shopify)</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redesign & Optimization -->
+        <div class="categoryy redesign_optimization">
+          <h2 class="category_title" data-i18n="services.cat.redesign">Redesign & Optimization</h2>
+          <div class="services_list">
+            <!-- REDESIGN -->
+            <div class="service_item" data-i18n-attr="
+                 data-name:services.items.redesign_opt.name,
+                 data-price:services.items.redesign_opt.price,
+                 data-time:services.items.redesign_opt.time,
+                 data-includes:services.items.redesign_opt.includes" data-name="Redesign & Optimization"
+              data-price="200 - 600 €" data-time="3 - 10 days"
+              data-includes="&#10;A complete redesign and optimization service to improve the look and performance of your website.&#10;&#10;Includes UI/UX enhancements, speed and performance optimization, responsive adjustments, and basic SEO setup.&#10;Perfect for outdated sites that need a modern, fast, and user-friendly upgrade to increase engagement and conversions.">
+              <span class="service_name" data-i18n="services.items.redesign_opt.name">Redesign & Optimization</span>
+              <button class="btn icon_btn learn_more_btn" onclick="openModal(this)">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Modal (igual que antes) -->
+
+  <!-- Modal -->
   <div class="modal-overlay" id="modalOverlay" style="display:none;">
     <div class="modal-content">
-      <button class="modal-close" id="modalClose">&times;</button>
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
       <h2 id="modalServiceName"></h2>
       <div class="modal-details">
-        <p><strong>Price:</strong> <span id="modalPrice"></span></p>
-        <p><strong>Time:</strong> <span id="modalTime"></span></p>
+        <p><strong data-i18n="services.modal.price">Price:</strong> <span id="modalPrice"></span></p>
+        <p><strong data-i18n="services.modal.time">Time:</strong> <span id="modalTime"></span></p>
       </div>
       <hr />
       <p id="modalIncludes"></p>
@@ -344,111 +407,136 @@
 
 
 
-  <!-- FICHAS MANTENIMIENTO  -->
+
+
+  <!-- FICHAS MANTENIMIENTO =================================== -->
+
+
   <section class="maintenance_section">
-    <div class="maintenance_title">Maintenance</div>
+    <div class="maintenance_title" data-i18n="services.maintenance.title">Maintenance</div>
 
     <div class="maintenance_cards">
       <!-- BASIC -->
-      <!-- BASIC -->
       <div class="maintenance_card" onclick="selectPlan(this)">
-        <h3>Basic</h3>
+        <h3 data-i18n="services.maintenance.basic">Basic</h3>
         <p class="price">34'99 €</p>
         <ul class="features">
-          <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
-          <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
-          <li class="excluded"><i class="fa-solid fa-xmark"></i>Plugin updates</li>
-          <li class="excluded"><i class="fa-solid fa-xmark"></i>Email & Chat Support</li>
-          <li class="excluded"><i class="fa-solid fa-xmark"></i>Daily backups</li>
-          <li class="excluded"><i class="fa-solid fa-xmark"></i>Consulting</li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.system_updates">System updates</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.maintenance_247">24/7 maintenance</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.security_analysis">Security analysis</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.speed_opt">Speed optimization</span></li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i><span
+              data-i18n="services.maintenance.features.plugin_updates">Plugin updates</span></li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i><span
+              data-i18n="services.maintenance.features.email_chat">Email & Chat Support</span></li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i><span
+              data-i18n="services.maintenance.features.daily_backups">Daily backups</span></li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i><span
+              data-i18n="services.maintenance.features.consulting">Consulting</span></li>
         </ul>
-        <button class="btn btn4" onclick="location.href='https://buy.stripe.com/14A8wR3Jgeb248e3MygrS00'">Choose</button>
+        <button class="btn btn4" onclick="location.href='https://buy.stripe.com/14A8wR3Jgeb248e3MygrS00'"
+          data-i18n="services.maintenance.choose">Choose</button>
       </div>
 
       <!-- STANDARD -->
       <div class="maintenance_card selected" onclick="selectPlan(this)">
-        <h3>Standard</h3>
+        <h3 data-i18n="services.maintenance.standard">Standard</h3>
         <p class="price">49'99 €</p>
         <ul class="features">
-          <li class="included"><i class="fa-solid fa-check"></i>Theme & Plugin updates</li>
-          <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
-          <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Email & Chat Support</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Weekly backups</li>
-          <li class="excluded"><i class="fa-solid fa-xmark"></i>Unlimited tasks</li>
-          <li class="excluded"><i class="fa-solid fa-xmark"></i>Consulting</li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.plugins">Theme & Plugin updates</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.system_updates">System updates</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.maintenance_247">24/7 maintenance</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.security_analysis">Security analysis</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.speed_opt">Speed optimization</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.email_chat">Email & Chat Support</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.weekly_backups">Weekly backups</span></li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i><span
+              data-i18n="services.maintenance.features.unlimited_tasks">Unlimited tasks</span></li>
+          <li class="excluded"><i class="fa-solid fa-xmark"></i><span
+              data-i18n="services.maintenance.features.consulting">Consulting</span></li>
         </ul>
-        <button class="btn btn4" onclick="location.href='https://buy.stripe.com/9B68wR93Aff6eMS3MygrS01'">Choose</button>
+        <button class="btn btn4" onclick="location.href='https://buy.stripe.com/9B68wR93Aff6eMS3MygrS01'"
+          data-i18n="services.maintenance.choose">Choose</button>
       </div>
 
       <!-- PREMIUM -->
       <div class="maintenance_card" onclick="selectPlan(this)">
-        <h3>Premium</h3>
+        <h3 data-i18n="services.maintenance.premium">Premium</h3>
         <p class="price">79'99 €</p>
         <ul class="features">
-          <li class="included"><i class="fa-solid fa-check"></i>Theme & Plugin updates</li>
-          <li class="included"><i class="fa-solid fa-check"></i>System updates</li>
-          <li class="included"><i class="fa-solid fa-check"></i>24/7 maintenance</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Security analysis</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Speed optimization</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Email, Chat & Call Support</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Daily backups</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Unlimited tasks</li>
-          <li class="included"><i class="fa-solid fa-check"></i>Consulting</li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.theme_plugin_updates">Theme & Plugin updates</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.system_updates">System updates</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.maintenance_247">24/7 maintenance</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.security_analysis">Security analysis</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.speed_opt">Speed optimization</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.email_chat_call">Email, Chat & Call Support</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.daily_backups">Daily backups</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.unlimited_tasks">Unlimited tasks</span></li>
+          <li class="included"><i class="fa-solid fa-check"></i><span
+              data-i18n="services.maintenance.features.consulting">Consulting</span></li>
         </ul>
-        <button class="btn btn4" onclick="location.href='https://buy.stripe.com/cNi7sNgw20kccEK96SgrS02'">Choose</button>
+        <button class="btn btn4" onclick="location.href='https://buy.stripe.com/cNi7sNgw20kccEK96SgrS02'"
+          data-i18n="services.maintenance.choose">Choose</button>
       </div>
-
-
     </div>
   </section>
 
-
-
-
   <section class="cta_service_section">
     <div class="cta_service_content">
-      <p class="subtitle">Did you like what you saw?</p>
-      <h2 class="cta_service_title">START YOUR PROJECT</h2>
-      <button class="btn-expand-icon btn4" onclick="location.href='/contact_us.html'">Contact Us <span class="arrow"><i class="fa-solid fa-phone"></i></span></button>
+      <p class="subtitle" data-i18n="services.cta.subtitle">Did you like what you saw?</p>
+      <h2 class="cta_service_title" data-i18n="services.cta.title">START YOUR PROJECT</h2>
+      <button class="btn-expand-icon btn4" onclick="location.href='/contact_us.html'">
+        <span data-i18n="services.cta.button">Contact Us</span>
+        <span class="arrow"><i class="fa-solid fa-phone"></i></span>
+      </button>
     </div>
     <div class="glow_circle_service"></div>
   </section>
 
-
-
-
-
   <!-- FOOTER_________________ -->
-
   <footer class="footer">
     <div class="footer_container">
       <div class="footer_logo">
         <a href="/">
-          <h2>DotNode.</h2>
+          <h2 data-i18n="site.name">DotNode.</h2>
         </a>
-        <p>Granada, España</p>
+        <p data-i18n="footer.location">Granada, España</p>
       </div>
       <div class="footer_socials">
         <ul>
-         <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a></li>
+          <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
+                class="fa-brands fa-square-threads"></i></a></li>
           <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
+          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin"></i></a></li>
         </ul>
       </div>
       <div class="footer_copyright">
         <p>Copyright &copy; 2024</p>
-        <a href="/">Política de privacidad</a>
+        <a href="/" data-i18n="footer.privacy">Política de privacidad</a>
       </div>
     </div>
   </footer>
-
 
 
 
@@ -503,9 +591,7 @@
       });
     });
 
-
   </script>
-
 </body>
 
 </html>

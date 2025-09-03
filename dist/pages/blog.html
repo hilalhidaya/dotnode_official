@@ -1,22 +1,60 @@
-<html lang="en">
+<!doctype html>
+
+<html lang="es" data-i18n-attr="lang:lang.code">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <link rel="icon" href="/dotnode_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    referrerpolicy="no-referrer">
+  <!-- Title & Description (i18n) -->
+  <title data-i18n="home.meta.title">DotNode — Web Development & Digital Reputation</title>
+  <meta name="description"
+        data-i18n-attr="content:home.meta.description"
+        content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
 
-  <title>DotNode</title>
-  <script type="module" crossorigin src="/assets/main-DbpOGh4_.js"></script>
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://dotnode.io/">
+  <link rel="alternate" href="https://dotnode.io/" hreflang="en">
+  <link rel="alternate" href="https://dotnode.io/es/" hreflang="es">
+  <link rel="alternate" href="https://dotnode.io/" hreflang="x-default">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dotnode.io/">
+  <meta property="og:site_name" data-i18n-attr="content:site.name" content="DotNode">
+  <meta property="og:title"
+        data-i18n-attr="content:home.meta.title"
+        content="DotNode — Web Development & Digital Reputation">
+  <meta property="og:description"
+        data-i18n-attr="content:home.meta.description"
+        content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
+  <meta property="og:image" content="https://dotnode.io/og/dotnode_og.jpg">
+  <meta property="og:image:alt"
+        data-i18n-attr="content:home.og.image_alt"
+        content="DotNode — modern web experiences">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title"
+        data-i18n-attr="content:home.meta.title"
+        content="DotNode — Web Development & Digital Reputation">
+  <meta name="twitter:description"
+        data-i18n-attr="content:home.meta.description"
+        content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
+  <meta name="twitter:image" content="https://dotnode.io/og/dotnode_og.jpg">
+
+  <meta name="theme-color" content="#0e0f13">
+  <meta name="robots" content="index,follow">
+  <script type="module" crossorigin src="/assets/main-BSWNHEUm.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main.css">
 </head>
 
-<body>
 
 
+<body class="blog_body">
   <!-- LOADER INICIAL -->
   <div class="loader">
     <div class="overlay">
@@ -25,7 +63,7 @@
     </div>
     <div class="intro-logo">
       <div class="word" id="word-1">
-        <h1><span>Dot</span></h1>
+        <h1>Dot</h1>
       </div>
       <div class="word" id="word-2">
         <h1>Node</h1>
@@ -46,31 +84,28 @@
       <!-- NAVBAR -->
       <nav class="nav">
         <div class="logo">
-          <h2 onclick="location.href='/'">DotNode.</h2>
+          <h2 onclick="location.href='/'" data-i18n="site.name">DotNode.</h2>
         </div>
         <div class="menu_right">
           <button class="btn-expand-icon">
-            <span>BOOK A CALL</span><span class="arrow"><i class="fa-solid fa-phone"></i></span>
+            <span data-i18n="cta.book_call">Book a call</span><span class="arrow"><i
+                class="fa-solid fa-phone"></i></span>
           </button>
-          <p class="menu-open"><i class="fa-solid fa-bars"></i></p>
+          <p class="menu-open" style="z-index: 400;"><i class="fa-solid fa-bars"></i></p>
         </div>
       </nav>
 
       <!-- HEADER -->
       <div class="header header_blog">
-        <!-- IZQUIERDA -->
         <div class="hero-copy">
           <div class="line line-img">
             <p><img class="float-y" src="/dotnode_logo.png" alt="DotNode Logo"></p>
           </div>
           <div class="line">
-            <h1>OUR</h1>
+            <h1 data-i18n="blog.latest">LATEST</h1>
           </div>
           <div class="line">
-            <h1>LATEST</h1>
-          </div>
-          <div class="line">
-            <h1>ARTICLES</h1>
+            <h1 data-i18n="blog.title">ARTICLES</h1>
           </div>
         </div>
 
@@ -78,16 +113,15 @@
         <div class="hero-image-right hero-img">
           <img src="/blog__img.png" alt="Cover image">
         </div>
-      </div><!-- /.header_blog -->
-    </div><!-- /.container -->
+      </div>
+    </div>
   </section>
-
 
   <!-- FULLSCREEN MENU -->
   <div class="menu">
     <div class="menu-nav">
       <p class="menu-close"><i class="fa-solid fa-xmark"></i></p>
-    </div> <!--close menu-->
+    </div>
 
     <div class="menu-col menu-img">
       <img id="img-1" src="/hero.jpg" alt="" />
@@ -104,16 +138,20 @@
 
       <div class="menu-links">
         <div class="menu-link">
-          <p><a href="/">HOME</a></p>
+          <p><a href="/" data-i18n="nav.home">HOME</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/pages/services.html">SERVICES</a></p>
+          <p><a href="/pages/services.html" data-i18n="nav.services">SERVICES</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/pages/blog.html">BLOG</a></p>
+          <p><a href="/pages/blog.html" data-i18n="nav.blog">BLOG</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/pages/contact_us.html">CONTACT US</a></p>
+          <p><a href="/pages/contact_us.html" data-i18n="nav.contact">CONTACT</a></p>
+        </div>
+       <div class="menu-link lang-switch" id="lang_switcher" aria-label="Language switcher">
+          <button class="btn btn2" type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button class="btn btn2" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
       </div>
 
@@ -122,7 +160,8 @@
           <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
                 class="fa-brands fa-square-threads"></i></a></li>
           <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.instagram.com/dotnode_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </li>
           <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
                 class="fa-brands fa-linkedin"></i></a></li>
         </ul>
@@ -130,152 +169,128 @@
     </div>
   </div>
 
-
-
+  <!-- ABOUT -->
   <section class="about_section">
     <div class="about_grid">
       <div class="about_left fade_in_left">
-        <h2>How we help you</h2>
+        <h2 data-i18n="blog.about.title">How we help you</h2>
       </div>
-      <div class="about_right left fade_in_right">
-        <h3 class="about_text">
-          Delivering pioneer digital solutions and top-notch design support, from ambitious startups and growing local
-          businesses to established corporations and individual entrepreneurs.
-        </h3>
-      </div>
+      <!-- <div class="about_right left fade_in_right">
+        <h3 class="about_text" data-i18n="blog.about.text">Delivering pioneer digital solutions and top-notch design
+          support...</h3>
+      </div> -->
     </div>
   </section>
 
-
-  <!-- ARTICLE CATEORIES SECTION ------------  -->
+  <!-- ARTICLE CATEGORIES -->
   <section class="article_categories_section">
     <div class="article_categories_container">
       <div class="article_categories_title left fade_in_left">
-        <h1>ARTICLE CATEGORIES</h1>
-        <i class="fa-solid fa-left-right"></i>
+        <h1 data-i18n="blog.categories.title">ARTICLE CATEGORIES</h1>
       </div>
 
-      <!-- Controles -->
       <div class="article_categories_controls">
         <button class="cat_btn prev" aria-label="Previous categories">
-          <i class="fa-solid fa-angle-left"></i>
-        </button>
-        <button class="cat_btn next" aria-label="Next categories">
-          <i class="fa-solid fa-angle-right"></i>
+          <i class="fa-solid fa-left-right"></i>
         </button>
       </div>
 
-      <!-- Viewport + Track -->
       <div class="article_categories_viewport fade_in_right">
         <div class="article_categories_track">
+
           <!-- CARD 1 -->
-          <a class="article_category" href="/blog.html?cat=web-dev" aria-label="Go to Web Development & Technology">
+          <a class="article_category" href="/blog.html?cat=web-dev">
             <div class="article_category_img">
               <img src="/heroo.jpg" alt="Web development and technology">
               <div class="article_category_text">
-                <h2>Web Development & Technology</h2>
-                <p>From modern stacks to performance, hosting, and best practices.</p>
+                <h2 data-i18n="categories.label.web-dev"></h2>
+                <p data-i18n="categories.desc.web-dev">From modern stacks to performance, hosting, and best practices.
+                </p>
               </div>
             </div>
-            <div class="article_category_badge" aria-hidden="true">
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </div>
+            <div class="article_category_badge"><i class="fa-solid fa-arrow-right-long"></i></div>
           </a>
 
           <!-- CARD 2 -->
-          <a class="article_category" href="/blog.html?cat=ux-ui" aria-label="Go to UX/UI & Digital Strategy">
+          <a class="article_category" href="/blog.html?cat=ux-ui">
             <div class="article_category_img">
               <img src="/ux_ui.jpg" alt="UX UI and digital strategy">
               <div class="article_category_text">
-                <h2>UX/UI & Digital Strategy</h2>
-                <p>Design systems, flows, research and conversion-focused thinking.</p>
+                <h2 data-i18n="categories.label.ux-ui"></h2>
+                <p data-i18n="categories.desc.ux-ui">Design systems, flows, research and conversion-focused thinking.
+                </p>
               </div>
             </div>
-            <div class="article_category_badge" aria-hidden="true">
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </div>
+            <div class="article_category_badge"><i class="fa-solid fa-arrow-right-long"></i></div>
           </a>
 
           <!-- CARD 3 -->
-          <a class="article_category" href="/blog.html?cat=business" aria-label="Go to Online Business & Marketing">
+          <a class="article_category" href="/blog.html?cat=business">
             <div class="article_category_img">
               <img src="/meeting.jpg" alt="Online business and marketing">
               <div class="article_category_text">
-                <h2>Online Business & Marketing</h2>
-                <p>Positioning, content, funnels, local SEO and growth tactics.</p>
+                <h2 data-i18n="categories.label.business"></h2>
+                <p data-i18n="categories.desc.business">Positioning, content, funnels, local SEO and growth tactics.</p>
               </div>
             </div>
-            <div class="article_category_badge" aria-hidden="true">
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </div>
+            <div class="article_category_badge"><i class="fa-solid fa-arrow-right-long"></i></div>
           </a>
 
-          <!-- CARD 4 (Nueva) -->
-          <a class="article_category" href="/blog.html?cat=ecommerce" aria-label="Go to Ecommerce">
+          <!-- CARD 4 -->
+          <a class="article_category" href="/blog.html?cat=ecommerce">
             <div class="article_category_img">
               <img src="/ecom.jpg" alt="Ecommerce">
               <div class="article_category_text">
-                <h2>Ecommerce</h2>
-                <p>Store builds, CRO, payments, logistics, and product strategy.</p>
+                <h2 data-i18n="categories.label.ecommerce"></h2>
+                <p data-i18n="categories.desc.ecommerce">Store builds, CRO, payments, logistics, and product strategy.
+                </p>
               </div>
             </div>
-            <div class="article_category_badge" aria-hidden="true">
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </div>
+            <div class="article_category_badge"><i class="fa-solid fa-arrow-right-long"></i></div>
           </a>
 
-          <!-- CARD 5 (Nueva) -->
-          <a class="article_category" href="/blog.html?cat=digital-reputation"
-            aria-label="Go to Digital Reputation & Strategies">
+          <!-- CARD 5 -->
+          <a class="article_category" href="/blog.html?cat=digital-reputation">
             <div class="article_category_img">
               <img src="/pigeon.jpg" alt="Digital reputation and strategies">
               <div class="article_category_text">
-                <h2>Digital Reputation & Strategies</h2>
-                <p>Reviews, Google Business, playbooks, and crisis management.</p>
+                <h2 data-i18n="categories.label.digital-reputation"></h2>
+                <p data-i18n="categories.desc.digital-reputation">Reviews, Google Business, playbooks, and crisis
+                  management.</p>
               </div>
             </div>
-            <div class="article_category_badge" aria-hidden="true">
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </div>
+            <div class="article_category_badge"><i class="fa-solid fa-arrow-right-long"></i></div>
           </a>
 
-          <!-- CARD 6 (Nueva) -->
-          <a class="article_category" href="/blog.html?cat=inspiration-tech-culture"
-            aria-label="Go to Inspiration & Tech Culture">
+          <!-- CARD 6 -->
+          <a class="article_category" href="/blog.html?cat=inspiration-tech-culture">
             <div class="article_category_img">
               <img src="/seen.jpg" alt="Inspiration and tech culture">
               <div class="article_category_text">
-                <h2>Inspiration & Tech Culture</h2>
-                <p>Trends, mindset, workflows, makers, and thoughtful tools.</p>
+                <h2 data-i18n="categories.label.inspiration-tech-culture"></h2>
+                <p data-i18n="categories.desc.inspiration-tech-culture">Trends, mindset, workflows, makers, and
+                  thoughtful tools.</p>
               </div>
             </div>
-            <div class="article_category_badge" aria-hidden="true">
-              <i class="fa-solid fa-arrow-right-long"></i>
-            </div>
+            <div class="article_category_badge"><i class="fa-solid fa-arrow-right-long"></i></div>
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="blog_list">
+    <div id="articles"></div>
+  </section>
 
 
-  <!-- 
-<section id="blog_articles_container" class="articles_wrapper"> -->
-  <!-- Artículos cargados dinámicamente -->
-  <!-- </section> -->
-
-
-
-
-  <!-- ---------------------------- -->
   <footer class="footer">
     <div class="footer_container">
       <div class="footer_logo">
         <a href="/">
-          <h2>DotNode.</h2>
+          <h2 data-i18n="site.name">DotNode.</h2>
         </a>
-        <p>Granada, España</p>
+        <p data-i18n="footer.location">Granada, España</p>
       </div>
       <div class="footer_socials">
         <ul>
@@ -287,25 +302,29 @@
       </div>
       <div class="footer_copyright">
         <p>Copyright &copy; 2024</p>
-        <a href="index.html">Política de privacidad</a>
+        <a href="index.html" data-i18n="footer.privacy">Privacy Policy</a>
       </div>
     </div>
   </footer>
+
+
 
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script>
     (() => {
       const viewport = document.querySelector('.article_categories_viewport');
       const track = document.querySelector('.article_categories_track');
-      const cards = Array.from(document.querySelectorAll('.article_category'));
-      const prevBtn = document.querySelector('.cat_btn.prev');
-      const nextBtn = document.querySelector('.cat_btn.next');
+      const cards = Array.from(track?.children || []);
+      const prev = document.querySelector('.cat_btn.prev');
+      const next = document.querySelector('.cat_btn.next');
       if (!viewport || !track || cards.length === 0) return;
 
-      // Flote desigual (respetando tu animación)
+      // Asegura transición en desktop (si no está en tu CSS)
+      if (!getComputedStyle(track).transition || getComputedStyle(track).transition === 'all 0s ease 0s') {
+        track.style.transition = 'transform 0.45s ease';
+      }
+
+      // Flote desigual (tu animación CSS sigue igual; esto solo randomiza tiempos)
       cards.forEach(card => {
         const dur = (Math.random() * 1.2 + 2.8).toFixed(2);
         const del = (Math.random() * 1.0).toFixed(2);
@@ -313,20 +332,17 @@
         card.style.animationDelay = `${del}s`;
       });
 
+      const mqMobile = window.matchMedia('(max-width: 560px)');
       let page = 0;
-      let desktopMode = null; // estado actual
-      let resizeTO;
 
       function perView() {
+        if (mqMobile.matches) return 1; // en móvil usamos scroll nativo
         const style = getComputedStyle(track);
-        // Si estamos en móvil (flex), perView = 1
-        if (window.matchMedia('(max-width: 560px)').matches) return 1;
-
         const gap = parseFloat(style.columnGap || style.gap || 0);
-        const first = track.firstElementChild;
+        const first = cards[0];
         const cardW = first ? first.getBoundingClientRect().width : viewport.getBoundingClientRect().width;
         const vw = viewport.getBoundingClientRect().width;
-        return Math.max(1, Math.round((vw + gap) / (cardW + gap))); // 3/2/1 según CSS
+        return Math.max(1, Math.round((vw + gap) / (cardW + gap))); // 3 / 2 / 1 según CSS
       }
 
       function totalPages() {
@@ -337,61 +353,193 @@
         const pages = totalPages();
         page = (p + pages) % pages;
         const shift = viewport.getBoundingClientRect().width * page;
-        if (animate) gsap.to(track, { x: -shift, duration: 0.45, ease: "power2.out" });
-        else gsap.set(track, { x: -shift });
+
+        if (!animate) {
+          const prevTransition = track.style.transition;
+          track.style.transition = 'none';
+          track.style.transform = `translateX(-${shift}px)`;
+          // Forzar reflow para que la siguiente transición se aplique
+          void track.offsetWidth;
+          track.style.transition = prevTransition;
+        } else {
+          track.style.transform = `translateX(-${shift}px)`;
+        }
 
         const single = pages <= 1;
-        if (prevBtn && nextBtn) {
-          prevBtn.disabled = single; nextBtn.disabled = single;
-          prevBtn.style.opacity = single ? .4 : 1; nextBtn.style.opacity = single ? .4 : 1;
-          prevBtn.style.pointerEvents = single ? 'none' : 'auto';
-          nextBtn.style.pointerEvents = single ? 'none' : 'auto';
+        if (prev && next) {
+          prev.disabled = single;
+          next.disabled = single;
+          prev.style.opacity = single ? .4 : 1;
+          next.style.opacity = single ? .4 : 1;
+          prev.style.pointerEvents = single ? 'none' : 'auto';
+          next.style.pointerEvents = single ? 'none' : 'auto';
         }
       }
 
-      // Activa modo desktop (botones + GSAP)
-      function enableDesktop() {
-        // Asegura grid en desktop (tu CSS ya lo define)
-        track.style.willChange = 'transform';
-        // Reinicia scroll nativo por si venimos de mobile
-        viewport.scrollLeft = 0;
-        goToPage(page, false);
-
-        prevBtn?.addEventListener('click', onPrev);
-        nextBtn?.addEventListener('click', onNext);
+      function applyMode() {
+        if (mqMobile.matches) {
+          // Móvil: sin transform (scroll-snap nativo horizontal)
+          track.style.transform = 'translateX(0)';
+          if (prev && next) { prev.style.display = 'none'; next.style.display = 'none'; }
+        } else {
+          if (prev && next) { prev.style.display = ''; next.style.display = ''; }
+          goToPage(page, false);
+        }
       }
 
-      function disableDesktop() {
-        // Limpia transform para que el scroll nativo funcione
-        gsap.set(track, { x: 0 });
-        // Quita listeners de botones (aunque en mobile están ocultos)
-        prevBtn?.removeEventListener('click', onPrev);
-        nextBtn?.removeEventListener('click', onNext);
-      }
+      // Botones (solo desktop)
+      prev?.addEventListener('click', () => goToPage(page - 1, true));
+      next?.addEventListener('click', () => goToPage(page + 1, true));
 
-      function onPrev() { goToPage(page - 1, true); }
-      function onNext() { goToPage(page + 1, true); }
-
-      function updateMode() {
-        const shouldDesktop = !window.matchMedia('(max-width: 560px)').matches;
-        if (desktopMode === shouldDesktop) return; // sin cambios
-
-        desktopMode = shouldDesktop;
-        if (desktopMode) enableDesktop();
-        else disableDesktop();
-      }
-
-      // Init + resize
-      updateMode();
+      // Reaccionar a cambios de tamaño / breakpoint
+      mqMobile.addEventListener?.('change', applyMode);
+      let to;
       window.addEventListener('resize', () => {
-        clearTimeout(resizeTO);
-        resizeTO = setTimeout(() => {
-          updateMode();
-          if (desktopMode) goToPage(page, false);
-        }, 120);
+        clearTimeout(to);
+        to = setTimeout(() => applyMode(), 120);
       });
+
+      // Init
+      applyMode();
     })();
   </script>
+  <script>
+    // 1) Envuelve cada palabra en <span class="word"> y conserva espacios
+    function wrapWords(selector) {
+      const el = document.querySelector(selector);
+      if (!el) return [];
+      const txt = el.textContent;
+      const parts = txt.split(/(\s+)/); // conserva espacios en el array
+      el.innerHTML = "";
+      for (const part of parts) {
+        if (/^\s+$/.test(part)) {
+          const s = document.createElement("span");
+          s.className = "space";
+          s.textContent = part;
+          el.appendChild(s);
+        } else if (part.length) {
+          const w = document.createElement("span");
+          w.className = "word";
+          w.textContent = part;
+          el.appendChild(w);
+        }
+      }
+      return Array.from(el.querySelectorAll(".word"));
+    }
+
+    // 2) Animación constante: ilumina palabra a palabra, mantiene todo iluminado un instante, reinicia
+    function runWordHighlighter(words, speedMs = 160, holdMs = 700) {
+      if (!words.length) return;
+      let i = 0;
+      const light = () => {
+        if (i < words.length) {
+          words[i].classList.add("is-lit");
+          i++;
+          timer = setTimeout(light, speedMs);
+        } else {
+          // al terminar, esperamos un poco y reiniciamos
+          timer = setTimeout(() => {
+            words.forEach(w => w.classList.remove("is-lit"));
+            i = 0;
+            timer = setTimeout(light, speedMs);
+          }, holdMs);
+        }
+      };
+      let timer = setTimeout(light, speedMs);
+
+      // Respeta prefers-reduced-motion
+      const m = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const applyPRM = () => {
+        if (m.matches) {
+          clearTimeout(timer);
+          words.forEach(w => w.classList.add("is-lit")); // deja todo visible
+        } else {
+          clearTimeout(timer);
+          words.forEach(w => w.classList.remove("is-lit"));
+          i = 0;
+          timer = setTimeout(light, speedMs);
+        }
+      };
+      m.addEventListener?.('change', applyPRM);
+    }
+
+    // 3) Init
+    document.addEventListener('DOMContentLoaded', () => {
+      const words = wrapWords(".about_text");
+      runWordHighlighter(words, 160, 700); // ajusta tiempos si quieres
+    });
+  </script>
+  <script>
+    // 1) Envuelve cada palabra en <span class="word"> y conserva espacios
+    function wrapWords(selector) {
+      const el = document.querySelector(selector);
+      if (!el) return [];
+      const txt = el.textContent;
+      const parts = txt.split(/(\s+)/); // conserva espacios en el array
+      el.innerHTML = "";
+      for (const part of parts) {
+        if (/^\s+$/.test(part)) {
+          const s = document.createElement("span");
+          s.className = "space";
+          s.textContent = part;
+          el.appendChild(s);
+        } else if (part.length) {
+          const w = document.createElement("span");
+          w.className = "word";
+          w.textContent = part;
+          el.appendChild(w);
+        }
+      }
+      return Array.from(el.querySelectorAll(".word"));
+    }
+
+    // 2) Animación constante: ilumina palabra a palabra, mantiene todo iluminado un instante, reinicia
+    function runWordHighlighter(words, speedMs = 160, holdMs = 700) {
+      if (!words.length) return;
+      let i = 0;
+      const light = () => {
+        if (i < words.length) {
+          words[i].classList.add("is-lit");
+          i++;
+          timer = setTimeout(light, speedMs);
+        } else {
+          // al terminar, esperamos un poco y reiniciamos
+          timer = setTimeout(() => {
+            words.forEach(w => w.classList.remove("is-lit"));
+            i = 0;
+            timer = setTimeout(light, speedMs);
+          }, holdMs);
+        }
+      };
+      let timer = setTimeout(light, speedMs);
+
+      // Respeta prefers-reduced-motion
+      const m = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const applyPRM = () => {
+        if (m.matches) {
+          clearTimeout(timer);
+          words.forEach(w => w.classList.add("is-lit")); // deja todo visible
+        } else {
+          clearTimeout(timer);
+          words.forEach(w => w.classList.remove("is-lit"));
+          i = 0;
+          timer = setTimeout(light, speedMs);
+        }
+      };
+      m.addEventListener?.('change', applyPRM);
+    }
+
+    // 3) Init
+    document.addEventListener('DOMContentLoaded', () => {
+      const words = wrapWords(".about_text");
+      runWordHighlighter(words, 160, 700); // ajusta tiempos si quieres
+    });
+  </script>
+
+
+
+
+
 
 </body>
 

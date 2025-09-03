@@ -53,7 +53,7 @@ color:var(--color-orange);}
   gap: 1.5em;
   clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   overflow: hidden;
-  z-index: 2;
+  z-index: 500;
   pointer-events: none;
 }
 

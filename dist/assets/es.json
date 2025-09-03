@@ -1,0 +1,254 @@
+{
+  "lang": { "code": "es" },
+  "lang.code": "es",
+  "site.name": "DotNode",
+  "nav.home": "INICIO",
+  "nav.blog": "BLOG",
+  "nav.services": "SERVICIOS",
+  "nav.contact": "CONTACTO",
+  "cta.book_call": "Contáctanos",
+
+  "hero.title": "Creamos experiencias web que mueven tu negocio",
+  "hero.subtitle": "Rápidas, estéticamente impecables y pensadas para convertir.",
+
+  "blog.title": "ARTÍCULOS",
+  "blog.filters.all_categories": "Todas las categorías",
+  "blog.filters.search": "Buscar…",
+  "blog.read_more": "Leer más",
+  "blog.latest": "ÚLTIMOS",
+  "blog.featured": "Artículos destacados",
+  "blog.no_results": "No hay artículos que coincidan.",
+
+  "categories.label.web-dev": "Desarrollo web y tecnología",
+  "categories.label.ux-ui": "UX/UI y estrategia digital",
+  "categories.label.business": "Negocios online y marketing",
+  "categories.label.ecommerce": "Ecommerce",
+  "categories.label.digital-reputation": "Reputación digital y estrategias",
+  "categories.label.inspiration-tech-culture": "Inspiración y cultura tech",
+
+
+  "contact.title": "Contáctanos",
+  "contact.get_in_touch": "Ponte en contacto",
+  "contact.lead": "Construyamos juntos algo de lo que te sientas orgulloso.",
+  "contact.location": "Granada, España",
+
+  "contact.form.title": "Tus datos",
+  "contact.form.full_name": "Nombre completo",
+  "contact.form.full_name_placeholder": "Tu nombre",
+  "contact.form.email": "Correo electrónico",
+  "contact.form.email_placeholder": "Correo electrónico",
+  "contact.form.message": "Mensaje",
+  "contact.form.message_placeholder": "Cuéntanos más sobre tu proyecto",
+  "contact.form.send": "Enviar mensaje",
+
+  "footer.location": "Granada, España",
+  "footer.privacy": "Política de privacidad",
+
+
+
+
+
+  "services.og.image_alt": "Servicios de desarrollo web de DotNode",
+  "services.meta.title": "Servicios de desarrollo web | DotNode",
+  "services.meta.description": "DotNode ofrece desarrollo web, ecommerce, SEO y optimización digital para empresas que buscan crecer online con resultados reales.",
+
+  "services.hero.kicker": "NUESTROS SERVICIOS",
+  "services.hero.title": "Nuestras soluciones digitales están diseñadas para llevar tu presencia online al siguiente nivel.",
+
+  "services.process.title": "PROCESO PROBADO PARA EL ÉXITO",
+  "services.process.subtitle": "Te acompañamos en cada paso del camino",
+  "services.process.step1.title": "Contáctanos",
+  "services.process.step1.text": "Tengamos una pequeña charla para entender con claridad tus objetivos y retos. Todo comienza con una conversación.",
+  "services.process.step2.title": "Investigación",
+  "services.process.step2.text": "Analizamos tus necesidades, competencia y oportunidades para diseñar una estrategia a medida que dé resultados.",
+  "services.process.step3.title": "Trabajo",
+  "services.process.step3.text": "Nos ponemos manos a la obra con precisión y creatividad, cuidando cada detalle alineado a tu visión.",
+  "services.process.step4.title": "Pruebas y resultados",
+  "services.process.step4.text": "Monitoreamos, probamos y optimizamos continuamente para ofrecer resultados medibles y de impacto duradero.",
+
+  "services.section.title": "SERVICIOS",
+  "services.cat.custom_platforms": "Plataformas a medida",
+  "services.cat.web_essentials": "Esenciales Web",
+  "services.cat.ecommerce": "Soluciones Ecommerce",
+  "services.cat.redesign": "Rediseño y Optimización",
+
+  "services.items.blog": "Blog dinámico administrable",
+  "services.items.booking": "Sistema de reservas y agenda",
+  "services.items.user_panel": "Panel de usuarios y login",
+  "services.items.portfolio": "Portafolio personalizado",
+  "services.items.dotgrade.name": "DotGrade",
+  "services.items.landing": "Landing page profesional",
+  "services.items.institutional": "Sitio institucional completo",
+  "services.items.store": "Tienda online a medida (Woo, Shopify)",
+  "services.items.redesign_opt": "Rediseño y Optimización",
+  "services.badge.new": "NUEVO",
+
+  "services.modal.price": "Precio:",
+  "services.modal.time": "Tiempo:",
+
+  "services": {
+    "section": {
+      "title": "NUESTROS SERVICIOS"
+    },
+    "badge": {
+      "new": "NUEVO"
+    },
+    "cat": {
+      "custom_platforms": "Plataformas a medida",
+      "web_essentials": "Esenciales web",
+      "ecommerce": "Soluciones eCommerce",
+      "redesign": "Rediseño y optimización"
+    },
+    "items": {
+      "blog": {
+        "name": "Blog dinámico administrable",
+        "price": "400 - 600 €",
+        "time": "6 - 9 días",
+        "includes": "Creamos un blog totalmente gestionable y adaptado a tus necesidades. Puede construirse con WordPress para priorizar simplicidad y escalabilidad, o con PHP, HTML, CSS y JavaScript a medida para una solución más personalizada. Incluye panel de administración seguro para gestionar artículos, comentarios y usuarios. Ya sea para uso personal, marca o monetización, el blog queda optimizado para SEO y listo para crecer con tu proyecto."
+      },
+      "booking": {
+        "name": "Sistema de reservas y citas",
+        "price": "desde 600 €",
+        "time": "7 - 14 días",
+        "includes": "Plataforma de reservas con registro de usuarios, integración de calendario y panel de administración para confirmar, reprogramar o cancelar citas. Incluye confirmaciones por email, recordatorios automáticos y optimización SEO para atraer más clientes."
+      },
+      "user_panel": {
+        "name": "Panel de usuarios y plataforma de login",
+        "price": "600 - 1000 €",
+        "time": "10 - 15 días",
+        "includes": "Plataforma completa con inicio de sesión seguro y perfiles personalizados. Incluye gestión de datos (CRUD), permisos por roles y panel personalizado para cada usuario. El panel de administración permite crear, editar o eliminar usuarios, asignar roles y monitorear actividad. Ideal para empresas o comunidades que necesitan un sistema fiable y escalable para gestionar miembros."
+      },
+      "portfolio": {
+        "name": "Portafolio personalizado",
+        "price": "250 - 400 €",
+        "time": "4 - 6 días",
+        "includes": "Portafolio atractivo para diseñadores, fotógrafos, artistas, freelancers y otros creativos. Incluye galería de proyectos, diseño responsive y categorías para organizar el contenido. Una solución profesional y moderna para destacar tu estilo, ganar credibilidad y captar nuevos clientes."
+      },
+      "dotgrade": {
+        "name": "DotGrade",
+        "price": "50 €",
+        "time": "1 - 3 días",
+        "includes": "Servicio de reputación digital centrado en mejorar tu perfil de Google Business. Incluye fotos actualizadas, descripciones con palabras clave, optimización integral del perfil y un código QR personalizado para que los clientes dejen reseñas con facilidad. Ideal para potenciar presencia online, credibilidad y captar más clientes locales rápidamente."
+      },
+      "landing": {
+        "name": "Landing page profesional",
+        "price": "250 - 400 €",
+        "time": "3 - 5 días",
+        "includes": "Sitio de una sola página, moderno y responsive, diseñado para causar una gran primera impresión. Incluye diseño a medida, visuales atractivos, integración de formulario de contacto y configuración básica de hosting. Perfecto para profesionales, startups o negocios que buscan mostrar su marca y captar leads rápidamente."
+      },
+      "institutional": {
+        "name": "Sitio institucional completo",
+        "price": "350 - 700 €",
+        "time": "5 - 7 días",
+        "includes": "Web multipágina con lo esencial: Inicio, Sobre nosotros, Servicios y Contacto. Incluye diseño moderno, layout responsive, animaciones e integración de formularios de contacto. Ideal para empresas u organizaciones que necesitan una presencia online profesional para informar y generar confianza."
+      },
+      "store": {
+        "name": "Tienda online personalizada (Woo, Shopify)",
+        "price": "450 - 800 €",
+        "time": "7 - 12 días",
+        "includes": "Tienda eCommerce personalizada con WooCommerce o Shopify, adaptada a tu negocio. Incluye hasta 20 productos, pasarela de pago segura e identidad visual acorde a tu marca. Ideal para emprendedores y pymes que buscan vender online con una solución profesional, escalable y fácil de gestionar."
+      },
+      "redesign_opt": {
+        "name": "Rediseño y optimización",
+        "price": "200 - 600 €",
+        "time": "3 - 10 días",
+        "includes": "Servicio completo de rediseño y optimización para mejorar la apariencia y el rendimiento de tu web. Incluye mejoras de UI/UX, optimización de velocidad y performance, ajustes responsive y configuración SEO básica. Perfecto para sitios desactualizados que necesitan ser modernos, rápidos y fáciles de usar."
+      }
+    }
+  },
+
+
+
+
+
+  "services.maintenance.title": "Mantenimiento",
+  "services.maintenance.basic": "Básico",
+  "services.maintenance.standard": "Estándar",
+  "services.maintenance.premium": "Premium",
+  "services.maintenance.choose": "Elegir",
+  "services.maintenance.features.system_updates": "Actualizaciones del sistema",
+  "services.maintenance.features.maintenance_247": "Mantenimiento 24/7",
+  "services.maintenance.features.security_analysis": "Análisis de seguridad",
+  "services.maintenance.features.speed_opt": "Optimización de velocidad",
+  "services.maintenance.features.plugin_updates": "Actualización de plugins",
+  "services.maintenance.features.email_chat": "Soporte por email y chat",
+  "services.maintenance.features.email_chat_call": "Soporte por email, chat y llamadas",
+  "services.maintenance.features.daily_backups": "Copias de seguridad diarias",
+  "services.maintenance.features.weekly_backups": "Copias de seguridad semanales",
+  "services.maintenance.features.unlimited_tasks": "Tareas ilimitadas",
+  "services.maintenance.features.consulting": "Consultoría",
+  "services.maintenance.features.plugins": "Actualización de Temas y Plugins",
+
+  "services.cta.subtitle": "¿Te gustó lo que viste?",
+  "services.cta.title": "EMPIEZA TU PROYECTO",
+  "services.cta.button": "Contáctanos",
+
+
+
+
+
+  "blog.categories.title": "CATEGORÍAS DE ARTÍCULOS",
+  "blog.about.title": "Cómo te ayudamos",
+  "blog.about.text": "Ofrecemos soluciones digitales pioneras y soporte de diseño de primer nivel...",
+
+  "categories.desc.web-dev": "De stacks modernos a rendimiento, hosting y mejores prácticas.",
+  "categories.desc.ux-ui": "Sistemas de diseño, flujos, investigación y conversión.",
+  "categories.desc.business": "Posicionamiento, contenido, embudos, SEO local y tácticas de crecimiento.",
+  "categories.desc.ecommerce": "Tiendas online, CRO, pagos, logística y estrategia de producto.",
+  "categories.desc.digital-reputation": "Reseñas, Google Business, manuales y gestión de crisis.",
+  "categories.desc.inspiration-tech-culture": "Tendencias, mentalidad, flujos, makers y herramientas útiles.",
+
+
+
+
+  "home.og.image_alt": "DotNode — experiencias web modernas",
+  "home.meta.title": "DotNode — Desarrollo Web y Reputación Digital",
+  "home.meta.description": "Webs a medida, ecommerce y reputación digital. Rápidas, estéticas y pensadas para convertir. Con base en España.",
+
+  "home.hero.kicker": "DESARROLLO WEB & REPUTACIÓN DIGITAL",
+  "home.hero.h1.line1": "Diseño que Inspira,",
+  "home.hero.h1.line2": "Impacto que Perdura.",
+
+  "home.about.btn": "¿Quiénes somos?",
+  "home.about.title": "Creemos que una página web no debería ser un lujo.",
+  "home.about.body": "Todos merecen una presencia online increíble, sin dolores de cabeza ni precios desorbitados. En DotNode hacemos el diseño a medida simple, humano y accesible...",
+
+  "home.issues.title": "¿TE SUENA ALGUNO DE ESTOS PROBLEMAS?",
+  "home.issues.subtitle": "No estás solo. Estas son frases reales de clientes que llegaron frustrados, confundidos y sobrecargados.",
+  "home.issues.button": "Arreglémoslo",
+  "home.issues.card1": "“Ni siquiera tengo web todavía.”",
+  "home.issues.card2": "“Llevamos meses con la web y sigue sin estar lista.”",
+  "home.issues.card3": "“Mi web se ve bien, pero no tengo tráfico ni resultados.”",
+  "home.issues.card4": "“Tengo dudas, pero me cobran por cada mínima cosa.”",
+  "home.issues.card5": "“El presupuesto cambia constantemente. Siento que se aprovechan de mí.”",
+  "home.issues.card6": "“Pagué por SEO, pero sigo invisible en Google.”",
+  "home.issues.card7": "“Prometieron soporte, pero desaparecieron tras el lanzamiento.”",
+  "home.issues.final.title": "TE MERECES ALGO MEJOR.",
+  "home.issues.final.typewriter": "Tu web debe ser una obra maestra: que cuente tu historia, cautive a tu audiencia y te haga destacar del resto.",
+
+  "home.categories.subtitle": "SERVICIOS",
+  "home.categories.title": "Transformamos tu ambicción en resultados digitales",
+  "home.categories.button": "VER MÁS",
+
+  "home.categories.cards.web_essentials.title": "ESENCIALES WEB",
+  "home.categories.cards.web_essentials.body": "Lanza tu presencia online con una web limpia y funcional: landing pages, sitios institucionales, blogs dinámicos y portafolios.",
+  "home.categories.cards.ecommerce.title": "SOLUCIONES E-COMMERCE",
+  "home.categories.cards.ecommerce.body": "Empieza a vender con una tienda online a medida — desde cero o en Shopify. Sistemas de reservas y optimización del checkout incluidos.",
+  "home.categories.cards.custom_platforms.title": "PLATAFORMAS A MEDIDA",
+  "home.categories.cards.custom_platforms.body": "¿Necesitas más que una web? Desarrollamos plataformas con login, paneles de usuario y backends para gestionar tu negocio.",
+  "home.categories.cards.redesign.title": "REDISEÑO Y OPTIMIZACIÓN",
+  "home.categories.cards.redesign.body": "Si ya tienes web, la mejoramos: rediseño moderno, más velocidad, mejor usabilidad y SEO básico.",
+
+  "home.process.title": "Nuestro Proceso.",
+  "home.process.step1.title": "01. Exploración",
+  "home.process.step1.text": "Empezamos con tu historia: entendemos tus objetivos, tu audiencia y el estilo que quieres proyectar. Una charla sencilla y clara para definir qué hacer y cómo debe sentirse tu proyecto.",
+  "home.process.step2.title": "02. Planificación",
+  "home.process.step2.text": "Trazamos la arquitectura de tu proyecto: páginas, flujos y un tono visual coherente. Diseños claros y potentes para que tu mensaje impacte.",
+  "home.process.step3.title": "03. Creación",
+  "home.process.step3.text": "Damos forma a tu contenido con diseños limpios, atractivos y totalmente funcionales. El resultado: una experiencia visual coherente, moderna y pensada para conectar con tu audiencia desde el primer momento.",
+  "home.process.step4.title": "04. Lanzamiento",
+  "home.process.step4.text": "Cerramos la etapa de creación afinando cada detalle y, una vez aprobado publicamos con seguridad. Obtendrás un sitio limpio, veloz y responsivo.",
+  "home.process.step5.title": "05. Soporte",
+  "home.process.step5.text": "Después de publicar tu web, seguimos a tu lado para que nunca se quede atrás, nos encargamos de las actualizaciones, los ajustes técnicos, las copias de seguridad y la seguridad constante."
+
+}

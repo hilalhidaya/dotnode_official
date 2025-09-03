@@ -1,144 +1,78 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import CustomEase from "gsap/CustomEase";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CustomEase } from "gsap/CustomEase";
 import Lenis from "lenis";
 import SplitType from "split-type";
 
-
 gsap.registerPlugin(ScrollTrigger, CustomEase);
-CustomEase.create("hop", "0.9, 0, 0.1, 1");
+CustomEase.create("hop", "0.9,0,0.1,1");
+
+
 
 const lenis = new Lenis({ autoRaf: true, smoothWheel: true, smoothTouch: true });
 lenis.on("scroll", () => ScrollTrigger.update());
 
 
+// Helpers para seleccionar de forma segura
+const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+const toNodes = (targets) => {
+  if (!targets) return [];
+  if (typeof targets === 'string') return $$(targets);
+  if (targets instanceof Element) return [targets];
+  if (Array.isArray(targets)) {
+    return targets
+      .flatMap(t => typeof t === 'string' ? $$(t) : (t instanceof Element ? [t] : []))
+      .filter(Boolean);
+  }
+  return [];
+};
+
+// Añade tweens solo si hay nodos
+const safeTo = (tl, targets, vars, pos) => {
+  const nodes = toNodes(targets);
+  if (nodes.length) tl.to(nodes, vars, pos);
+};
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  const tl = gsap.timeline({
-    delay: 0.3,
-    defaults: {
-      ease: "hop",
-    },
-  });
+  const hasIntro = document.querySelector(".loader") || document.querySelector(".word h1");
+  if (!hasIntro) return;
 
-  const counts = document.querySelectorAll(".count");
+  const tl = gsap.timeline({ delay: 0.3, defaults: { ease: "hop" } });
 
-  counts.forEach((count, index) => {
-    const digits = count.querySelectorAll(".digit h1");
+  safeTo(tl, ".spinner", { opacity: 0, duration: 0.3 });
 
-    tl.to(
-      digits,
-      {
-        y: "0%",
-        duration: 1,
-        stagger: 0.075,
-      },
-      index * 1
-    );
+  safeTo(tl, ".word h1", { y: "0%", duration: 1 }, "<");
 
-    if (index < counts.length) {
-      tl.to(
-        digits,
-        {
-          y: "-100%",
-          duration: 1,
-          stagger: 0.075,
-        },
-        index * 1 + 1
-      );
-    }
-  });
-
-  tl.to(".spinner", {
-    opacity: 0,
-    duration: 0.3,
-  });
-
-  tl.to(
-    ".word h1",
-    {
-      y: "0%",
-      duration: 1,
-    },
-    "<"
-  );
-
-  tl.to(".divider", {
+  safeTo(tl, ".divider", {
     scaleY: "100%",
     duration: 1,
-    onComplete: () =>
-      gsap.to(".divider", { opacity: 0, duration: 0.3, delay: 0.3 }),
+    onComplete: () => gsap.to(".divider", { opacity: 0, duration: 0.3, delay: 0.3 }),
   });
 
-  tl.to("#word-1 h1", {
-    y: "100%",
+  safeTo(tl, "#word-1 h1", { y: "100%", duration: 1, delay: 0.3 });
+  safeTo(tl, "#word-2 h1", { y: "-100%", duration: 1 }, "<");
+
+  safeTo(tl, ".block", {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     duration: 1,
-    delay: 0.3,
-  });
+    stagger: 0.1,
+    delay: 0.75,
+    onStart: () => gsap.to(".hero-img", { scale: 1, duration: 2, ease: "hop" }),
+  }, "<");
 
-  tl.to(
-    "#word-2 h1",
-    {
-      y: "-100%",
-      duration: 1,
-    },
-    "<"
-  );
+  safeTo(tl, [".nav", ".line h1", ".line p"], { y: "0%", duration: 1.5, stagger: 0.2 }, "<");
 
-  tl.to(
-    ".block",
-    {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-      duration: 1,
-      stagger: 0.1,
-      delay: 0.75,
-      onStart: () =>
-        gsap.to(".hero-img", { scale: 1, duration: 2, ease: "hop" }),
-    },
-    "<"
-  );
-
-  tl.to(
-    [".nav", ".line h1", ".line p"],
-    {
-      y: "0%",
-      duration: 1.5,
-      stagger: 0.2,
-    },
-    "<"
-  );
-
-  tl.to(
-    [".cta", ".cta-icon"],
-    {
-      scale: 1,
-      duration: 1.5,
-      stagger: 0.75,
-      delay: 0.75,
-    },
-    "<"
-  );
-
-  tl.to(
-    ".cta-label p",
-    {
-      y: "0%",
-      duration: 1.5,
-      delay: 0.5,
-
-    },
-    "<"
-  );
-  tl.to(".loader", {
+  safeTo(tl, ".loader", {
     opacity: 0,
     duration: 0.5,
     delay: 0.5,
     onComplete: () => {
-      document.querySelector(".loader").style.display = "none";
+      const el = document.querySelector(".loader");
+      if (el) el.style.display = "none";
       document.body.style.overflow = "auto";
     },
   });
-
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -188,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const mm = gsap.matchMedia();
@@ -318,8 +251,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   gsap.ticker.lagSmoothing(0);
-
-  gsap.registerPlugin(ScrollTrigger);
 
   // SECCIÓN DE PASOS
   const pasosSection = document.querySelector(".pasos_section");
@@ -519,55 +450,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // TEXTO MAQUINA DE ESCRIBIR 
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".typewriter");
+// TYPEWRITER con soporte i18n
+(function () {
+  function startTypewriter(el) {
+    const text = el.getAttribute("data-text") ?? ""; // lee data-text actual (ya traducido)
+    const speed = parseInt(el.dataset.speed || "40", 10);
+    el.textContent = "";      // limpia
+    el.dataset.started = "1"; // marca que empezó
+    let i = 0;
 
-  // Prepara cada elemento
-  elements.forEach(el => {
-    const text = el.getAttribute("data-text") ?? "";
-    el.textContent = "";                 // evita duplicados
-    el.dataset.fullText = text;          // guarda el texto definitivo
-    // Permite velocidad personalizada por elemento: <h2 class="typewriter" data-text="..." data-speed="40">
-    if (!el.dataset.speed) el.dataset.speed = "40";
-  });
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
-      const el = entry.target;
-      if (el.dataset.started === "1" || el.classList.contains("done")) {
-        // ya empezó o terminó -> no repetir
-        obs.unobserve(el);
-        return;
+    (function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i++);
+        setTimeout(type, speed);
+      } else {
+        el.classList.add("done"); // marca completado
       }
+    })();
+  }
 
-      el.dataset.started = "1";      // bandera: evita múltiples bucles
-      obs.unobserve(el);             // no volver a disparar
-
-      const text = el.dataset.fullText || "";
-      const speed = parseInt(el.dataset.speed, 10) || 40;
-      let i = 0;
-
-      const type = () => {
-        if (i < text.length) {
-          el.textContent += text.charAt(i);
-          i++;
-          setTimeout(type, speed);
-        } else {
-          el.classList.add("done");  // marca como completado
+  function initTypewriters() {
+    const elements = document.querySelectorAll(".typewriter");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        if (el.dataset.started === "1" || el.classList.contains("done")) {
+          obs.unobserve(el);
+          return;
         }
-      };
+        obs.unobserve(el);
+        startTypewriter(el);
+      });
+    }, { threshold: 0.1 });
 
-      type();
+    elements.forEach(el => observer.observe(el));
+  }
+
+  // Arranca al cargar DOM
+  document.addEventListener("DOMContentLoaded", initTypewriters);
+
+  // Reinicia cada vez que cambie idioma
+  document.addEventListener("language-changed", () => {
+    document.querySelectorAll(".typewriter").forEach(el => {
+      el.classList.remove("done");
+      el.dataset.started = "0";
+      el.textContent = "";
     });
-  }, { threshold: 0.1 });
+    initTypewriters();
+  });
+})();
 
-  elements.forEach(el => observer.observe(el));
-});
 
-
-// CALL TO ACTION 
+// CALL TO ACTION
 
   document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector(".cta_ending_section");
@@ -851,3 +786,4 @@ function selectPlan(card) {
 })();
 
 
+console.log('DotNode rev=2025-09-03-01');

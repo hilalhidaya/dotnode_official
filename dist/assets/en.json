@@ -1,0 +1,175 @@
+{
+  "lang.code": "en",
+  "site.name": "DotNode",
+  "nav.home": "HOME",
+  "nav.blog": "BLOG",
+  "nav.services": "SERVICES",
+  "nav.contact": "CONTACT",
+  "cta.book_call": "Book a call",
+
+  "hero.title": "We craft web experiences that move your business",
+  "hero.subtitle": "Fast, beautiful, and built to convert.",
+
+  "blog.title": "Articles",
+  "blog.filters.all_categories": "All categories",
+  "blog.filters.search": "Search…",
+  "blog.read_more": "Read more",
+  "blog.latest": "Latest articles",
+  "blog.featured": "Featured articles",
+  "blog.no_results": "No matching articles.",
+
+  "categories.label.web-dev": "Web Development & Technology",
+  "categories.label.ux-ui": "UX/UI & Digital Strategy",
+  "categories.label.business": "Online Business & Marketing",
+  "categories.label.ecommerce": "Ecommerce",
+  "categories.label.digital-reputation": "Digital Reputation & Strategies",
+  "categories.label.inspiration-tech-culture": "Inspiration & Tech Culture",
+
+
+  "contact.title": "Contact Us",
+  "contact.get_in_touch": "Get in touch",
+  "contact.lead": "Let’s work together to build something you’re proud of.",
+  "contact.location": "Granada, Spain",
+
+  "contact.form.title": "Your Details",
+  "contact.form.full_name": "Full Name",
+  "contact.form.full_name_placeholder": "Your Name",
+  "contact.form.email": "Email",
+  "contact.form.email_placeholder": "Email",
+  "contact.form.message": "Message",
+  "contact.form.message_placeholder": "Tell us more about your project",
+  "contact.form.send": "Send message",
+
+  "footer.location": "Granada, Spain",
+  "footer.privacy": "Privacy Policy",
+
+
+
+
+    "services.og.image_alt": "DotNode web development services",
+  "services.meta.title": "Web development services | DotNode",
+  "services.meta.description": "DotNode delivers web development, ecommerce, SEO and digital optimization for businesses that want real online growth.",
+
+  "services.hero.kicker": "OUR SERVICES",
+  "services.hero.title": "Our digital solutions are crafted to take your online presence to new heights.",
+
+  "services.process.title": "PROVEN PROCESS FOR SUCCESS",
+  "services.process.subtitle": "We help you on every step of the journey",
+  "services.process.step1.title": "Contact me",
+  "services.process.step1.text": "Start by reaching out so we can understand your goals and challenges clearly. Your journey begins with a simple conversation.",
+  "services.process.step2.title": "Research",
+  "services.process.step2.text": "We analyze your needs, competitors, and opportunities to craft a tailored strategy that delivers results.",
+  "services.process.step3.title": "Work",
+  "services.process.step3.text": "We implement with precision and creativity, ensuring every detail aligns with your vision.",
+  "services.process.step4.title": "Test & results",
+  "services.process.step4.text": "We track progress, test outcomes, and optimize continuously to deliver measurable success and lasting impact.",
+
+  "services.section.title": "OUR SERVICES",
+  "services.cat.custom_platforms": "Custom Platforms",
+  "services.cat.web_essentials": "Web Essentials",
+  "services.cat.ecommerce": "Ecommerce Solutions",
+  "services.cat.redesign": "Redesign & Optimization",
+
+  "services.items.blog": "Dynamic Administered Blog",
+  "services.items.booking": "Booking and Scheduling System",
+  "services.items.user_panel": "User Panel and Login Platform",
+  "services.items.portfolio": "Personalized Portfolio",
+  "services.items.dotgrade": "DotGrade",
+  "services.items.landing": "Professional Landing Page",
+  "services.items.institutional": "Complete Institutional Site",
+  "services.items.store": "Customized Online Store (Woo, Shopify)",
+  "services.items.redesign_opt": "Redesign & Optimization",
+  "services.badge.new": "NEW",
+
+  "services.modal.price": "Price:",
+  "services.modal.time": "Time:",
+
+  "services.maintenance.title": "Maintenance",
+  "services.maintenance.basic": "Basic",
+  "services.maintenance.standard": "Standard",
+  "services.maintenance.premium": "Premium",
+  "services.maintenance.choose": "Choose",
+  "services.maintenance.features.system_updates": "System updates",
+  "services.maintenance.features.maintenance_247": "24/7 maintenance",
+  "services.maintenance.features.security_analysis": "Security analysis",
+  "services.maintenance.features.speed_opt": "Speed optimization",
+  "services.maintenance.features.plugin_updates": "Plugin updates",
+  "services.maintenance.features.email_chat": "Email & Chat Support",
+  "services.maintenance.features.email_chat_call": "Email, Chat & Call Support",
+  "services.maintenance.features.daily_backups": "Daily backups",
+  "services.maintenance.features.weekly_backups": "Weekly backups",
+  "services.maintenance.features.unlimited_tasks": "Unlimited tasks",
+  "services.maintenance.features.consulting": "Consulting",
+
+  "services.cta.subtitle": "Did you like what you saw?",
+  "services.cta.title": "START YOUR PROJECT",
+  "services.cta.button": "Contact Us",
+
+
+
+
+
+
+  "blog.categories.title": "ARTICLE CATEGORIES",
+  "blog.about.title": "How we help you",
+  "blog.about.text": "Delivering pioneer digital solutions and top-notch design support...",
+
+  "categories.desc.web-dev": "From modern stacks to performance, hosting, and best practices.",
+  "categories.desc.ux-ui": "Design systems, flows, research and conversion-focused thinking.",
+  "categories.desc.business": "Positioning, content, funnels, local SEO and growth tactics.",
+  "categories.desc.ecommerce": "Store builds, CRO, payments, logistics, and product strategy.",
+  "categories.desc.digital-reputation": "Reviews, Google Business, playbooks, and crisis management.",
+  "categories.desc.inspiration-tech-culture": "Trends, mindset, workflows, makers, and thoughtful tools.",
+
+
+
+
+  "home.og.image_alt": "DotNode — modern web experiences",
+  "home.meta.title": "DotNode — Web Development & Digital Reputation",
+  "home.meta.description": "Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.",
+  "home.hero.kicker": "WEB DEVELOPMENT & DIGITAL REPUTATION",
+  "home.hero.h1.line1": "Smart Design,",
+  "home.hero.h1.line2": "Real IMPACT",
+
+  "home.about.btn": "Who Are We",
+  "home.about.title": "We believe great websites shouldn’t be a luxury.",
+  "home.about.body": "Everyone deserves a stunning online presence—without headaches or high costs. At DotNode, we make custom design simple, human, and affordable...",
+
+  "home.issues.title": "DOES ANY OF THIS SOUND FAMILIAR?",
+  "home.issues.subtitle": "You’re not alone. These are real quotes from clients who came to us frustrated, confused, and overcharged.",
+  "home.issues.button": "Let’s fix this",
+  "home.issues.card1": "“I don’t even have a website yet.”",
+  "home.issues.card2": "“We’ve been working on the site for months, and it’s still not done.”",
+  "home.issues.card3": "“My site looks fine, but I’m not getting any traffic or results.”",
+  "home.issues.card4": "“I have questions, but they charge me for every little thing.”",
+  "home.issues.card5": "“The budget keeps changing. I feel like I’m being taken advantage of.”",
+  "home.issues.card6": "“I paid for SEO, but I’m still invisible on Google.”",
+  "home.issues.card7": "“They promised support, but they ghosted me after launching.”",
+  "home.issues.final.title": "YOU DESERVE BETTER.",
+  "home.issues.final.typewriter": "Your website should be a masterpiece — one that tells your story, captivates your audience, and sets you apart from the rest.",
+
+  "home.categories.subtitle": "SERVICES",
+  "home.categories.title": "Comprehensive digital solutions for all ambitions.",
+  "home.categories.button": "SEE MORE",
+
+  "home.categories.cards.web_essentials.title": "WEB ESSENTIALS",
+  "home.categories.cards.web_essentials.body": "Launch your presence with a clean, functional site: landing pages, institutional sites, dynamic blogs, and portfolios.",
+  "home.categories.cards.ecommerce.title": "E-COMMERCE SOLUTIONS",
+  "home.categories.cards.ecommerce.body": "Start selling with a custom store — from scratch or on Shopify. Booking systems and checkout optimization included.",
+  "home.categories.cards.custom_platforms.title": "CUSTOM PLATFORMS",
+  "home.categories.cards.custom_platforms.body": "Need more than a website? We build login-based platforms, user dashboards, and custom backends.",
+  "home.categories.cards.redesign.title": "REDESIGN & OPTIMIZATION",
+  "home.categories.cards.redesign.body": "Already have a site? We improve it with modern redesign, faster performance, better UX, and basic SEO.",
+
+  "home.process.title": "This is Our Process.",
+  "home.process.step1.title": "01. Discovery",
+  "home.process.step1.text": "We start with your story — your goals, audience, and style. A quick, friendly chat to define what to do and how it should feel.",
+  "home.process.step2.title": "02. Planning",
+  "home.process.step2.text": "We sketch the pages, map the flow, and set the vibe. Clean layouts, bold visuals, thoughtful structure.",
+  "home.process.step3.title": "03. Creation",
+  "home.process.step3.text": "We turn your content into something visual, clear, and easy to explore. No clutter, no confusion.",
+  "home.process.step4.title": "04. Launch",
+  "home.process.step4.text": "Time to go live. We test everything, polish the details, and publish with confidence.",
+  "home.process.step5.title": "05. Support",
+  "home.process.step5.text": "After launch, we stick around: updates, tweaks, backups — whatever you need to keep it smooth."
+}

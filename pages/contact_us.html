@@ -1,17 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="es" data-i18n-attr="lang:lang.code">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <link rel="icon" href="/dotnode_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    referrerpolicy="no-referrer">
+  <!-- Title & Description (i18n) -->
+  <title data-i18n="home.meta.title">DotNode — Web Development & Digital Reputation</title>
+  <meta name="description"
+        data-i18n-attr="content:home.meta.description"
+        content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
 
-  <title>DotNode</title>
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://dotnode.io/">
+  <link rel="alternate" href="https://dotnode.io/" hreflang="en">
+  <link rel="alternate" href="https://dotnode.io/es/" hreflang="es">
+  <link rel="alternate" href="https://dotnode.io/" hreflang="x-default">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dotnode.io/">
+  <meta property="og:site_name" data-i18n-attr="content:site.name" content="DotNode">
+  <meta property="og:title"
+        data-i18n-attr="content:home.meta.title"
+        content="DotNode — Web Development & Digital Reputation">
+  <meta property="og:description"
+        data-i18n-attr="content:home.meta.description"
+        content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
+  <meta property="og:image" content="https://dotnode.io/og/dotnode_og.jpg">
+  <meta property="og:image:alt"
+        data-i18n-attr="content:home.og.image_alt"
+        content="DotNode — modern web experiences">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title"
+        data-i18n-attr="content:home.meta.title"
+        content="DotNode — Web Development & Digital Reputation">
+  <meta name="twitter:description"
+        data-i18n-attr="content:home.meta.description"
+        content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
+  <meta name="twitter:image" content="https://dotnode.io/og/dotnode_og.jpg">
+
+  <!-- Useful -->
+  <meta name="theme-color" content="#0e0f13">
+  <meta name="robots" content="index,follow">
 </head>
+
 
 <body class="contact_page">
 
@@ -23,7 +60,7 @@
     </div>
     <div class="intro-logo">
       <div class="word" id="word-1">
-        <h1><span>Dot</span></h1>
+        <h1>Dot</h1>
       </div>
       <div class="word" id="word-2">
         <h1>Node</h1>
@@ -46,11 +83,12 @@
       <!-- NAVBAR nueva (menu fullscreen) -->
       <nav class="nav">
         <div class="logo">
-          <h2 onclick="location.href='/'">DotNode.</h2>
+          <h2 onclick="location.href='/'" data-i18n="site.name">DotNode</h2>
         </div>
         <div class="menu_right">
           <button class="btn-expand-icon" onclick="">
-            <span>BOOK A CALL</span><span class="arrow"><i class="fa-solid fa-phone"></i></span>
+            <span data-i18n="cta.book_call">Book a call</span><span class="arrow"><i
+                class="fa-solid fa-phone"></i></span>
           </button>
           <p class="menu-open"><i class="fa-solid fa-bars"></i></p>
         </div>
@@ -59,7 +97,7 @@
       <div class="header">
         <div class="hero-copy">
           <div class="line">
-            <h1>CONTACT US</h1>
+            <h1 data-i18n="contact.title">Contact Us</h1>
           </div>
         </div>
       </div>
@@ -84,26 +122,32 @@
       <div class="menu-logo"><img src="/dotnode_logo.png" alt="logo" /></div>
 
       <div class="menu-links">
-        <div class="menu-link">
-          <p><a href="/">HOME</a></p>
+       <div class="menu-link">
+          <p><a href="/" data-i18n="nav.home">HOME</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="services.html">SERVICES</a></p>
+          <p><a href="/pages/services.html" data-i18n="nav.services">SERVICES</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="blog.html">BLOG</a></p>
+          <p><a href="/pages/blog.html" data-i18n="nav.blog">BLOG</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="contact_us.html">CONTACT US</a></p>
+          <p><a href="/pages/contact_us.html" data-i18n="nav.contact">CONTACT</a></p>
+        </div>
+       <div class="menu-link lang-switch" id="lang_switcher" aria-label="Language switcher">
+          <button class="btn btn2" type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button class="btn btn2" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
       </div>
 
       <div class="menu-footer">
         <ul>
-           <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a></li>
+          <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
+                class="fa-brands fa-square-threads"></i></a></li>
           <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
@@ -116,14 +160,14 @@
     <div class="container grid">
       <!-- LADO IZQUIERDO: INFO -->
       <div class="contact_info">
-        <h2 class="fade_in_right">Get in touch<span class="punto">.</span></h2>
-        <p class="lead fade_in_right">Let’s work together to build something you’re proud of.</p>
+        <h2 class="fade_in_right" data-i18n="contact.get_in_touch">Get in touch<span class="punto">.</span></h2>
+        <p class="lead fade_in_right" data-i18n="contact.lead">Let’s work together to build something you’re proud of.
+        </p>
 
         <ul class="contact_list fade_in_left">
           <li>
             <i class="fa-solid fa-envelope"></i>
             <div>
-
               <span>contact@dotnode.io</span>
             </div>
           </li>
@@ -136,7 +180,7 @@
           <li>
             <i class="fa-solid fa-location-dot"></i>
             <div>
-              <span>Granada, Spain</span>
+              <span data-i18n="contact.location">Granada, Spain</span>
             </div>
           </li>
         </ul>
@@ -154,7 +198,7 @@
       <!-- LADO DERECHO: FORMULARIO EN TARJETA -->
       <div class="contact_card fade_in_right">
         <form id="contactForm" class="contact_form" action="#" method="post" novalidate>
-          <h3>Your Details</h3>
+          <h3 data-i18n="contact.form.title">Your Details</h3>
 
           <!-- Honeypot (anti-spam) -->
           <label class="form_field honeypot" aria-hidden="true" tabindex="-1">
@@ -164,26 +208,28 @@
 
           <div class="form_grid">
             <label class="form_field">
-              <span>Full Name</span>
-              <input id="name" type="text" name="name" placeholder="Your Name" required>
+              <span data-i18n="contact.form.full_name">Full Name</span>
+              <input id="name" type="text" name="name" placeholder="Your Name" data-i18n-attr="placeholder"
+                data-i18n="contact.form.full_name_placeholder" required>
               <small class="field_error" id="nameError" aria-live="polite"></small>
             </label>
 
             <label class="form_field">
-              <span>Email</span>
-              <input id="email" type="email" name="email" placeholder="Email" required>
+              <span data-i18n="contact.form.email">Email</span>
+              <input id="email" type="email" name="email" placeholder="Email" data-i18n-attr="placeholder"
+                data-i18n="contact.form.email_placeholder" required>
               <small class="field_error" id="emailError" aria-live="polite"></small>
             </label>
           </div>
 
           <label class="form_field">
-            <span>Message</span>
+            <span data-i18n="contact.form.message">Message</span>
             <textarea id="message" name="message" rows="5" placeholder="Tell us more about your project"
-              required></textarea>
+              data-i18n-attr="placeholder" data-i18n="contact.form.message_placeholder" required></textarea>
             <small class="field_error" id="messageError" aria-live="polite"></small>
           </label>
 
-          <button class="btn btn4" id="submitBtn" type="submit">Send message</button>
+          <button class="btn btn4" id="submitBtn" type="submit" data-i18n="contact.form.send">Send message</button>
 
           <!-- Estado general (éxito/fracaso) -->
           <div id="formStatus" class="form_status" role="status" aria-live="polite"></div>
@@ -196,9 +242,9 @@
     <div class="footer_container">
       <div class="footer_logo">
         <a href="/">
-          <h2>DotNode.</h2>
+          <h2 data-i18n="site.name">DotNode</h2>
         </a>
-        <p>Granada, España</p>
+        <p data-i18n="footer.location">Granada, Spain</p>
       </div>
       <div class="footer_socials">
         <ul>
@@ -212,12 +258,11 @@
       </div>
       <div class="footer_copyright">
         <p>Copyright &copy; 2024</p>
-        <a href="/">Política de privacidad</a>
+        <a href="/" data-i18n="footer.privacy">Privacy Policy</a>
       </div>
     </div>
   </footer>
   <script type="module" src="/src/main.js"></script>
-
 </body>
 
 </html>

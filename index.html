@@ -1,16 +1,50 @@
-<html lang="en">
+<!doctype html>
+<html lang="es" data-i18n-attr="lang:lang.code">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <link rel="icon" href="/dotnode_logo.png">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     referrerpolicy="no-referrer">
 
-  <title>DotNode</title>
+  <!-- Title & Description (i18n) -->
+  <title data-i18n="home.meta.title">DotNode — Web Development & Digital Reputation</title>
+  <meta name="description" data-i18n-attr="content:home.meta.description"
+    content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
+
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://dotnode.io/">
+  <link rel="alternate" href="https://dotnode.io/" hreflang="en">
+  <link rel="alternate" href="https://dotnode.io/es/" hreflang="es">
+  <link rel="alternate" href="https://dotnode.io/" hreflang="x-default">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dotnode.io/">
+  <meta property="og:site_name" data-i18n-attr="content:site.name" content="DotNode">
+  <meta property="og:title" data-i18n-attr="content:home.meta.title"
+    content="DotNode — Web Development & Digital Reputation">
+  <meta property="og:description" data-i18n-attr="content:home.meta.description"
+    content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
+  <meta property="og:image" content="https://dotnode.io/og/dotnode_og.jpg">
+  <meta property="og:image:alt" data-i18n-attr="content:home.og.image_alt" content="DotNode — modern web experiences">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-attr="content:home.meta.title"
+    content="DotNode — Web Development & Digital Reputation">
+  <meta name="twitter:description" data-i18n-attr="content:home.meta.description"
+    content="Custom websites, ecommerce and digital reputation. Fast, aesthetic and built to convert. Based in Spain.">
+  <meta name="twitter:image" content="https://dotnode.io/og/dotnode_og.jpg">
+
+  <!-- Useful -->
+  <meta name="theme-color" content="#0e0f13">
+  <meta name="robots" content="index,follow">
 </head>
+
+
 
 <body>
   <!-- LOADER INICIAL -->
@@ -21,7 +55,7 @@
     </div>
     <div class="intro-logo">
       <div class="word" id="word-1">
-        <h1><span>Dot</span></h1>
+        <h1>Dot</h1>
       </div>
       <div class="word" id="word-2">
         <h1>Node</h1>
@@ -43,11 +77,12 @@
       <!-- NAVBAR nueva (menu fullscreen) -->
       <nav class="nav">
         <div class="logo">
-          <h2 onclick="location.href='/'">DotNode.</h2>
+          <h2 onclick="location.href='/'" data-i18n="site.name">DotNode.</h2>
         </div>
         <div class="menu_right">
           <button class="btn-expand-icon" onclick="">
-            <span>BOOK A CALL</span><span class="arrow"><i class="fa-solid fa-phone"></i></span>
+            <span data-i18n="cta.book_call">Book a call</span><span class="arrow"><i
+                class="fa-solid fa-phone"></i></span>
           </button>
           <p class="menu-open"><i class="fa-solid fa-bars"></i></p>
         </div>
@@ -56,13 +91,13 @@
       <div class="header">
         <div class="hero-copy">
           <div class="line line-subtitle">
-            <p>WEB DEVELOPMENT & DIGITAL REPUTATION</p>
+            <p data-i18n="home.hero.kicker">WEB DEVELOPMENT & DIGITAL REPUTATION</p>
           </div>
           <div class="line">
-            <h1>Smart Design,</h1>
+            <h1 data-i18n="home.hero.h1.line1">Smart Design,</h1>
           </div>
           <div class="line">
-            <h1>Real IMPACT</h1>
+            <h1 data-i18n="home.hero.h1.line2">Real IMPACT</h1>
           </div>
         </div>
         <div class="line line-img">
@@ -72,7 +107,6 @@
     </div>
     <div class="landing-glow" aria-hidden="true"></div>
   </section>
-
 
   <!-- FULLSCREEN MENU -->
   <div class="menu">
@@ -95,61 +129,64 @@
 
       <div class="menu-links">
         <div class="menu-link">
-          <p><a href="/">HOME</a></p>
+          <p><a href="/" data-i18n="nav.home">HOME</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/pages/services.html">SERVICES</a></p>
+          <p><a href="/pages/services.html" data-i18n="nav.services">SERVICES</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/pages/blog.html">BLOG</a></p>
+          <p><a href="/pages/blog.html" data-i18n="nav.blog">BLOG</a></p>
         </div>
         <div class="menu-link">
-          <p><a href="/pages/contact_us.html">CONTACT US</a></p>
+          <p><a href="/pages/contact_us.html" data-i18n="nav.contact">CONTACT</a></p>
+        </div>
+        <div class="menu-link lang-switch" id="lang_switcher" aria-label="Language switcher">
+          <button class="btn btn2" type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button class="btn btn2" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
       </div>
 
       <div class="menu-footer">
         <ul>
-        <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a></li>
+          <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
+                class="fa-brands fa-square-threads"></i></a></li>
           <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
   </div>
 
-
-
   <!-- SECCION PARA TI   -->
   <section class="para_ti">
     <div class="para_ti_container animate-on-scroll">
       <div class="para_ti_link fade_in_scroll">
-        <button class="btn3 btn" onclick="location.href='/pages/contact_us.html'"><i class="fa-solid fa-link"></i>
-          Who Are We</button>
+        <button class="btn3 btn" onclick="location.href='/pages/contact_us.html'">
+          <i class="fa-solid fa-link"></i>
+          <span data-i18n="home.about.btn">Who Are We</span>
+        </button>
       </div>
-      <h1 class="fade_in_scroll">We believe great websites shouldn’t be a luxury.</h2>
-        <p class="fade_in_scroll">Everyone deserves a stunning online presence—without the headaches or the high price
-          tag. At DotNode, we make
-          custom design simple, human, and affordable. Whether you’re starting a small business, a personal brand, or
-          a passion project, we help you bring your vision to life and make it unforgettable.</p>
+      <h1 class="fade_in_scroll" data-i18n="home.about.title">We believe great websites shouldn’t be a luxury.</h1>
+      <p class="fade_in_scroll" data-i18n="home.about.body">Everyone deserves a stunning online presence—without the
+        headaches or the high price tag...</p>
     </div>
   </section>
 
-
   <!-- SECCION ISSUES  -->
-
   <section class="issues_area">
     <div class="issues_left">
       <div class="issues_title fade_in_right">
-        <h1>DOES ANY OF THIS SOUND FAMILIAR?</h1>
+        <h1 data-i18n="home.issues.title">DOES ANY OF THIS SOUND FAMILIAR?</h1>
       </div>
       <div class="issues_subtitle fade_in_left">
-        <p>You’re not alone. These are real quotes from real clients who came to us frustrated, confused, and
-          overcharged.</p>
+        <p data-i18n="home.issues.subtitle">You’re not alone. These are real quotes from real clients who came to us
+          frustrated, confused, and overcharged.</p>
         <br />
         <button class="btn-expand-icon btn4 fade_in_left" onclick="location.href='pages/services.html'"
-          style="background: #e15941;">Let’s fix this
+          style="background: #e15941;">
+          <span data-i18n="home.issues.button">Let’s fix this</span>
           <i class="fa-solid fa-arrow-right arrow"></i>
         </button>
       </div>
@@ -158,44 +195,44 @@
     <div class="issues_right">
       <div class="issues_card">
         <div class="issues_content">
-          <p>“I don’t even have a website yet.”</p>
+          <p data-i18n="home.issues.card1">“I don’t even have a website yet.”</p>
         </div>
       </div>
       <div class="issues_card">
         <div class="issues_content">
-          <p>“We’ve been working on the site for months, and it’s still not done.”</p>
+          <p data-i18n="home.issues.card2">“We’ve been working on the site for months, and it’s still not done.”</p>
         </div>
       </div>
       <div class="issues_card">
         <div class="issues_content">
-          <p>“My site looks fine, but I’m not getting any traffic or results.”</p>
+          <p data-i18n="home.issues.card3">“My site looks fine, but I’m not getting any traffic or results.”</p>
         </div>
       </div>
       <div class="issues_card">
         <div class="issues_content">
-          <p>“I have questions, but they charge me for every little thing.”</p>
+          <p data-i18n="home.issues.card4">“I have questions, but they charge me for every little thing.”</p>
         </div>
       </div>
       <div class="issues_card">
         <div class="issues_content">
-          <p>“The budget keeps changing. I feel like I’m being taken advantage of.”</p>
+          <p data-i18n="home.issues.card5">“The budget keeps changing. I feel like I’m being taken advantage of.”</p>
         </div>
       </div>
       <div class="issues_card">
         <div class="issues_content">
-          <p>“I paid for SEO, but I’m still invisible on Google.”</p>
+          <p data-i18n="home.issues.card6">“I paid for SEO, but I’m still invisible on Google.”</p>
         </div>
       </div>
       <div class="issues_card">
         <div class="issues_content">
-          <p>“They promised support, but they ghosted me after launching.”</p>
+          <p data-i18n="home.issues.card7">“They promised support, but they ghosted me after launching.”</p>
         </div>
       </div>
     </div>
 
     <div class="issues_final">
-      <h1>YOU DESERVE BETTER.</h1><br>
-      <h2 class="typewriter"
+      <h1 data-i18n="home.issues.final.title">YOU DESERVE BETTER.</h1><br>
+      <h2 class="typewriter" data-i18n-attr="data-text" data-i18n="home.issues.final.typewriter"
         data-text="Your website should be a masterpiece — one that tells your story, captivates your audience, and sets you apart from the rest."
         data-speed="35">
       </h2>
@@ -203,73 +240,69 @@
     </div>
   </section>
 
-
-
   <!-- CATEGORIAS_________ -->
   <section class="categories">
     <div class="categories__container">
 
       <div class="categories__top fade_in_scroll">
-        <p class="subtitle orange">SERVICES</p>
-        <h1>Comprehensive digital solutions for all ambitions<span class="punto">.</span></h1>
-        <button class="btn-expand-icon btn4" onclick="location.href='pages/services.html'">SEE MORE<i
-            class="fa-solid fa-arrow-right arrow"></i></button>
+        <p class="subtitle orange" data-i18n="home.categories.subtitle">SERVICES</p>
+        <h1 data-i18n="home.categories.title">Comprehensive digital solutions for all ambitions<span
+            class="punto">.</span></h1>
+        <button class="btn-expand-icon btn4" onclick="location.href='pages/services.html'">
+          <span data-i18n="home.categories.button">SEE MORE</span>
+          <i class="fa-solid fa-arrow-right arrow"></i>
+        </button>
       </div>
 
       <div class="categories__bottom fade_in_scroll">
 
-        <article class="category color-blue" onclick="location.href='/pages/services.html#available_services'" style="color: white;">
+        <article class="category color-blue" onclick="location.href='/pages/services.html#available_services'"
+          style="color: white;">
           <span class="category__icon"><i class="fa-solid fa-layer-group"></i></span>
-          <h5>WEB ESSENCIALS</h5>
-          <p>Launch your presence online with a clean, functional website. From landing pages to full
-            institutional sites, dynamic blogs, and digital portfolios — built to reflect you.</p>
+          <h5 data-i18n="home.categories.cards.web_essentials.title">WEB ESSENCIALS</h5>
+          <p data-i18n="home.categories.cards.web_essentials.body">Launch your presence online with a clean, functional
+            website...</p>
         </article>
 
         <article class="category color-red" onclick="location.href='/pages/services.html#available_services'">
-            <span class="category__icon"><i class="fa-solid fa-cart-shopping"></i></span>
-            <h5>E-COMMERCE SOLUTIONS</h5>
-            <p>Start selling with a custom online store — built from scratch or on Shopify. We also create
-              booking systems and optimize your shop for a seamless buying experience.</p>
+          <span class="category__icon"><i class="fa-solid fa-cart-shopping"></i></span>
+          <h5 data-i18n="home.categories.cards.ecommerce.title">E-COMMERCE SOLUTIONS</h5>
+          <p data-i18n="home.categories.cards.ecommerce.body">Start selling with a custom online store — built from
+            scratch or on Shopify...</p>
         </article>
 
         <article class="category color-purple" onclick="location.href='/pages/services.html#available_services'">
-            <span class="category__icon"><i class="fa-solid fa-user-shield"></i></span>
-            <h5>CUSTOM PLATFORMS</h5>
-            <p>Need more than a website? We develop login-based platforms, user dashboards, and custom
-              backend systems for business and client management.</p>
+          <span class="category__icon"><i class="fa-solid fa-user-shield"></i></span>
+          <h5 data-i18n="home.categories.cards.custom_platforms.title">CUSTOM PLATFORMS</h5>
+          <p data-i18n="home.categories.cards.custom_platforms.body">Need more than a website? We develop login-based
+            platforms...</p>
         </article>
 
         <article class="category color-orange" onclick="location.href='/pages/services.html#available_services'">
-            <span class="category__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-            <h5>REDESIGN & OPTIMIZATION</h5>
-            <p>If you already have a website, we help you improve it — with a modern redesign, faster
-              performance, better usability and basic SEO improvements.</p>
+          <span class="category__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <h5 data-i18n="home.categories.cards.redesign.title">REDESIGN & OPTIMIZATION</h5>
+          <p data-i18n="home.categories.cards.redesign.body">If you already have a website, we help you improve it —
+            with a modern redesign...</p>
         </article>
 
       </div>
     </div>
   </section>
 
-
-
   <!-- SECCION PASOS  -->
-
   <section class="pasos_section">
     <div class="pasos_header">
-      <h1>This is Our Process.</h1>
+      <h1 data-i18n="home.process.title">This is Our Process.</h1>
     </div>
 
     <div class="pasos_card">
       <div class="pasos_card-img"><img src="/img1.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
-          <h2>01. Discovery</h2>
+          <h2 data-i18n="home.process.step1.title">01. Discovery</h2>
         </div>
         <div class="pasos_card-description">
-          <p>
-            We start with your story — your goals, your audience, your style. It's a quick and friendly chat where we
-            figure out exactly what your should do and how it should feel.
-          </p>
+          <p data-i18n="home.process.step1.text">We start with your story — your goals, your audience, your style...</p>
         </div>
       </div>
     </div>
@@ -278,13 +311,10 @@
       <div class="pasos_card-img"><img src="/img2.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
-          <h2>02. Planning</h2>
+          <h2 data-i18n="home.process.step2.title">02. Planning</h2>
         </div>
         <div class="pasos_card-description">
-          <p>
-            We sketch out the pages, map, the flow, and we set the vibe. Clean layouts, bold visuals, and thoughtful
-            structures so your message lands where it should.
-          </p>
+          <p data-i18n="home.process.step2.text">We sketch out the pages, map, the flow, and we set the vibe...</p>
         </div>
       </div>
     </div>
@@ -293,13 +323,11 @@
       <div class="pasos_card-img"><img src="/img3.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
-          <h2>03. Creation</h2>
+          <h2 data-i18n="home.process.step3.title">03. Creation</h2>
         </div>
         <div class="pasos_card-description">
-          <p>
-            We turn your content into something visual, clear, and easy to explore. No clutter, no confusion — just
-            smooth design that guides your visitors and keeps tthem engaged.
-          </p>
+          <p data-i18n="home.process.step3.text">We turn your content into something visual, clear, and easy to
+            explore...</p>
         </div>
       </div>
     </div>
@@ -308,13 +336,10 @@
       <div class="pasos_card-img"><img src="/img4.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
-          <h2>04. Launch</h2>
+          <h2 data-i18n="home.process.step4.title">04. Launch</h2>
         </div>
         <div class="pasos_card-description">
-          <p>
-            Time to go live. We test everything, polish the final details, and launch your website with full confidence.
-            You’ll have a clean, responsive, and fast-performing site ready to impress.
-          </p>
+          <p data-i18n="home.process.step4.text">Time to go live. We test everything, polish the final details...</p>
         </div>
       </div>
     </div>
@@ -323,12 +348,10 @@
       <div class="pasos_card-img"><img src="/img5.jpg" alt="" /></div>
       <div class="pasos_card-content">
         <div class="pasos_card-title">
-          <h2>05. Support</h2>
+          <h2 data-i18n="home.process.step5.title">05. Support</h2>
         </div>
         <div class="pasos_card-description">
-          <p>
-            Once your site is live, we stick around. Updates, tweaks, backups — whatever you need to keep everything
-            smooth and solid, we're here for it.
+          <p data-i18n="home.process.step5.text">Once your site is live, we stick around. Updates, tweaks, backups...
           </p>
         </div>
       </div>
@@ -337,22 +360,27 @@
     </div>
   </section>
 
+  <!-- BLOG SECTION (comentado) -->
 
-  <!-- BLOG SECTION -----    -->
 
-  <!-- <section class="latest_articles">
-    <h2>Our Latest Articles</h2>
-    <div id="latest_articles_container" class="articles_wrapper">
-    </div>
-  </section> -->
+
+
+  <section class="home_featured">
+    <h2 data-i18n="blog.featured">Artículos destacados</h2>
+    <div id="featured_articles" class="posts_grid"></div>
+  </section>
+
+  <section class="home_latest">
+    <h2 data-i18n="blog.latest">Últimos artículos</h2>
+    <div id="latest_articles" class="posts_grid"></div>
+  </section>
 
 
   <!-- CALL TO ACTION  -->
   <section class="cta_ending_section" onclick="location.href='/pages/contact_us.html'">
-    <h2 class="cta_title">BOOK A CALL</h2>
+    <h2 class="cta_title" data-i18n="cta.book_call">BOOK A CALL</h2>
     <img class="cta_mascot" src="/dotnode_logo.png" alt="DotNode logo" />
 
-    <!-- Cursor custom -->
     <div class="cta_cursor">
       <div class="cursor_circle">
         <i class="fa-solid fa-arrow-right-long"></i>
@@ -360,46 +388,34 @@
     </div>
   </section>
 
-
   <!-- FOOTER_________________ -->
-
   <footer class="footer">
     <div class="footer_container">
       <div class="footer_logo">
         <a href="/">
-          <h2>DotNode.</h2>
+          <h2 data-i18n="site.name">DotNode.</h2>
         </a>
-        <p>Granada, España</p>
+        <p data-i18n="footer.location">Granada, España</p>
       </div>
       <div class="footer_socials">
-                      
+
         <ul>
-          <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i class="fa-brands fa-square-threads"></i></a></li>
+          <li><a href="https://www.threads.com/@dotnode_?igshid=NTc4MTIwNjQ2YQ==" aria-label="Threads"><i
+                class="fa-brands fa-square-threads"></i></a></li>
           <li><a href="https://x.com/dotnode_" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="https://www.instagram.com/dotnode_/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/dotnode-io/" aria-label="LinkedIn"><i
+                class="fa-brands fa-linkedin"></i></a></li>
         </ul>
       </div>
       <div class="footer_copyright">
         <p>Copyright &copy; 2024</p>
-        <a href="/">Política de privacidad</a>
+        <a href="/" data-i18n="footer.privacy">Política de privacidad</a>
       </div>
     </div>
   </footer>
 
-
-
-
-
-
-  <!-- 
-  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
-
   <script type="module" src="/src/main.js"></script>
-
+</body>
 
 </html>
